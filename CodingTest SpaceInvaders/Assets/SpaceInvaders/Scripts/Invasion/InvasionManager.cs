@@ -1,21 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
     public class InvasionManager : MonoBehaviour
     {
         /// <summary>
-        ///     The prefab of the aliens.
+        ///     InvasionManager is a singleton.
         /// </summary>
-        [SerializeField] private Alien alienPrefab;
-
+        public static InvasionManager Instance { get; private set; }
 
         /// <summary>
         ///     The prefab of the aliens.
         /// </summary>
+        [SerializeField] private Ship playerShip;
+
+        /// <summary>
+        ///     The prefab of the aliens.
+        /// </summary>
+        [SerializeField] private Alien alienPrefab;
+
+        /// <summary>
+        ///     The prefab of the blocks.
+        /// </summary>
         [SerializeField] private Block blockPrefab;
+
+        /// <summary>
+        ///     The pause panel.
+        /// </summary>
+        [SerializeField] private GameObject centralPanel;
 
         /// <summary>
         ///     Height of the top header (it will contains the highscores).
@@ -37,10 +52,18 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private const int BLOCKS_NUMBER = 4;
 
+        public enum GamePhase
+        {
+            Start,
+            Play,
+            Pause,
+            End
+        }
+
         /// <summary>
         ///     The percentage of the horizontal space occupied by the aliens at the beginning.
         /// </summary>
-        private const float ALIENS_HORIZONTAL_OCCUPATION = 0.8f;
+        private const float ALIENS_HORIZONTAL_OCCUPATION = 0.7f;
 
         /// <summary>
         ///     The percentage of the vertical space occupied by the aliens at the beginning.
@@ -48,47 +71,70 @@ namespace SpaceInvaders.Scripts.Invasion
         private const float ALIENS_VERTICAL_OCCUPATION = 0.35f;
 
         /// <summary>
+        ///     The number of movements that an alien perform each row 
+        ///     (when the alien at the border are still alive).
+        /// </summary>
+        private const int ALIENS_HORIZONTAL_MOVEMENTS = 15;
+
+        /// <summary>
+        ///     The number of movements that an alien perform each row.
+        /// </summary>
+        private const int ALIENS_VERTICAL_MOVEMENTS = 10;
+
+        /// <summary>
         ///     Vertical distance from the bottom of the Blocks.
         /// </summary>
         private const float BLOCKS_HEIGHT = 1.8f;
 
-        private static float _leftBorderPosition;
+        public GamePhase _currentPhase;
+        /// <summary>
+        ///     Current Game Phase
+        /// </summary>
+        public GamePhase CurrentPhase
+        {
+            get
+            {
+                return _currentPhase;
+            }
+        }
+
+        private float _leftBorderPosition;
         /// <summary>
         ///     Left border position according to the current resolution.
         /// </summary>
-        public static float LeftBorderPosition
+        public float LeftBorderPosition
         {
             get
             {
                 if (_leftBorderPosition == 0)
                 {
-                    _leftBorderPosition = -Camera.main.orthographicSize * Camera.main.aspect;
+                    _leftBorderPosition = (-Camera.main.orthographicSize * Camera.main.aspect) + (playerShip.ShipSpriteRenderer.bounds.size.x / 2f);
                 }
                 return _leftBorderPosition;
             }
         }
 
-        private static float _rightBorderPosition;
+        private float _rightBorderPosition;
         /// <summary>
         ///     Right border position according to the current resolution.
         /// </summary>
-        public static float RightBorderPosition
+        public float RightBorderPosition
         {
             get
             {
                 if (_rightBorderPosition == 0)
                 {
-                    _rightBorderPosition = Camera.main.orthographicSize * Camera.main.aspect;
+                    _rightBorderPosition = (Camera.main.orthographicSize * Camera.main.aspect) - (playerShip.ShipSpriteRenderer.bounds.size.x / 2f);
                 }
                 return _rightBorderPosition;
             }
         }
 
-        private static float _higherBorderPosition;
+        private float _higherBorderPosition;
         /// <summary>
         ///     Higher border position of the gameplay area, according to the current resolution.
         /// </summary>
-        public static float HigherBorderPosition
+        public float HigherBorderPosition
         {
             get
             {
@@ -100,11 +146,11 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
-        private static float _lowerBorderPosition;
+        private float _lowerBorderPosition;
         /// <summary>
         ///     Lower border position of the gameplay area, according to the current resolution.
         /// </summary>
-        public static float LowerBorderPosition
+        public float LowerBorderPosition
         {
             get
             {
@@ -124,12 +170,30 @@ namespace SpaceInvaders.Scripts.Invasion
         private List<List<Alien>> aliensGroup;
 
         /// <summary>
+        ///     GameObject parent of all the Aliens.
+        /// </summary>
+        private GameObject aliensContainer;
+
+        /// <summary>
         ///     List of the blocks.
         /// </summary>
         private List<Block> blocksGroup;
 
+        /// <summary>
+        ///     The minimum movement performed by an alien.
+        /// </summary>
+        private float alienMinimumMovement;
+
+        /// <summary>
+        ///     Current speed of the aliens.
+        /// </summary>
+        private float aliensSpeed = 4;
+
         void Awake()
         {
+            Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
+            Instance = this;
+            _currentPhase = GamePhase.Start;
             SpawnAliens();
             SpawnBlocks();
         }
@@ -137,7 +201,10 @@ namespace SpaceInvaders.Scripts.Invasion
         private void SpawnAliens()
         {
             aliensGroup = new List<List<Alien>>();
-            float horizontalSpace = (Camera.main.orthographicSize * Camera.main.aspect * 2f) * ALIENS_HORIZONTAL_OCCUPATION;
+            aliensContainer = Instantiate(new GameObject());
+            aliensContainer.name = "AliensContainer";
+            float horizontalSpace = (RightBorderPosition - LeftBorderPosition) * ALIENS_HORIZONTAL_OCCUPATION;
+            alienMinimumMovement = (RightBorderPosition - LeftBorderPosition) * (1f - ALIENS_HORIZONTAL_OCCUPATION) / ALIENS_HORIZONTAL_MOVEMENTS;
             float horizontalDistance = horizontalSpace / (ALIENS_COLUMNS - 1);
             float verticalSpace = (HigherBorderPosition - LowerBorderPosition) * ALIENS_VERTICAL_OCCUPATION;
             float verticalDistance = verticalSpace / (ALIENS_ROWS - 1);
@@ -153,9 +220,10 @@ namespace SpaceInvaders.Scripts.Invasion
                             initialHorizontalPosition + (column * horizontalDistance),
                             initialVerticalPosition - (row * verticalDistance),
                             0f),
-                        Quaternion.identity).GetComponent<Alien>());
+                        Quaternion.identity, aliensContainer.transform).GetComponent<Alien>());
                 }
             }
+            aliensContainer.SetActive(false);
         }
 
         private void SpawnBlocks()
@@ -175,10 +243,74 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            
+            switch (CurrentPhase)
+            {
+                case GamePhase.Start:
+                    if (Input.GetButtonUp("Fire") || Input.GetButtonUp("Quit"))
+                    {
+                        StartGame();
+                    }
+                    break;
+                case GamePhase.Play:
+                    if (Input.GetButtonUp("Quit"))
+                    {
+
+                    }
+                    break;
+                case GamePhase.Pause:
+                    if (Input.GetButtonUp("Fire"))
+                    {
+
+                    }
+                    if (Input.GetButtonUp("Quit"))
+                    {
+
+                    }
+                    break;
+                case GamePhase.End:
+                    if (Input.GetButtonUp("Fire"))
+                    {
+                        StartGame();
+                    }
+                    if (Input.GetButtonUp("Quit"))
+                    {
+
+                    }
+                    break;
+            }
         }
 
+        private void StartGame()
+        {
+            centralPanel.SetActive(false);
+            aliensContainer.SetActive(true);
+            _currentPhase = GamePhase.Play;
+            StartCoroutine(MoveAliens());
+        }
+
+        private IEnumerator MoveAliens()
+        {
+            int currentRow = ALIENS_ROWS - 1;
+            while (CurrentPhase != GamePhase.End)
+            {
+                if (CurrentPhase == GamePhase.Play)
+                {
+                    foreach (Alien alien in aliensGroup[currentRow])
+                    {
+                        alien.transform.position = new Vector3(
+                            alien.transform.position.x + alienMinimumMovement,
+                            alien.transform.position.y,
+                            0f);
+                    }
+                    if (--currentRow < 0)
+                    {
+                        currentRow = ALIENS_ROWS - 1;
+                    }
+                    yield return new WaitForSeconds(1 / aliensSpeed);
+                }
+            }
+        }
     }
 }

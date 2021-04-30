@@ -6,16 +6,14 @@ namespace SpaceInvaders.Scripts.Invasion
 {
     public class Alien : MonoBehaviour
     {
-        // Start is called before the first frame update
+        /// <summary>
+        ///     The sprite renderer of the Alien.
+        /// </summary>
+        public SpriteRenderer AlienSpriteRenderer { get; private set; }
+
         void Start()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            AlienSpriteRenderer = GetComponent<SpriteRenderer>();
         }
     }
 }
