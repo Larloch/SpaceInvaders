@@ -6,9 +6,11 @@ namespace SpaceInvaders.Scripts.Invasion
 {
     public class Ship : MonoBehaviour
     {
+        private SpriteRenderer shipSpriteRenderer;
+
         void Start()
         {
-
+            shipSpriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         /// <summary>
@@ -19,7 +21,7 @@ namespace SpaceInvaders.Scripts.Invasion
             if (Input.GetAxis("Horizontal") > 0.01f)
             {
                 transform.position = new Vector3(
-                    Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / 2f), 8f),
+                    Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / 2f), InvasionManager.RightBorderPosition - shipSpriteRenderer.bounds.size.x),
                     transform.position.y,
                     transform.position.z
                 );
@@ -27,7 +29,7 @@ namespace SpaceInvaders.Scripts.Invasion
             else if (Input.GetAxis("Horizontal") < -0.01f)
             {
                 transform.position = new Vector3(
-                    Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / 2f), -8f),
+                    Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / 2f), InvasionManager.LeftBorderPosition + shipSpriteRenderer.bounds.size.x),
                     transform.position.y,
                     transform.position.z
                 );

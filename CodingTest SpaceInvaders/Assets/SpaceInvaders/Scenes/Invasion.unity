@@ -137,13 +137,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539705645132952716, guid: 29751632fa39a9b40ab86ca8edb0b695,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539705645132952716, guid: 29751632fa39a9b40ab86ca8edb0b695,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1539705645132952716, guid: 29751632fa39a9b40ab86ca8edb0b695,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 1539705645132952716, guid: 29751632fa39a9b40ab86ca8edb0b695,
         type: 3}
@@ -246,7 +251,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -302,6 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619506212}
+  - component: {fileID: 1619506213}
   m_Layer: 0
   m_Name: InvasionManager
   m_TagString: Untagged
@@ -323,3 +329,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619506213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619506211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d69b36510eb0bd45a0248f862f7b811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienPrefab: {fileID: 3770488619004683312, guid: 3ac83ab9c03068c4d99f163429a5e0e8,
+    type: 3}
+  blockPrefab: {fileID: -8102278434471788636, guid: 8bb28796a64e7694390862d13be2232f,
+    type: 3}
