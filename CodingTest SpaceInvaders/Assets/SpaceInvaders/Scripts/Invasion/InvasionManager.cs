@@ -173,6 +173,18 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        private float _aliensSpeed;
+        /// <summary>
+        ///     Current speed of the aliens.
+        /// </summary>
+        public float AliensSpeed
+        {
+            get
+            {
+                return _aliensSpeed;
+            }
+        }
+
         /// <summary>
         ///     The aliens movement direction.
         /// </summary>
@@ -200,15 +212,11 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private float alienMinimumMovement;
 
-        /// <summary>
-        ///     Current speed of the aliens.
-        /// </summary>
-        private float aliensSpeed = 4;
-
         void Awake()
         {
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
+            _aliensSpeed = 4; // TODO: Get speed from configuration
             _currentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
@@ -238,6 +246,11 @@ namespace SpaceInvaders.Scripts.Invasion
                             initialVerticalPosition - (row * verticalDistance),
                             0f),
                         Quaternion.identity, aliensContainer.transform).GetComponent<Alien>());
+                    if (row > 0)
+                    {
+                        aliensGroup[row][column].UpperAlien = aliensGroup[row - 1][column];
+                        aliensGroup[row - 1][column].LowerAlien = aliensGroup[row][column];
+                    }    
                 }
             }
             aliensContainer.SetActive(false);
@@ -340,7 +353,7 @@ namespace SpaceInvaders.Scripts.Invasion
                             moveVertical = false;
                         }
                     }
-                    yield return new WaitForSeconds(1 / aliensSpeed);
+                    yield return new WaitForSeconds(1 / AliensSpeed);
                 }
             }
         }

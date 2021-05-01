@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &770079614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,6 +1213,7 @@ MonoBehaviour:
     type: 3}
   centralPanel: {fileID: 1407602900}
   _currentPhase: 0
+  AliensDirection: 0
 --- !u!1 &1662035059
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,13 +7,39 @@ namespace SpaceInvaders.Scripts.Invasion
     public class Alien : MonoBehaviour
     {
         /// <summary>
+        ///     The prefab of the projectile.
+        /// </summary>
+        [SerializeField] private AlienProjectile alienProjectilePrefab;
+
+        public const int BASE_SHOOTING_CHANCE = 100;
+
+        /// <summary>
         ///     The sprite renderer of the Alien.
         /// </summary>
         public SpriteRenderer AlienSpriteRenderer { get; private set; }
 
+        /// <summary>
+        ///     Health of this alien (0 or less and it is dead).
+        /// </summary>
+        public int HealthPoints { get; private set; }
+
+        /// <summary>
+        ///     The closest upper alien in the same column.
+        ///     Null if no other aliens are over this one.
+        /// </summary>
+        public Alien UpperAlien;
+
+        /// <summary>
+        ///     The closest lower alien in the same column.
+        ///     Null if no other aliens are under this one.
+        /// </summary>
+        public Alien LowerAlien;
+
         void Start()
         {
             AlienSpriteRenderer = GetComponent<SpriteRenderer>();
+            HealthPoints = 100;
+            StartCoroutine(Shoot());
         }
 
         void Update()
@@ -28,6 +54,21 @@ namespace SpaceInvaders.Scripts.Invasion
                 {
                     InvasionManager.Instance.AliensDirection = InvasionManager.Direction.Left;
                 }
+            }
+        }
+
+        private IEnumerator Shoot()
+        {
+            while (HealthPoints > 0)
+            {
+                if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && LowerAlien == null)
+                {
+                    if (Random.Range(0, BASE_SHOOTING_CHANCE) == 0)
+                    {
+                        Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);
+                    }
+                }
+                yield return new WaitForSeconds(1 / InvasionManager.Instance.AliensSpeed);
             }
         }
 
