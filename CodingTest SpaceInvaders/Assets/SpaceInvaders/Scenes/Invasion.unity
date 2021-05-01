@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 562045721}
   - component: {fileID: 562045720}
   m_Layer: 5
-  m_Name: Level
+  m_Name: CentralTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,7 +1108,7 @@ GameObject:
   - component: {fileID: 1590958002}
   - component: {fileID: 1590958001}
   m_Layer: 5
-  m_Name: StartMessage
+  m_Name: CentralMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TO START PRESS FIRE
+  m_text: PRESS FIRE TO BEGIN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1180,8 +1180,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1279,6 +1279,8 @@ MonoBehaviour:
   blockPrefab: {fileID: -8102278434471788636, guid: 8bb28796a64e7694390862d13be2232f,
     type: 3}
   centralPanel: {fileID: 1407602900}
+  centralTitle: {fileID: 562045720}
+  centralMessage: {fileID: 1590958001}
   _currentPhase: 0
   AliensDirection: 0
 --- !u!1 &1662035059

@@ -42,6 +42,7 @@ namespace SpaceInvaders.Scripts.Scores
             
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            //changesLog = JsonUtility.FromJson<InvasionConfiguration>(Resources.Load<TextAsset>("Configuration").ToString());
         }
     }
 }

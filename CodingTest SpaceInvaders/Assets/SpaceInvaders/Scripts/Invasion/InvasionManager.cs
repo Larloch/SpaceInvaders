@@ -1,6 +1,8 @@
+using SpaceInvaders.Scripts.Configuration;
 using SpaceInvaders.Scripts.Scores;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
@@ -30,10 +32,20 @@ namespace SpaceInvaders.Scripts.Invasion
         [SerializeField] private Block blockPrefab;
 
         /// <summary>
-        ///     The pause panel.
+        ///     The central panel.
         /// </summary>
         [SerializeField] private GameObject centralPanel;
 
+        /// <summary>
+        ///     The central panel title.
+        /// </summary>
+        [SerializeField] private TMP_Text centralTitle;
+
+        /// <summary>
+        ///     The central panel message.
+        /// </summary>
+        [SerializeField] private TMP_Text centralMessage;
+        
         public enum GamePhase
         {
             Start,
@@ -180,9 +192,15 @@ namespace SpaceInvaders.Scripts.Invasion
         public float AliensSpeed { get; private set; }
 
         /// <summary>
+        ///     The upper bound of the random range used to decide if
+        ///     an alien will shoot or not.
+        /// </summary>
+        public int AliensShootingRange { get; private set; }
+
+        /// <summary>
         ///     The aliens movement direction.
         /// </summary>
-        public Direction AliensDirection;
+        [HideInInspector] public Direction AliensDirection;
 
         /// <summary>
         ///     All the spawned aliens [row][column].
@@ -215,8 +233,8 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
-            AliensSpeed = 4.0f; // TODO: Get speed from configuration
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
+            centralTitle.text = "LEVEL - " + ScoreManager.Instance.CurrentLevel;
             _currentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
@@ -312,17 +330,17 @@ namespace SpaceInvaders.Scripts.Invasion
                 case GamePhase.Play:
                     if (Input.GetButtonUp("Quit"))
                     {
-
+                        PauseGame();
                     }
                     break;
                 case GamePhase.Pause:
                     if (Input.GetButtonUp("Fire"))
                     {
-
+                        ResumeGame();
                     }
                     if (Input.GetButtonUp("Quit"))
                     {
-
+                        GameOver();
                     }
                     break;
             }
@@ -330,10 +348,26 @@ namespace SpaceInvaders.Scripts.Invasion
 
         private void StartGame()
         {
+            ResumeGame();
+            AliensSpeed = ConfigurationManager.Instance.GetCurrentSpeed(ScoreManager.Instance.CurrentLevel);
+            AliensShootingRange = ConfigurationManager.Instance.GetCurrentShootingRange(ScoreManager.Instance.CurrentLevel);
+            StartCoroutine(MoveAliens());
+        }
+
+        private void PauseGame()
+        {
+            _currentPhase = GamePhase.Pause;
+            centralTitle.text = "PAUSE";
+            centralMessage.text = "PRESS: FIRE TO RESUME, QUIT TO LEAVE";
+            centralPanel.SetActive(true);
+            aliensContainer.SetActive(false);
+        }
+
+        private void ResumeGame()
+        {
             centralPanel.SetActive(false);
             aliensContainer.SetActive(true);
             _currentPhase = GamePhase.Play;
-            StartCoroutine(MoveAliens());
         }
 
         private IEnumerator MoveAliens()

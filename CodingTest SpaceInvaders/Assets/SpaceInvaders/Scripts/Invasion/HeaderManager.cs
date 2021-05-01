@@ -7,6 +7,7 @@ using UnityEngine.Assertions;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    // TODO: Rename in UserInterfaceManager and handle also the central screen.
     public class HeaderManager : MonoBehaviour
     {
 
