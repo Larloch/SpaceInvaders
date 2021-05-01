@@ -44,6 +44,12 @@ namespace SpaceInvaders.Scripts.Invasion
                 return;
             }
 
+            if (col.gameObject.tag == "Projectile")
+            {
+                Destroy(col.gameObject);
+                Destroy(gameObject);
+            }
+
             if (col.gameObject.tag == "Player")
             {
                 InvasionManager.Instance.GameOver();
