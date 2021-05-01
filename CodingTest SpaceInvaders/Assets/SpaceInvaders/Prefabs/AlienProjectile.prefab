@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 959276754210491462}
   - component: {fileID: 3493246727792878742}
   - component: {fileID: -2170880584034861497}
+  - component: {fileID: 8377073432052270544}
+  - component: {fileID: 2013457939809380139}
   m_Layer: 0
   m_Name: AlienProjectile
   m_TagString: Untagged
@@ -96,3 +98,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61978dbe70836b43898b7d40df0f8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &8377073432052270544
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222776927616426165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0025959015, y: 0.2440002}
+      - {x: -0.44809628, y: 0.01653107}
+      - {x: -0.46886253, y: -0.00048701186}
+      - {x: -0.001543045, y: -0.24355318}
+      - {x: 0.01015377, y: -0.24820948}
+      - {x: 0.46107578, y: -0.0005280208}
+      - {x: 0.43771553, y: 0.013895274}
+      - {x: 0.011818886, y: 0.23837592}
+--- !u!50 &2013457939809380139
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222776927616426165}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

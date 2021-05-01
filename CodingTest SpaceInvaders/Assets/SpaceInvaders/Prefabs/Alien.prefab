@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4485029115063688}
   m_Layer: 0
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienProjectilePrefab: {fileID: -2170880584034861497, guid: e33d602a11c7c0a438b9005efa120a3c,
     type: 3}
+  UpperAlien: {fileID: 0}
+  LowerAlien: {fileID: 0}
 --- !u!60 &4485029115063688
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -123,9 +125,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.089999996, y: 0.11}
-      - {x: -0.09263738, y: 0.109121434}
-      - {x: -0.014725227, y: -0.13}
-      - {x: 0.02362613, y: -0.13}
-      - {x: 0.103956155, y: 0.10912143}
-      - {x: 0.099999994, y: 0.11}
+    - - {x: -0.07714627, y: 0.112593144}
+      - {x: -0.079671375, y: 0.11171457}
+      - {x: 0.0060198903, y: -0.11573769}
+      - {x: 0.0067705708, y: -0.11833083}
+      - {x: 0.09099047, y: 0.113011144}
+      - {x: 0.09092371, y: 0.11388972}

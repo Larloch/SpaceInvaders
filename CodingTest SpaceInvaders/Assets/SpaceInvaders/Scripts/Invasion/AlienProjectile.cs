@@ -11,18 +11,43 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         public const float PROJECTILE_SPEED_REDUCTOR = 100f;
 
+        /// <summary>
+        ///     The rigidbody of this projectile.
+        /// </summary>
+        private Rigidbody2D projectileRigidbody;
+
+        void Start()
+        {
+            projectileRigidbody = GetComponent<Rigidbody2D>();
+        }
+
         void FixedUpdate()
         {
             if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
             {
-                transform.position = new Vector3(
-                    transform.position.x,
-                    transform.position.y - (InvasionManager.Instance.AliensSpeed / PROJECTILE_SPEED_REDUCTOR),
-                    0f);
+                projectileRigidbody.MovePosition(new Vector2(
+                    projectileRigidbody.position.x,
+                    projectileRigidbody.position.y - (InvasionManager.Instance.AliensSpeed / PROJECTILE_SPEED_REDUCTOR)));
                 if (transform.position.y < InvasionManager.Instance.LowerBorderPosition)
                 {
                     Destroy(gameObject);
                 }
+            }
+        }
+
+        void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.tag == "Block")
+            {
+                col.GetComponent<Block>().OnHit();
+                Destroy(gameObject);
+                return;
+            }
+
+            if (col.gameObject.tag == "Player")
+            {
+                InvasionManager.Instance.GameOver();
+                Destroy(gameObject);
             }
         }
     }

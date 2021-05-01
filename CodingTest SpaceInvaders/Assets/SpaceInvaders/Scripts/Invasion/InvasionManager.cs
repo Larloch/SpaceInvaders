@@ -49,7 +49,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Height of the top header (it will contains the highscores).
         /// </summary>
-        public const float HEADER_HEIGHT = 1f;
+        public const float HEADER_HEIGHT = 1.4f;
 
         /// <summary>
         ///     The number of columns of the invasion.
@@ -216,11 +216,20 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
-            _aliensSpeed = 4; // TODO: Get speed from configuration
+            _aliensSpeed = 40; // TODO: Get speed from configuration
             _currentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
+        }
+
+        /// <summary>
+        ///     Open the GameOver panel.
+        /// </summary>
+        public void GameOver()
+        {
+            _currentPhase = GamePhase.End;
+            Debug.Log("Game OVER");
         }
 
         private void SpawnAliens()

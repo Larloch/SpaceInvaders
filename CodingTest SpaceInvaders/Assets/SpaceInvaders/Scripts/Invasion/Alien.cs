@@ -15,7 +15,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The upper bound of the range for the random decision of this
         ///     alien to shot.
         /// </summary>
-        public const int BASE_SHOOTING_CHANCE_RANGE = 100;
+        public const int BASE_SHOOTING_CHANCE_RANGE = 100000;
 
         /// <summary>
         ///     The sprite renderer of the Alien.
@@ -90,6 +90,30 @@ namespace SpaceInvaders.Scripts.Invasion
                             transform.position.x,
                             transform.position.y - space,
                             0f);
+        }
+
+        /// <summary>
+        ///     Called when a player projectile hit this alien.
+        /// </summary>
+        public void OnHit()
+        {
+            HealthPoints -= 100;
+            if (HealthPoints <= 0)
+            {
+                Die();
+            }
+        }
+
+        /// <summary>
+        ///     Handle the alien destruction.   
+        /// </summary>
+        private void Die()
+        {
+            if (UpperAlien != null)
+            {
+                UpperAlien.LowerAlien = LowerAlien;
+            }
+            gameObject.SetActive(false);
         }
     }
 }

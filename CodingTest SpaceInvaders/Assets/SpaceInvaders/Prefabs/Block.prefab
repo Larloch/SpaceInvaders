@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2998382882123247940}
   - component: {fileID: 2998382882123247941}
   - component: {fileID: -8102278434471788636}
-  - component: {fileID: 2970074875740440458}
+  - component: {fileID: 2356005837018294289}
   m_Layer: 0
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51919c59d9ed9ae478faebf4ec17f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &2970074875740440458
-PolygonCollider2D:
+--- !u!61 &2356005837018294289
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,9 +119,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.16, y: 0.16}
-      - {x: -0.16, y: -0.16}
-      - {x: 0.16, y: -0.16}
-      - {x: 0.16, y: 0.16}
+  serializedVersion: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_EdgeRadius: 0
