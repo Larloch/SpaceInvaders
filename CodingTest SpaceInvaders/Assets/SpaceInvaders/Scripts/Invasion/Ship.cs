@@ -47,7 +47,8 @@ namespace SpaceInvaders.Scripts.Invasion
                 if (Input.GetAxis("Horizontal") > 0.01f)
                 {
                     transform.position = new Vector3(
-                        Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), InvasionManager.Instance.RightBorderPosition),
+                        Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), 
+                            InvasionManager.Instance.RightBorderPosition),
                         transform.position.y,
                         transform.position.z
                     );
@@ -55,7 +56,8 @@ namespace SpaceInvaders.Scripts.Invasion
                 else if (Input.GetAxis("Horizontal") < -0.01f)
                 {
                     transform.position = new Vector3(
-                        Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), InvasionManager.Instance.LeftBorderPosition),
+                        Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), 
+                            InvasionManager.Instance.LeftBorderPosition),
                         transform.position.y,
                         transform.position.z
                     );
@@ -74,13 +76,11 @@ namespace SpaceInvaders.Scripts.Invasion
 
         private void Update()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && shotAvailable)
-            {
-                if (Input.GetButtonDown("Fire"))
-                {
-                    Instantiate(shipProjectilePrefab, transform.position, Quaternion.identity);
-                    shotAvailable = false;
-                }
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && 
+                shotAvailable && Input.GetButtonDown("Fire"))
+            {                
+                Instantiate(shipProjectilePrefab, transform.position, Quaternion.identity);
+                shotAvailable = false;   
             }
         }
     }

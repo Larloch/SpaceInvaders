@@ -30,13 +30,13 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The closest upper alien in the same column.
         ///     Null if no other aliens are over this one.
         /// </summary>
-        public Alien UpperAlien;
+        public Alien UpperAlien { get; set; }
 
         /// <summary>
         ///     The closest lower alien in the same column.
         ///     Null if no other aliens are under this one.
         /// </summary>
-        public Alien LowerAlien;
+        public Alien LowerAlien { get; set; }
 
         void Start()
         {
@@ -64,12 +64,10 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             while (HealthPoints > 0)
             {
-                if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && LowerAlien == null)
+                if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && 
+                    LowerAlien == null && Random.Range(0, InvasionManager.Instance.AliensShootingRange) == 0)
                 {
-                    if (Random.Range(0, InvasionManager.Instance.AliensShootingRange) == 0)
-                    {
-                        Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);
-                    }
+                    Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);                    
                 }
                 yield return new WaitForSeconds(1 / InvasionManager.Instance.AliensSpeed);
             }

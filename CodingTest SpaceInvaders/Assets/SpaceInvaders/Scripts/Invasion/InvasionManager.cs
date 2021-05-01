@@ -95,17 +95,10 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private const int ALIENS_INITIAL_VERTICAL_POSITION = 3;
 
-        public GamePhase _currentPhase;
         /// <summary>
         ///     Current Game Phase
         /// </summary>
-        public GamePhase CurrentPhase
-        {
-            get
-            {
-                return _currentPhase;
-            }
-        }
+        public GamePhase CurrentPhase { get; private set; }
 
         private float _leftBorderPosition;
         /// <summary>
@@ -185,7 +178,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     The aliens movement direction.
         /// </summary>
-        [HideInInspector] public Direction AliensDirection;
+        public Direction AliensDirection { get; set; }
 
         /// <summary>
         ///     All the spawned aliens [row][column].
@@ -198,11 +191,6 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     GameObject parent of all the Aliens.
         /// </summary>
         private GameObject aliensContainer;
-
-        /// <summary>
-        ///     List of the blocks.
-        /// </summary>
-        private List<Block> blocksGroup;
 
         /// <summary>
         ///     The minimum movement performed by an alien.
@@ -219,7 +207,7 @@ namespace SpaceInvaders.Scripts.Invasion
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
-            _currentPhase = GamePhase.Start;
+            CurrentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
@@ -291,18 +279,17 @@ namespace SpaceInvaders.Scripts.Invasion
 
         private void SpawnBlocks()
         {
-            blocksGroup = new List<Block>();
             float horizontalSpace = Camera.main.orthographicSize * Camera.main.aspect;
             float horizontalDistance = horizontalSpace / (BLOCKS_NUMBER - 1);
             float initialHorizontalPosition = -horizontalSpace / 2f;
             for (int block = 0; block < BLOCKS_NUMBER; ++block)
             {
-                blocksGroup.Add(Instantiate(blockPrefab,
+                Instantiate(blockPrefab,
                     new Vector3(
                         initialHorizontalPosition + (block * horizontalDistance),
                         LowerBorderPosition + BLOCKS_HEIGHT,
                         0f),
-                    Quaternion.identity).GetComponent<Block>());
+                    Quaternion.identity);
             }
         }
 
@@ -337,7 +324,7 @@ namespace SpaceInvaders.Scripts.Invasion
 
         private void PauseGame()
         {
-            _currentPhase = GamePhase.Pause;
+            CurrentPhase = GamePhase.Pause;
             aliensContainer.SetActive(false);
             UserInterfaceManager.Instance.OpenPause();
         }
@@ -346,7 +333,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             UserInterfaceManager.Instance.CloseCentral();
             aliensContainer.SetActive(true);
-            _currentPhase = GamePhase.Play;
+            CurrentPhase = GamePhase.Play;
         }
 
         private void StartGame()

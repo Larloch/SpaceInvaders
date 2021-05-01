@@ -15,27 +15,27 @@ namespace SpaceInvaders.Scripts.Scores
         /// <summary>
         ///     Current player.
         /// </summary>
-        [HideInInspector] public string PlayerName;
+        public string PlayerName { get; set; }
 
         /// <summary>
         ///     Name of the player that own the Highscore of this session.
         /// </summary>
-        [HideInInspector] public string HighScoreOwner;
+        public string HighScoreOwner { get; set; }
 
         /// <summary>
         ///     Highscore of this session.
         /// </summary>
-        [HideInInspector] public int HighScore;
+        public int HighScore { get; set; }
 
         /// <summary>
         ///     Current score of this session.
         /// </summary>
-        [HideInInspector] public int CurrentScore;
+        public int CurrentScore { get; set; }
 
         /// <summary>
         ///     Current level of this game.
         /// </summary>
-        [HideInInspector] public int CurrentLevel;
+        public int CurrentLevel { get; set; }
 
         void Awake()
         {
