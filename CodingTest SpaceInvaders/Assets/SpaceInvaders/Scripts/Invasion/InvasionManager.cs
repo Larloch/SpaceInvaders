@@ -32,6 +32,20 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         [SerializeField] private GameObject centralPanel;
 
+        public enum GamePhase
+        {
+            Start,
+            Play,
+            Pause,
+            End
+        }
+
+        public enum Direction
+        {
+            Left,
+            Right
+        }
+
         /// <summary>
         ///     Height of the top header (it will contains the highscores).
         /// </summary>
@@ -51,14 +65,6 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     Number of the Blocks.
         /// </summary>
         private const int BLOCKS_NUMBER = 4;
-
-        public enum GamePhase
-        {
-            Start,
-            Play,
-            Pause,
-            End
-        }
 
         /// <summary>
         ///     The percentage of the horizontal space occupied by the aliens at the beginning.
@@ -80,6 +86,11 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The number of movements that an alien perform each row.
         /// </summary>
         private const int ALIENS_VERTICAL_MOVEMENTS = 10;
+
+        /// <summary>
+        ///     The initial position of the aliens on the y axis.
+        /// </summary>
+        private const int ALIENS_INITIAL_VERTICAL_POSITION = 3;
 
         /// <summary>
         ///     Vertical distance from the bottom of the Blocks.
@@ -163,6 +174,11 @@ namespace SpaceInvaders.Scripts.Invasion
         }
 
         /// <summary>
+        ///     The aliens movement direction.
+        /// </summary>
+        public Direction AliensDirection;
+
+        /// <summary>
         ///     All the spawned aliens [row][column].
         ///     The rows are from the higher to the lower.
         ///     The columns, from left to right.
@@ -194,6 +210,7 @@ namespace SpaceInvaders.Scripts.Invasion
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
             _currentPhase = GamePhase.Start;
+            AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
         }
@@ -209,7 +226,7 @@ namespace SpaceInvaders.Scripts.Invasion
             float verticalSpace = (HigherBorderPosition - LowerBorderPosition) * ALIENS_VERTICAL_OCCUPATION;
             float verticalDistance = verticalSpace / (ALIENS_ROWS - 1);
             float initialHorizontalPosition = -horizontalSpace / 2f;
-            float initialVerticalPosition = HigherBorderPosition - 1f; // TODO: Set the height of the Alien sprite.
+            float initialVerticalPosition = ALIENS_INITIAL_VERTICAL_POSITION;
             for (int row = 0; row < ALIENS_ROWS; ++row)
             {
                 aliensGroup.Add(new List<Alien>());
@@ -293,20 +310,35 @@ namespace SpaceInvaders.Scripts.Invasion
         private IEnumerator MoveAliens()
         {
             int currentRow = ALIENS_ROWS - 1;
+            int aliensDirection = 1;
+            float verticalSpaceLeft = (HigherBorderPosition - LowerBorderPosition) * (1f - ALIENS_VERTICAL_OCCUPATION);
+            float alienVerticalMovement = verticalSpaceLeft / ALIENS_VERTICAL_MOVEMENTS;
+            bool moveVertical = false;
             while (CurrentPhase != GamePhase.End)
             {
                 if (CurrentPhase == GamePhase.Play)
                 {
                     foreach (Alien alien in aliensGroup[currentRow])
                     {
-                        alien.transform.position = new Vector3(
-                            alien.transform.position.x + alienMinimumMovement,
-                            alien.transform.position.y,
-                            0f);
+                        alien.MoveHorizontally(alienMinimumMovement * aliensDirection);
+                        if (moveVertical)
+                        {
+                            alien.MoveVertically(alienVerticalMovement);
+                        }
                     }
                     if (--currentRow < 0)
                     {
                         currentRow = ALIENS_ROWS - 1;
+                        int newDirection = AliensDirection == Direction.Right ? 1 : -1;
+                        if (newDirection != aliensDirection)
+                        {
+                            aliensDirection = newDirection;
+                            moveVertical = true;
+                        }
+                        else
+                        {
+                            moveVertical = false;
+                        }
                     }
                     yield return new WaitForSeconds(1 / aliensSpeed);
                 }
