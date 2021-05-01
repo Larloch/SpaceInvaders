@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1539705645132952716}
   - component: {fileID: 1539705645132952717}
   - component: {fileID: -6414033231771254380}
+  - component: {fileID: 861562492}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -118,3 +119,18 @@ PolygonCollider2D:
       - {x: 0.035663005, y: 0.077470474}
     - - {x: 0.034539826, y: -0.0291554}
       - {x: -0.016385136, y: -0.029155396}
+--- !u!114 &861562492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539705645132952722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d667d3f52c9a9654aba068440f7463ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipProjectilePrefab: {fileID: -3346397348324980303, guid: 9b534f017d119b540bccd9af1e4efbe0,
+    type: 3}
+  ShipSpriteRenderer: {fileID: 1539705645132952717}

@@ -11,7 +11,11 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         [SerializeField] private AlienProjectile alienProjectilePrefab;
 
-        public const int BASE_SHOOTING_CHANCE = 100;
+        /// <summary>
+        ///     The upper bound of the range for the random decision of this
+        ///     alien to shot.
+        /// </summary>
+        public const int BASE_SHOOTING_CHANCE_RANGE = 100;
 
         /// <summary>
         ///     The sprite renderer of the Alien.
@@ -63,7 +67,7 @@ namespace SpaceInvaders.Scripts.Invasion
             {
                 if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && LowerAlien == null)
                 {
-                    if (Random.Range(0, BASE_SHOOTING_CHANCE) == 0)
+                    if (Random.Range(0, BASE_SHOOTING_CHANCE_RANGE) == 0)
                     {
                         Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);
                     }

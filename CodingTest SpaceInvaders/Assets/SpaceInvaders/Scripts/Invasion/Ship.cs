@@ -7,9 +7,30 @@ namespace SpaceInvaders.Scripts.Invasion
     public class Ship : MonoBehaviour
     {
         /// <summary>
-        ///     The sprite renderer of the Alien.
+        ///     The prefab of the projectile.
+        /// </summary>
+        [SerializeField] private ShipProjectile shipProjectilePrefab;
+
+        /// <summary>
+        ///     The sprite renderer of the Ship.
         /// </summary>
         [SerializeField] public SpriteRenderer ShipSpriteRenderer;
+
+        /// <summary>
+        ///     This value is used to calculate the intervall between a shot and 
+        ///     the following one (in seconds).
+        /// </summary>
+        public const float RECHARGE_DURATION = 0.4f;
+
+        /// <summary>
+        ///     Flag enabled when the next shot is available.
+        /// </summary>
+        private bool shotAvailable = true;
+
+        /// <summary>
+        ///     Countdown to the next projectile recharge.
+        /// </summary>
+        private float rechargingTime = RECHARGE_DURATION;
 
         /// <summary>
         ///     Handle the player inputs
@@ -33,6 +54,27 @@ namespace SpaceInvaders.Scripts.Invasion
                         transform.position.y,
                         transform.position.z
                     );
+                }
+                if (!shotAvailable)
+                {
+                    rechargingTime -= Time.fixedDeltaTime;
+                    if (rechargingTime <= 0f)
+                    {
+                        rechargingTime = RECHARGE_DURATION;
+                        shotAvailable = true;
+                    }
+                }    
+            }
+        }
+
+        private void Update()
+        {
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && shotAvailable)
+            {
+                if (Input.GetButtonDown("Fire"))
+                {
+                    Instantiate(shipProjectilePrefab, transform.position, Quaternion.identity);
+                    shotAvailable = false;
                 }
             }
         }

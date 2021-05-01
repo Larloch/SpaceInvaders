@@ -2,17 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipProjectile : MonoBehaviour
+namespace SpaceInvaders.Scripts.Invasion
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ShipProjectile : MonoBehaviour
     {
-        
-    }
+        /// <summary>
+        ///     The projectile speed will depend on the AlienSpeed divided by this value.
+        /// </summary>
+        public const float PROJECTILE_SPEED_REDUCTOR = 20f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void FixedUpdate()
+        {
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
+            {
+                transform.position = new Vector3(
+                    transform.position.x,
+                    transform.position.y + (InvasionManager.Instance.AliensSpeed / PROJECTILE_SPEED_REDUCTOR),
+                    0f);
+                if (transform.position.y > InvasionManager.Instance.HigherBorderPosition)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 }
