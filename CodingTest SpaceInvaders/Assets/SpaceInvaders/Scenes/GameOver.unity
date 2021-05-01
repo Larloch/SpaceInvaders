@@ -2079,3 +2079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28822b1a32170d43b681d953888c51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: {fileID: 941972189}
+  currentScore: {fileID: 165964711}
+  highScore: {fileID: 1991549820}

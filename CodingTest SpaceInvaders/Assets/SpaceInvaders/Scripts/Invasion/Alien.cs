@@ -12,6 +12,11 @@ namespace SpaceInvaders.Scripts.Invasion
         [SerializeField] private AlienProjectile alienProjectilePrefab;
 
         /// <summary>
+        ///     The quantity of points gained destroying this alien.
+        /// </summary>
+        public const int ALIEN_POINTS = 100;
+
+        /// <summary>
         ///     The upper bound of the range for the random decision of this
         ///     alien to shot.
         /// </summary>
@@ -117,6 +122,8 @@ namespace SpaceInvaders.Scripts.Invasion
             {
                 UpperAlien.LowerAlien = LowerAlien;
             }
+            InvasionManager.Instance.RemoveOneAlien();
+            HeaderManager.Instance.AddPoints(ALIEN_POINTS);
             gameObject.SetActive(false);
         }
 

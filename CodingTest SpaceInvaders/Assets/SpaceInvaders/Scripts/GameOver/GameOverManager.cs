@@ -1,5 +1,7 @@
+using SpaceInvaders.Scripts.Scores;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +10,34 @@ namespace SpaceInvaders.Scripts.GameOver
     public class GameOverManager : MonoBehaviour
     {
         /// <summary>
+        ///     The name of the player.
+        /// </summary>
+        [SerializeField] private TMP_Text playerName;
+
+        /// <summary>
+        ///     The score of this game in text format.
+        /// </summary>
+        [SerializeField] private TMP_Text currentScore;
+
+        /// <summary>
+        ///     The high-score of this sesssion in text format.
+        /// </summary>
+        [SerializeField] private TMP_Text highScore;
+
+        void Start()
+        {
+            playerName.text = ScoreManager.Instance.PlayerName;
+            currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
+            highScore.text = ScoreManager.Instance.HighScore.ToString();
+        }
+
+        /// <summary>
         ///     Called when the player clicks on the restart button
         /// </summary>
         public void OnRestartButtonClick()
         {
+            ScoreManager.Instance.CurrentScore = 0;
+            ScoreManager.Instance.CurrentLevel = 1;
             SceneManager.LoadScene("Invasion");
         }
 
@@ -20,7 +46,6 @@ namespace SpaceInvaders.Scripts.GameOver
         /// </summary>
         public void OnMainMenuButtonClick()
         {
-            Debug.Log("Loading Main Menu");
             SceneManager.LoadScene("MainMenu");
         }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Alien
   - Block
+  - Projectile
   layers:
   - Default
   - TransparentFX

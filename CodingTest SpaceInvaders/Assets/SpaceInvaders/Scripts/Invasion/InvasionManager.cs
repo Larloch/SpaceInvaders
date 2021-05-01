@@ -1,3 +1,4 @@
+using SpaceInvaders.Scripts.Scores;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,8 +38,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             Start,
             Play,
-            Pause,
-            End
+            Pause
         }
 
         public enum Direction
@@ -174,17 +174,10 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
-        private float _aliensSpeed;
         /// <summary>
         ///     Current speed of the aliens.
         /// </summary>
-        public float AliensSpeed
-        {
-            get
-            {
-                return _aliensSpeed;
-            }
-        }
+        public float AliensSpeed { get; private set; }
 
         /// <summary>
         ///     The aliens movement direction.
@@ -213,11 +206,17 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private float alienMinimumMovement;
 
+        /// <summary>
+        ///     The number of remaining aliens in the game.
+        /// </summary>
+        private int aliensLeft;
+
         void Awake()
         {
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
-            _aliensSpeed = 4; // TODO: Get speed from configuration
+            AliensSpeed = 4.0f; // TODO: Get speed from configuration
+            aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
             _currentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
@@ -229,8 +228,25 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         public void GameOver()
         {
-            _currentPhase = GamePhase.End;
             SceneManager.LoadScene("GameOver");
+        }
+
+        public void RemoveOneAlien()
+        {
+            aliensLeft--;
+            if (aliensLeft == 0)
+            {
+                LevelWon();
+            }
+        }
+
+        /// <summary>
+        ///     Open the GameOver panel.
+        /// </summary>
+        private void LevelWon()
+        {
+            ScoreManager.Instance.CurrentLevel++;
+            SceneManager.LoadScene("Invasion");
         }
 
         private void SpawnAliens()
@@ -309,16 +325,6 @@ namespace SpaceInvaders.Scripts.Invasion
 
                     }
                     break;
-                case GamePhase.End:
-                    if (Input.GetButtonUp("Fire"))
-                    {
-                        StartGame();
-                    }
-                    if (Input.GetButtonUp("Quit"))
-                    {
-
-                    }
-                    break;
             }
         }
 
@@ -337,7 +343,7 @@ namespace SpaceInvaders.Scripts.Invasion
             float verticalSpaceLeft = (HigherBorderPosition - LowerBorderPosition) * (1f - ALIENS_VERTICAL_OCCUPATION);
             float alienVerticalMovement = verticalSpaceLeft / ALIENS_VERTICAL_MOVEMENTS;
             bool moveVertical = false;
-            while (CurrentPhase != GamePhase.End)
+            while (CurrentPhase != GamePhase.Start)
             {
                 if (CurrentPhase == GamePhase.Play)
                 {
@@ -363,8 +369,8 @@ namespace SpaceInvaders.Scripts.Invasion
                             moveVertical = false;
                         }
                     }
-                    yield return new WaitForSeconds(1 / AliensSpeed);
                 }
+                yield return new WaitForSeconds(1 / AliensSpeed);
             }
         }
     }

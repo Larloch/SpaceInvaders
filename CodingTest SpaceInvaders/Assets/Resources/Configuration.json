@@ -1,0 +1,10 @@
+{
+	"StartingSpeed": 4.0,
+	"SpeedIncreaseValue": 0.8,
+	"SpeedIncreaseFromLevel": 2,
+	"SpeedIncreaseEvery": 2,
+	"StartingShootingRange": 60,
+	"ShootingIncreaseValue": 1,
+	"ShootingIncreaseFromLevel": 1,
+	"ShootingIncreaseEvery": 1
+}
