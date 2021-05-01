@@ -46,5 +46,14 @@ namespace SpaceInvaders.Scripts.Invasion
             }
             Destroy(gameObject);
         }
+
+
+        /// <summary>
+        ///     When an alien crash on this block.
+        /// </summary>
+        public void AlienCollision()
+        {
+            Destroy(gameObject);
+        }
     }
 }

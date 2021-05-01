@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2894236700421901727}
   - component: {fileID: 3770488619004683312}
   - component: {fileID: 4485029115063688}
+  - component: {fileID: 1816823556397184428}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Alien
@@ -110,7 +111,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -131,3 +132,24 @@ PolygonCollider2D:
       - {x: 0.0067705708, y: -0.11833083}
       - {x: 0.09099047, y: 0.113011144}
       - {x: 0.09092371, y: 0.11388972}
+--- !u!50 &1816823556397184428
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894236700421901726}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

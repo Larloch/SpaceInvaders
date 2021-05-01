@@ -6,7 +6,7 @@ namespace SpaceInvaders.Scripts.MainMenu
     public class MainMenuManager : MonoBehaviour
     {
         /// <summary>
-        ///     Called when the player clicks on the quit button
+        ///     Called when the player clicks on the start button
         /// </summary>
         public void OnStartButtonClick()
         {

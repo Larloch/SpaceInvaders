@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
@@ -52,6 +53,11 @@ namespace SpaceInvaders.Scripts.Invasion
         public const float HEADER_HEIGHT = 1.4f;
 
         /// <summary>
+        ///     Vertical distance from the bottom of the Blocks.
+        /// </summary>
+        public const float BLOCKS_HEIGHT = 1.8f;
+
+        /// <summary>
         ///     The number of columns of the invasion.
         /// </summary>
         private const int ALIENS_COLUMNS = 11;
@@ -91,11 +97,6 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The initial position of the aliens on the y axis.
         /// </summary>
         private const int ALIENS_INITIAL_VERTICAL_POSITION = 3;
-
-        /// <summary>
-        ///     Vertical distance from the bottom of the Blocks.
-        /// </summary>
-        private const float BLOCKS_HEIGHT = 1.8f;
 
         public GamePhase _currentPhase;
         /// <summary>
@@ -216,7 +217,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
-            _aliensSpeed = 40; // TODO: Get speed from configuration
+            _aliensSpeed = 4; // TODO: Get speed from configuration
             _currentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
@@ -229,7 +230,7 @@ namespace SpaceInvaders.Scripts.Invasion
         public void GameOver()
         {
             _currentPhase = GamePhase.End;
-            Debug.Log("Game OVER");
+            SceneManager.LoadScene("GameOver");
         }
 
         private void SpawnAliens()

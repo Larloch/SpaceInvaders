@@ -15,7 +15,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The upper bound of the range for the random decision of this
         ///     alien to shot.
         /// </summary>
-        public const int BASE_SHOOTING_CHANCE_RANGE = 100000;
+        public const int BASE_SHOOTING_CHANCE_RANGE = 60;
 
         /// <summary>
         ///     The sprite renderer of the Alien.
@@ -90,6 +90,10 @@ namespace SpaceInvaders.Scripts.Invasion
                             transform.position.x,
                             transform.position.y - space,
                             0f);
+            if (transform.position.y <= -Camera.main.orthographicSize + InvasionManager.BLOCKS_HEIGHT)
+            {
+                InvasionManager.Instance.GameOver();
+            }
         }
 
         /// <summary>
@@ -114,6 +118,23 @@ namespace SpaceInvaders.Scripts.Invasion
                 UpperAlien.LowerAlien = LowerAlien;
             }
             gameObject.SetActive(false);
+        }
+
+
+        void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.tag == "Block")
+            {
+                col.GetComponent<Block>().AlienCollision();
+                HealthPoints = 0;
+                Die();
+                return;
+            }
+
+            if (col.gameObject.tag == "Player")
+            {
+                InvasionManager.Instance.GameOver();
+            }
         }
     }
 }
