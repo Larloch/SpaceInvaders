@@ -18,6 +18,11 @@ namespace SpaceInvaders.Scripts.Scores
         [HideInInspector] public string PlayerName;
 
         /// <summary>
+        ///     Name of the player that own the Highscore of this session.
+        /// </summary>
+        [HideInInspector] public string HighScoreOwner;
+
+        /// <summary>
         ///     Highscore of this session.
         /// </summary>
         [HideInInspector] public int HighScore;
@@ -42,7 +47,6 @@ namespace SpaceInvaders.Scripts.Scores
             
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            //changesLog = JsonUtility.FromJson<InvasionConfiguration>(Resources.Load<TextAsset>("Configuration").ToString());
         }
     }
 }

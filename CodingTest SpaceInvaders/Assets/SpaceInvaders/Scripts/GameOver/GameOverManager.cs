@@ -19,16 +19,10 @@ namespace SpaceInvaders.Scripts.GameOver
         /// </summary>
         [SerializeField] private TMP_Text currentScore;
 
-        /// <summary>
-        ///     The high-score of this sesssion in text format.
-        /// </summary>
-        [SerializeField] private TMP_Text highScore;
-
         void Start()
         {
             playerName.text = ScoreManager.Instance.PlayerName;
             currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
-            highScore.text = ScoreManager.Instance.HighScore.ToString();
         }
 
         /// <summary>

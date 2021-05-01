@@ -117,7 +117,7 @@ namespace SpaceInvaders.Scripts.Invasion
                 UpperAlien.LowerAlien = LowerAlien;
             }
             InvasionManager.Instance.RemoveOneAlien();
-            HeaderManager.Instance.AddPoints(ALIEN_POINTS);
+            UserInterfaceManager.Instance.AddPoints(ALIEN_POINTS);
             gameObject.SetActive(false);
         }
 

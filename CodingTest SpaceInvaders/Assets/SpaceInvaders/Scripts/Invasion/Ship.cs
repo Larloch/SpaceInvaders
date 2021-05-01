@@ -17,6 +17,11 @@ namespace SpaceInvaders.Scripts.Invasion
         [SerializeField] public SpriteRenderer ShipSpriteRenderer;
 
         /// <summary>
+        ///     Reduce the horizontal speed of the player ship.
+        /// </summary>
+        public const float SPEED_REDUCER = 4f;
+
+        /// <summary>
         ///     This value is used to calculate the intervall between a shot and 
         ///     the following one (in seconds).
         /// </summary>
@@ -42,7 +47,7 @@ namespace SpaceInvaders.Scripts.Invasion
                 if (Input.GetAxis("Horizontal") > 0.01f)
                 {
                     transform.position = new Vector3(
-                        Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / 2f), InvasionManager.Instance.RightBorderPosition),
+                        Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), InvasionManager.Instance.RightBorderPosition),
                         transform.position.y,
                         transform.position.z
                     );
@@ -50,7 +55,7 @@ namespace SpaceInvaders.Scripts.Invasion
                 else if (Input.GetAxis("Horizontal") < -0.01f)
                 {
                     transform.position = new Vector3(
-                        Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / 2f), InvasionManager.Instance.LeftBorderPosition),
+                        Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), InvasionManager.Instance.LeftBorderPosition),
                         transform.position.y,
                         transform.position.z
                     );

@@ -30,21 +30,6 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The prefab of the blocks.
         /// </summary>
         [SerializeField] private Block blockPrefab;
-
-        /// <summary>
-        ///     The central panel.
-        /// </summary>
-        [SerializeField] private GameObject centralPanel;
-
-        /// <summary>
-        ///     The central panel title.
-        /// </summary>
-        [SerializeField] private TMP_Text centralTitle;
-
-        /// <summary>
-        ///     The central panel message.
-        /// </summary>
-        [SerializeField] private TMP_Text centralMessage;
         
         public enum GamePhase
         {
@@ -234,11 +219,15 @@ namespace SpaceInvaders.Scripts.Invasion
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
-            centralTitle.text = "LEVEL - " + ScoreManager.Instance.CurrentLevel;
             _currentPhase = GamePhase.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
+        }
+
+        void Start()
+        {
+            UserInterfaceManager.Instance.SetLevel(ScoreManager.Instance.CurrentLevel);
         }
 
         /// <summary>
@@ -346,28 +335,26 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        private void PauseGame()
+        {
+            _currentPhase = GamePhase.Pause;
+            aliensContainer.SetActive(false);
+            UserInterfaceManager.Instance.OpenPause();
+        }
+
+        private void ResumeGame()
+        {
+            UserInterfaceManager.Instance.CloseCentral();
+            aliensContainer.SetActive(true);
+            _currentPhase = GamePhase.Play;
+        }
+
         private void StartGame()
         {
             ResumeGame();
             AliensSpeed = ConfigurationManager.Instance.GetCurrentSpeed(ScoreManager.Instance.CurrentLevel);
             AliensShootingRange = ConfigurationManager.Instance.GetCurrentShootingRange(ScoreManager.Instance.CurrentLevel);
             StartCoroutine(MoveAliens());
-        }
-
-        private void PauseGame()
-        {
-            _currentPhase = GamePhase.Pause;
-            centralTitle.text = "PAUSE";
-            centralMessage.text = "PRESS: FIRE TO RESUME, QUIT TO LEAVE";
-            centralPanel.SetActive(true);
-            aliensContainer.SetActive(false);
-        }
-
-        private void ResumeGame()
-        {
-            centralPanel.SetActive(false);
-            aliensContainer.SetActive(true);
-            _currentPhase = GamePhase.Play;
         }
 
         private IEnumerator MoveAliens()
