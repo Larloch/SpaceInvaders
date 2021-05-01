@@ -20,6 +20,7 @@ namespace SpaceInvaders.Scripts.GameOver
         /// </summary>
         public void OnMainMenuButtonClick()
         {
+            Debug.Log("Loading Main Menu");
             SceneManager.LoadScene("MainMenu");
         }
 
