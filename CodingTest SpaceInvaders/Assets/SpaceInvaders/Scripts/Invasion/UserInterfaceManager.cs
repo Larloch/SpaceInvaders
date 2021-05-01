@@ -49,6 +49,16 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The central panel message.
         /// </summary>
         [SerializeField] private TMP_Text centralMessage;
+        
+        /// <summary>
+        ///     The title of the pause panel.
+        /// </summary>
+        private const string PAUSE_TITLE = "PAUSE";
+
+        /// <summary>
+        ///     The message of the pause panel.
+        /// </summary>
+        private const string PAUSE_MESSAGE = "PRESS: FIRE TO RESUME, ESC TO LEAVE";
 
 
         void Awake()
@@ -93,8 +103,8 @@ namespace SpaceInvaders.Scripts.Invasion
 
         public void OpenPause()
         {
-            centralTitle.text = "PAUSE";
-            centralMessage.text = "PRESS: FIRE TO RESUME, QUIT TO LEAVE";
+            centralTitle.text = PAUSE_TITLE;
+            centralMessage.text = PAUSE_MESSAGE;
             centralPanel.SetActive(true);
         }
     }

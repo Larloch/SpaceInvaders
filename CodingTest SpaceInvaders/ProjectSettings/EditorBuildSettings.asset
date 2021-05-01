@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SpaceInvaders/Scenes/GameOver.unity
     guid: d780e64f6787d4f48b8c88eb04b93a27
+  - enabled: 1
+    path: Assets/SpaceInvaders/Scenes/Leaderboards.unity
+    guid: a911c4a2545653340a1fb5a2dc9ad118
   m_configObjects: {}

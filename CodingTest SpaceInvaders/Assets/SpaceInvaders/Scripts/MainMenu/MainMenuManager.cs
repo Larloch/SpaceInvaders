@@ -46,6 +46,14 @@ namespace SpaceInvaders.Scripts.MainMenu
         /// <summary>
         ///     Called when the player clicks on the quit button
         /// </summary>
+        public void OnLeaderboardsButtonClick()
+        {
+            SceneManager.LoadScene("Leaderboards");
+        }
+
+        /// <summary>
+        ///     Called when the player clicks on the quit button
+        /// </summary>
         public void OnQuitButtonClick()
         {
             Application.Quit();

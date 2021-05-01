@@ -13,6 +13,11 @@ namespace SpaceInvaders.Scripts.Configuration
         public static ConfigurationManager Instance { get; private set; }
 
         /// <summary>
+        ///     Filename (without extension) of the json configuration file.
+        /// </summary>
+        private const string CONFIGURATION_FILE_NAME = "Configuration";
+
+        /// <summary>
         ///     Current player.
         /// </summary>
         private InvasionConfiguration invasionConfig;
@@ -27,7 +32,7 @@ namespace SpaceInvaders.Scripts.Configuration
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            invasionConfig = JsonUtility.FromJson<InvasionConfiguration>(Resources.Load<TextAsset>("Configuration").ToString());
+            invasionConfig = JsonUtility.FromJson<InvasionConfiguration>(Resources.Load<TextAsset>(CONFIGURATION_FILE_NAME).ToString());
         }
 
         public float GetCurrentSpeed(int level)
