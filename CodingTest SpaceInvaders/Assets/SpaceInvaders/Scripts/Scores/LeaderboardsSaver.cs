@@ -10,7 +10,18 @@ namespace SpaceInvaders.Scripts.Scores
 {
     public class LeaderboardsSaver
     {
+        /// <summary>
+        ///     The filename of the binary serialized file saved in the playerprefs.
+        /// </summary>
         private const string SAVED_FILE_NAME = "SpaceInvaders.bytes";
+
+        /// <summary>
+        ///     The maximum number of elements saved in the leaderboard.
+        ///     It the list has already MAX_SIZE number of elements:
+        ///     1) Any new score below the lower one in the list will not be saved.
+        ///     2) Including a new score better than the lower one, will remove the lower one from the list.
+        /// </summary>
+        private const int MAX_SIZE = 10;
 
         /// <summary>
         ///     SortedList of <(ScoreOwner, Score), Score> used to keep
@@ -20,7 +31,7 @@ namespace SpaceInvaders.Scripts.Scores
 
         public LeaderboardsSaver()
         {
-            leaderboardList = new SortedList<(string, int), int>(new Item2Comparer());
+            leaderboardList = new SortedList<(string, int), int>(MAX_SIZE + 1, new Item2Comparer());
             string leaderboardsFilePath = Path.Combine(Application.persistentDataPath, SAVED_FILE_NAME);
             if (File.Exists(leaderboardsFilePath))
             {
@@ -54,7 +65,15 @@ namespace SpaceInvaders.Scripts.Scores
         public void SaveScore(string owner, int score)
         {
             Assert.IsNotNull(leaderboardList, "The leaderboards should have already been loaded.");
+            if (leaderboardList.ContainsKey((owner, score)))
+            {
+                return;
+            }
             leaderboardList.Add((owner, score), score);
+            if (leaderboardList.Count == MAX_SIZE + 1)
+            {
+                leaderboardList.RemoveAt(leaderboardList.Count - 1);
+            }
             LeaderboardsStructure leaderboards = new LeaderboardsStructure();
             leaderboards.ScoreOwners = leaderboardList.Select(x => x.Key.Item1).ToList();
             leaderboards.Scores = leaderboardList.Values.ToList();
@@ -68,7 +87,12 @@ namespace SpaceInvaders.Scripts.Scores
         {
             int IComparer<(string, int)>.Compare((string, int) a, (string, int) b)
             {
-                return b.Item2.CompareTo(a.Item2);
+                int result = b.Item2.CompareTo(a.Item2) * MAX_SIZE;
+                if (result == 0 && !b.Item1.Equals(a.Item1))
+                {
+                    result = 1;
+                }
+                return result;
             }
         }
 
