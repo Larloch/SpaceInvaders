@@ -18,6 +18,8 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         public static InvasionManager Instance { get; private set; }
 
+        #region SerializedFields
+
         /// <summary>
         ///     The prefab of the aliens.
         /// </summary>
@@ -32,7 +34,11 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The prefab of the blocks.
         /// </summary>
         [SerializeField] private Block blockPrefab;
-        
+
+        #endregion
+
+        #region Const and Enums
+
         /// <summary>
         ///     Enumerator to describe the states of the game.
         /// </summary>
@@ -102,6 +108,8 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The initial position of the aliens on the y axis.
         /// </summary>
         private const int ALIENS_INITIAL_VERTICAL_POSITION = 3;
+
+        #endregion
 
         /// <summary>
         ///     Current Game Phase

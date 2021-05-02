@@ -25,7 +25,7 @@ InputManager:
     m_Name: Fire
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: enter
+    negativeButton: left ctrl
     positiveButton: up
     altNegativeButton: space
     altPositiveButton: w
@@ -58,9 +58,9 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: enter
+    positiveButton: return
     altNegativeButton: 
-    altPositiveButton: space
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

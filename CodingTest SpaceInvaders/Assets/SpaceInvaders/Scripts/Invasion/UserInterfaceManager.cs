@@ -15,6 +15,8 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         public static UserInterfaceManager Instance { get; private set; }
 
+        #region SerializedFields
+
         /// <summary>
         ///     The name of the player.
         /// </summary>
@@ -49,7 +51,9 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     The central panel message.
         /// </summary>
         [SerializeField] private TMP_Text centralMessage;
-        
+
+        #endregion
+
         /// <summary>
         ///     The title of the pause panel.
         /// </summary>
@@ -83,6 +87,7 @@ namespace SpaceInvaders.Scripts.Invasion
             }
             currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
             highScore.text = ScoreManager.Instance.HighScore.ToString();
+            SetLevel(ScoreManager.Instance.CurrentLevel);
             Cursor.visible = false;
         }
 
