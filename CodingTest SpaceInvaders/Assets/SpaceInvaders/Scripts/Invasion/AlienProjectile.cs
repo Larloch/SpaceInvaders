@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SpaceInvaders.Scripts.Invasion
@@ -32,7 +30,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void FixedUpdate()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
             {
                 projectileRigidbody.MovePosition(new Vector2(
                     projectileRigidbody.position.x,

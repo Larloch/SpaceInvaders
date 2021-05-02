@@ -29,6 +29,7 @@ namespace SpaceInvaders.Scripts.MainMenu
         void Start()
         {
             playerName.text = ScoreManager.Instance.PlayerName;
+            Cursor.visible = true;
         }
 
         /// <summary>

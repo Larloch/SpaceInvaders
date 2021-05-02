@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    /// <summary>
+    ///     Class that represent the player ship.
+    /// </summary>
     public class Ship : MonoBehaviour
     {
         /// <summary>
@@ -38,11 +39,11 @@ namespace SpaceInvaders.Scripts.Invasion
         private float rechargingTime = RECHARGE_DURATION;
 
         /// <summary>
-        ///     Handle the player inputs
+        ///     Handle the player movement inputs.
         /// </summary>
         void FixedUpdate()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
             {
                 if (Input.GetAxis("Horizontal") > 0.01f)
                 {
@@ -62,25 +63,30 @@ namespace SpaceInvaders.Scripts.Invasion
                         transform.position.z
                     );
                 }
+            }
+        }
+
+        /// <summary>
+        ///     Handle the shooting input.
+        /// </summary>
+        private void Update()
+        {
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            {
                 if (!shotAvailable)
                 {
-                    rechargingTime -= Time.fixedDeltaTime;
+                    rechargingTime -= Time.deltaTime;
                     if (rechargingTime <= 0f)
                     {
                         rechargingTime = RECHARGE_DURATION;
                         shotAvailable = true;
                     }
-                }    
-            }
-        }
-
-        private void Update()
-        {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && 
-                shotAvailable && Input.GetButtonDown("Fire"))
-            {                
-                Instantiate(shipProjectilePrefab, transform.position, Quaternion.identity);
-                shotAvailable = false;   
+                }
+                if (shotAvailable && Input.GetButtonDown("Fire"))
+                {
+                    Instantiate(shipProjectilePrefab, transform.position, Quaternion.identity);
+                    shotAvailable = false;
+                }
             }
         }
     }

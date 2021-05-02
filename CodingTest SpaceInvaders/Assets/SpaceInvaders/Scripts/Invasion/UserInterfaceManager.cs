@@ -1,6 +1,4 @@
 using SpaceInvaders.Scripts.Scores;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -85,6 +83,7 @@ namespace SpaceInvaders.Scripts.Invasion
             }
             currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
             highScore.text = ScoreManager.Instance.HighScore.ToString();
+            Cursor.visible = false;
         }
 
         /// <summary>

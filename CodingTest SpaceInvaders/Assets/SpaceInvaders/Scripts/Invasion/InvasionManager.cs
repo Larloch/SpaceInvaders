@@ -2,13 +2,15 @@ using SpaceInvaders.Scripts.Configuration;
 using SpaceInvaders.Scripts.Scores;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    /// <summary>
+    ///     Singleton class that manage the game progression.
+    /// </summary>
     public class InvasionManager : MonoBehaviour
     {
         /// <summary>
@@ -31,13 +33,19 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         [SerializeField] private Block blockPrefab;
         
-        public enum GamePhase
+        /// <summary>
+        ///     Enumerator to describe the states of the game.
+        /// </summary>
+        public enum GameStates
         {
             Start,
             Play,
             Pause
         }
 
+        /// <summary>
+        ///     Enumerator for the aliens movement directions.
+        /// </summary>
         public enum Direction
         {
             Left,
@@ -72,7 +80,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     The percentage of the horizontal space occupied by the aliens at the beginning.
         /// </summary>
-        private const float ALIENS_HORIZONTAL_OCCUPATION = 0.7f;
+        private const float ALIENS_HORIZONTAL_OCCUPATION = 0.6f;
 
         /// <summary>
         ///     The percentage of the vertical space occupied by the aliens at the beginning.
@@ -98,7 +106,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Current Game Phase
         /// </summary>
-        public GamePhase CurrentPhase { get; private set; }
+        public GameStates CurrentPhase { get; private set; }
 
         private float _leftBorderPosition;
         /// <summary>
@@ -110,7 +118,7 @@ namespace SpaceInvaders.Scripts.Invasion
             {
                 if (_leftBorderPosition == 0)
                 {
-                    _leftBorderPosition = (-Camera.main.orthographicSize * Camera.main.aspect) + (playerShip.ShipSpriteRenderer.bounds.size.x / 2f);
+                    _leftBorderPosition = (-Camera.main.orthographicSize * Camera.main.aspect) + playerShip.ShipSpriteRenderer.bounds.size.x;
                 }
                 return _leftBorderPosition;
             }
@@ -126,7 +134,7 @@ namespace SpaceInvaders.Scripts.Invasion
             {
                 if (_rightBorderPosition == 0)
                 {
-                    _rightBorderPosition = (Camera.main.orthographicSize * Camera.main.aspect) - (playerShip.ShipSpriteRenderer.bounds.size.x / 2f);
+                    _rightBorderPosition = (Camera.main.orthographicSize * Camera.main.aspect) - playerShip.ShipSpriteRenderer.bounds.size.x;
                 }
                 return _rightBorderPosition;
             }
@@ -202,21 +210,18 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private int aliensLeft;
 
+        /// <summary>
+        ///     Attach the reference of this instance for its access as a singleton and initialize the game phase.
+        /// </summary>
         void Awake()
         {
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
-            CurrentPhase = GamePhase.Start;
+            CurrentPhase = GameStates.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
-            Cursor.visible = false;
-        }
-
-        void Start()
-        {
-            UserInterfaceManager.Instance.SetLevel(ScoreManager.Instance.CurrentLevel);
         }
 
         /// <summary>
@@ -227,6 +232,10 @@ namespace SpaceInvaders.Scripts.Invasion
             SceneManager.LoadScene("GameOver");
         }
 
+        /// <summary>
+        ///     When an alien die decrease the counter to
+        ///     determine when the level is won.
+        /// </summary>
         public void RemoveOneAlien()
         {
             aliensLeft--;
@@ -245,6 +254,10 @@ namespace SpaceInvaders.Scripts.Invasion
             SceneManager.LoadScene("Invasion");
         }
 
+        /// <summary>
+        ///     Instantiate all the aliens. The position is calculated considering the screen size, in a way that it should adapt well to
+        ///     various resolutions (better if in a landscape format).
+        /// </summary>
         private void SpawnAliens()
         {
             aliensGroup = new List<List<Alien>>();
@@ -278,6 +291,9 @@ namespace SpaceInvaders.Scripts.Invasion
             aliensContainer.SetActive(false);
         }
 
+        /// <summary>
+        ///     Instantiate the four protection blocks. 
+        /// </summary>
         private void SpawnBlocks()
         {
             float horizontalSpace = Camera.main.orthographicSize * Camera.main.aspect;
@@ -294,23 +310,27 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Handle the keys to move from a game state to another:
+        ///     to start, pause or resume the game.
+        /// </summary>
         private void Update()
         {
             switch (CurrentPhase)
             {
-                case GamePhase.Start:
+                case GameStates.Start:
                     if (Input.GetButtonUp("Fire") || Input.GetButtonUp("Quit"))
                     {
                         StartGame();
                     }
                     break;
-                case GamePhase.Play:
+                case GameStates.Play:
                     if (Input.GetButtonUp("Quit"))
                     {
                         PauseGame();
                     }
                     break;
-                case GamePhase.Pause:
+                case GameStates.Pause:
                     if (Input.GetButtonUp("Fire"))
                     {
                         ResumeGame();
@@ -323,20 +343,29 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Pause the game.
+        /// </summary>
         private void PauseGame()
         {
-            CurrentPhase = GamePhase.Pause;
+            CurrentPhase = GameStates.Pause;
             aliensContainer.SetActive(false);
             UserInterfaceManager.Instance.OpenPause();
         }
 
+        /// <summary>
+        ///     Resume the game from the pause state.
+        /// </summary>
         private void ResumeGame()
         {
             UserInterfaceManager.Instance.CloseCentral();
             aliensContainer.SetActive(true);
-            CurrentPhase = GamePhase.Play;
+            CurrentPhase = GameStates.Play;
         }
 
+        /// <summary>
+        ///     Start the game and start the coroutine to move the aliens.
+        /// </summary>
         private void StartGame()
         {
             ResumeGame();
@@ -345,6 +374,10 @@ namespace SpaceInvaders.Scripts.Invasion
             StartCoroutine(MoveAliens());
         }
 
+        /// <summary>
+        ///     Move the aliens in the typical SpaceInvaders manner (row by row, starting from the lowest one).
+        ///     The movement is willingly not smooth to replicate better the SpaceInvaders feeling.
+        /// </summary>
         private IEnumerator MoveAliens()
         {
             int currentRow = ALIENS_ROWS - 1;
@@ -352,9 +385,9 @@ namespace SpaceInvaders.Scripts.Invasion
             float verticalSpaceLeft = (HigherBorderPosition - LowerBorderPosition) * (1f - ALIENS_VERTICAL_OCCUPATION);
             float alienVerticalMovement = verticalSpaceLeft / ALIENS_VERTICAL_MOVEMENTS;
             bool moveVertical = false;
-            while (CurrentPhase != GamePhase.Start)
+            while (CurrentPhase != GameStates.Start)
             {
-                if (CurrentPhase == GamePhase.Play)
+                if (CurrentPhase == GameStates.Play)
                 {
                     foreach (Alien alien in aliensGroup[currentRow])
                     {

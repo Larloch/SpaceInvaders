@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SpaceInvaders.Scripts.Invasion
@@ -65,7 +64,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Update()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
+            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
             {
                 if (transform.position.x <= InvasionManager.Instance.LeftBorderPosition)
                 {
@@ -81,12 +80,13 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Coroutine that manage the shooting frequence of this robot.
         ///     The frequence for the probability check to choose if shoot or not depend on the alien speed.
+        ///     Note: Since the game is very light there is no need for an object pooler for the projectiles.
         /// </summary>
         private IEnumerator Shoot()
         {
             while (HealthPoints > 0)
             {
-                if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play && 
+                if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play && 
                     LowerAlien == null && Random.Range(0, InvasionManager.Instance.AliensShootingRange) == 0)
                 {
                     Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);                    

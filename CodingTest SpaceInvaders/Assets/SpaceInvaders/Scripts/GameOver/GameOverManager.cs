@@ -1,6 +1,4 @@
 using SpaceInvaders.Scripts.Scores;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,6 +31,7 @@ namespace SpaceInvaders.Scripts.GameOver
             playerName.text = ScoreManager.Instance.PlayerName;
             currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
             ScoreManager.Instance.SaveFinalScore();
+            Cursor.visible = true;
         }
 
         /// <summary>
