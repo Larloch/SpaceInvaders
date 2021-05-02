@@ -32,7 +32,7 @@ namespace SpaceInvaders.Scripts.Scores
         ///     SortedList of <(ScoreOwner, Score), Score> used to keep
         ///     updated the leaderboards during the games.
         /// </summary>
-        private SortedList<(string, int), int> leaderboardList;
+        private readonly SortedList<(string, int), int> leaderboardList;
 
         /// <summary>
         ///     Constructor that initialize the sortedlist used to keep in memory the current leaderboard.
@@ -112,10 +112,10 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         public class Item2Comparer : IComparer<(string, int)>
         {
-            int IComparer<(string, int)>.Compare((string, int) a, (string, int) b)
+            int IComparer<(string, int)>.Compare((string, int) x, (string, int) y)
             {
-                int result = b.Item2.CompareTo(a.Item2) * MAX_SIZE;
-                if (result == 0 && !b.Item1.Equals(a.Item1))
+                int result = y.Item2.CompareTo(x.Item2) * MAX_SIZE;
+                if (result == 0 && !y.Item1.Equals(x.Item1))
                 {
                     result = 1;
                 }
