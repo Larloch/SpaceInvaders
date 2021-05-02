@@ -211,6 +211,7 @@ namespace SpaceInvaders.Scripts.Invasion
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
+            Cursor.visible = false;
         }
 
         void Start()

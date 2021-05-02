@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    /// <summary>
+    ///     Class that represent an alien.
+    /// </summary>
     public class Alien : MonoBehaviour
     {
         /// <summary>
@@ -14,7 +17,14 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     The quantity of points gained destroying this alien.
         /// </summary>
-        public const int ALIEN_POINTS = 100;
+        private const int ALIEN_POINTS = 100;
+
+        /// <summary>
+        ///     The initial amount of HP of this alien.
+        ///     Note: In the current version of the game this quantity is the same 
+        ///     removed by a player projectile.
+        /// </summary>
+        private const int ALIEN_HEALTH_POINTS = 100;
 
         /// <summary>
         ///     The sprite renderer of the Alien.
@@ -38,13 +48,21 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         public Alien LowerAlien { get; set; }
 
+        /// <summary>
+        ///     Initialize the alien health and start the shooting coroutine.
+        ///     Note: Since the Aliens move in rows, its movement is managed by the InvasionManager.
+        /// </summary>
         void Start()
         {
             AlienSpriteRenderer = GetComponent<SpriteRenderer>();
-            HealthPoints = 100;
+            HealthPoints = ALIEN_HEALTH_POINTS;
             StartCoroutine(Shoot());
         }
 
+        /// <summary>
+        ///     Update the AliensDirection in the InvasionManager if its position is close to
+        ///     the borders of the game area.
+        /// </summary>
         void Update()
         {
             if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
@@ -60,6 +78,10 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Coroutine that manage the shooting frequence of this robot.
+        ///     The frequence for the probability check to choose if shoot or not depend on the alien speed.
+        /// </summary>
         private IEnumerator Shoot()
         {
             while (HealthPoints > 0)
@@ -73,6 +95,11 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Move on the X axis the alien to the given amount of space.
+        ///     Called by the InvasionManager.
+        /// </summary>
+        /// <param name="space">The amount of space (negative to move to the left)</param>
         public void MoveHorizontally(float space)
         {
             transform.position = new Vector3(
@@ -81,6 +108,12 @@ namespace SpaceInvaders.Scripts.Invasion
                             0f);
         }
 
+        /// <summary>
+        ///     Move on the Y axis the alien to the given amount of space.
+        ///     Called by the InvasionManager.
+        ///     If the robot reach the level of the blocks is GameOver.
+        /// </summary>
+        /// <param name="space"></param>
         public void MoveVertically(float space)
         {
             transform.position = new Vector3(
@@ -120,6 +153,11 @@ namespace SpaceInvaders.Scripts.Invasion
         }
 
 
+        /// <summary>
+        ///     Handle the collision with the blocks or eventually with the player.
+        ///     Note: Currently the GameOver is triggered before reaching the player position.
+        /// </summary>
+        /// <param name="col">The collider of the other object.</param>
         void OnTriggerEnter2D(Collider2D col)
         {
             if (col.gameObject.CompareTag("Block"))

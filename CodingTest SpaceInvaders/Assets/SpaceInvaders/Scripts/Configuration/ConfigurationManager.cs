@@ -58,8 +58,7 @@ namespace SpaceInvaders.Scripts.Configuration
 
         /// <summary>
         ///     Expose the aliens shooting frequence range parameter of the configuration.
-        ///     The range is calculated considering the current level, the initial range, and the minimum range
-        ///     (every 0.02 seconds each robot will try to shoot with a probability of 1/ShootingRange).
+        ///     The range is calculated considering the current level, the initial range, and the range limit.
         /// </summary>
         /// <param name="level">The current level</param>
         /// <returns>The aliens speed relative to the current level.</returns>
@@ -93,9 +92,10 @@ namespace SpaceInvaders.Scripts.Configuration
             
             /// <summary>
             ///     The initial upper bound of the range used to choose the probability
-            ///     that an alien has to shoot, every 0.02 seconds.
-            ///     E.g.: With the StartingShooting value set to 50, every fixed time frame (0.02 second) 
-            ///     each available alien will shoot with a probability of 1 / 50.
+            ///     that an alien has to shoot. This probability is calculated in fixed timeframes depending
+            ///     on the speed of the alien (higher speed means more frequent probability checks).
+            ///     E.g.: With the StartingShooting value set to 50, during the first level each available 
+            ///     alien will shoot with a probability of 1 / 50.
             /// </summary>
             public int StartingShooting;
             
@@ -103,7 +103,7 @@ namespace SpaceInvaders.Scripts.Configuration
             ///     This is the quantity of range that is removed by the current range to increase
             ///     the probability of the aliens to shoot.
             ///     E.g.: If in the previous level the range was 50, and the value of ShootingIncrease
-            ///     is 5, the next level the probability to shoot every 0.02 seconds is 1 / 45.
+            ///     is 5, the next level the probability to shoot is 1 / 45.
             /// </summary>
             public int ShootingIncrease;
             

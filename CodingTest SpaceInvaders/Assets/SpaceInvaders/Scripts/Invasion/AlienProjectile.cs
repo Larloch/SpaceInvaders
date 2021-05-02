@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    /// <summary>
+    ///     Class that represent the alien bullet, it handle its movement and its collisions.
+    /// </summary>
     public class AlienProjectile : MonoBehaviour
     {
         /// <summary>
@@ -16,11 +19,17 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private Rigidbody2D projectileRigidbody;
 
+        /// <summary>
+        ///     Detect and save the reference of this projectile rigidbody.
+        /// </summary>
         void Start()
         {
             projectileRigidbody = GetComponent<Rigidbody2D>();
         }
 
+        /// <summary>
+        ///     Every fixed time frame (0.02 sec) if the game is started and not in pause will move the projectile.
+        /// </summary>
         void FixedUpdate()
         {
             if (InvasionManager.Instance.CurrentPhase == InvasionManager.GamePhase.Play)
@@ -35,6 +44,10 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Handle the collision with other objects.
+        /// </summary>
+        /// <param name="col">The collider of the other object.</param>
         void OnTriggerEnter2D(Collider2D col)
         {
             if (col.gameObject.CompareTag("Block"))

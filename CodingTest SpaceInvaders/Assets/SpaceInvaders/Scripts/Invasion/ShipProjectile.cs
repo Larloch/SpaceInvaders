@@ -44,15 +44,19 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Handle the collision with other objects.
+        /// </summary>
+        /// <param name="col">The collider of the other object.</param>
         void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.tag == "Block")
+            if (col.gameObject.CompareTag("Block"))
             {
                 Destroy(gameObject);
                 return;
             }
 
-            if (col.gameObject.tag == "Alien")
+            if (col.gameObject.CompareTag("Alien"))
             {
                 col.GetComponent<Alien>().OnHit();
                 Destroy(gameObject);

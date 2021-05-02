@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    /// <summary>
+    ///     Class that represent a block that can be used to cover from the aliens bullets.
+    /// </summary>
     public class Block : MonoBehaviour
     {
         /// <summary>
