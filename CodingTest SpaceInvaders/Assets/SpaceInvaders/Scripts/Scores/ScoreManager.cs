@@ -37,6 +37,11 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         public int CurrentLevel { get; set; }
 
+        /// <summary>
+        ///     The leaderboard handler.
+        /// </summary>
+        private LeaderboardsSaver leaderboards;
+
         void Awake()
         {
             if (Instance != null)
@@ -44,9 +49,15 @@ namespace SpaceInvaders.Scripts.Scores
                 Destroy(gameObject);
                 return;
             }
-            
             Instance = this;
+            leaderboards = new LeaderboardsSaver();
+            (HighScoreOwner, HighScore) = leaderboards.GetHighScore();
             DontDestroyOnLoad(gameObject);
+        }
+
+        public void SaveFinalScore()
+        {
+            leaderboards.SaveScore(PlayerName, CurrentScore);
         }
     }
 }

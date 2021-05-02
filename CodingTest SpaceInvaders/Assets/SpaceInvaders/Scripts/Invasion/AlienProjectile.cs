@@ -37,20 +37,20 @@ namespace SpaceInvaders.Scripts.Invasion
 
         void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.tag == "Block")
+            if (col.gameObject.CompareTag("Block"))
             {
                 col.GetComponent<Block>().OnHit();
                 Destroy(gameObject);
                 return;
             }
 
-            if (col.gameObject.tag == "Projectile")
+            if (col.gameObject.CompareTag("Projectile"))
             {
                 Destroy(col.gameObject);
                 Destroy(gameObject);
             }
 
-            if (col.gameObject.tag == "Player")
+            if (col.gameObject.CompareTag("Player"))
             {
                 InvasionManager.Instance.GameOver();
                 Destroy(gameObject);

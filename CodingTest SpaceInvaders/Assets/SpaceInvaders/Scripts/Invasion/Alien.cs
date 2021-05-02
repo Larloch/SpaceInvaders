@@ -122,7 +122,7 @@ namespace SpaceInvaders.Scripts.Invasion
 
         void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.tag == "Block")
+            if (col.gameObject.CompareTag("Block"))
             {
                 col.GetComponent<Block>().AlienCollision();
                 HealthPoints = 0;
@@ -130,7 +130,7 @@ namespace SpaceInvaders.Scripts.Invasion
                 return;
             }
 
-            if (col.gameObject.tag == "Player")
+            if (col.gameObject.CompareTag("Player"))
             {
                 InvasionManager.Instance.GameOver();
             }
