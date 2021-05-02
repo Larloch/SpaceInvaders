@@ -42,7 +42,7 @@ namespace SpaceInvaders.Scripts.MainMenu
                 missingName.gameObject.SetActive(true);
                 return;
             }
-            ScoreManager.Instance.PlayerName = playerName.text;
+            ScoreManager.Instance.PlayerName = playerName.text.Trim();
             ScoreManager.Instance.CurrentScore = 0;
             ScoreManager.Instance.CurrentLevel = 1;
             SceneManager.LoadScene("Invasion");
