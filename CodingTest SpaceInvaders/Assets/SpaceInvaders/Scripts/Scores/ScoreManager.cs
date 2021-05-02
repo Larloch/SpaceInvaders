@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -58,6 +59,11 @@ namespace SpaceInvaders.Scripts.Scores
         public void SaveFinalScore()
         {
             leaderboards.SaveScore(PlayerName, CurrentScore);
+        }
+
+        public List<(string, int)> GetLeaderboardTop(int size)
+        {
+            return leaderboards.GetCompleteLeaderboards().Take(size).ToList();
         }
     }
 }

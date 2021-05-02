@@ -37,6 +37,7 @@ namespace SpaceInvaders.Scripts.Scores
 
         public (string, int) GetHighScore()
         {
+            Assert.IsNotNull(leaderboardList, "The leaderboards should have already been loaded.");
             if (leaderboardList.Count == 0)
             {
                 return (null, 0);
@@ -44,7 +45,7 @@ namespace SpaceInvaders.Scripts.Scores
             return leaderboardList.Keys[0];
         }
 
-        public List<(string, int)> Load()
+        public List<(string, int)> GetCompleteLeaderboards()
         {
             Assert.IsNotNull(leaderboardList, "The leaderboards should have already been loaded.");
             return leaderboardList.Keys.ToList();
