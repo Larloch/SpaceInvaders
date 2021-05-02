@@ -7,9 +7,11 @@ using UnityEngine.Assertions;
 
 namespace SpaceInvaders.Scripts.Invasion
 {
+    /// <summary>
+    ///     Singleton class that manage the UI of the Invasion scene.
+    /// </summary>
     public class UserInterfaceManager : MonoBehaviour
     {
-
         /// <summary>
         ///     ScoreManager is a singleton.
         /// </summary>
@@ -60,13 +62,20 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private const string PAUSE_MESSAGE = "PRESS: FIRE TO RESUME, ESC TO LEAVE";
 
-
+        /// <summary>
+        ///     Attach the reference of this instance for its access as a singleton.
+        /// </summary>
         void Awake()
         {
             Assert.IsNull(Instance, "Only one instance of UserInterfaceManager is allowed");
             Instance = this;
         }
 
+        /// <summary>
+        ///     Request from the ScoreManager the current player name, its previous score,
+        ///     and the hi-score and name of the best player. Then add this informations to
+        ///     the UI header.
+        /// </summary>
         void Start()
         {
             playerName.text = ScoreManager.Instance.PlayerName;
@@ -78,6 +87,12 @@ namespace SpaceInvaders.Scripts.Invasion
             highScore.text = ScoreManager.Instance.HighScore.ToString();
         }
 
+        /// <summary>
+        ///     Every time a robot get destroyed this is called to handle the visualization
+        ///     of the score (it also update the current score, and eventually the high score
+        ///     in the ScoreManager).
+        /// </summary>
+        /// <param name="points">The quantity of points to add.</param>
         public void AddPoints(int points)
         {
             ScoreManager.Instance.CurrentScore = ScoreManager.Instance.CurrentScore + points;
@@ -91,16 +106,26 @@ namespace SpaceInvaders.Scripts.Invasion
             }
         }
 
+        /// <summary>
+        ///     Set the UI visualization of the current level.
+        /// </summary>
+        /// <param name="level">The current level to visualize.</param>
         public void SetLevel(int level)
         {
             centralTitle.text = "LEVEL - " + level;
         }
 
+        /// <summary>
+        ///     Close the central panel.
+        /// </summary>
         public void CloseCentral()
         {
             centralPanel.SetActive(false);
         }
 
+        /// <summary>
+        ///     Open the central panel and set the Pause title and message.
+        /// </summary>
         public void OpenPause()
         {
             centralTitle.text = PAUSE_TITLE;

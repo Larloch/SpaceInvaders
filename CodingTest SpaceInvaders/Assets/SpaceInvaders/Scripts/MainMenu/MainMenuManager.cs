@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 namespace SpaceInvaders.Scripts.MainMenu
 {
+    /// <summary>
+    ///     Class used in the MainMenu scene to manage
+    ///     the button clicks and the loading of the othere scenes.
+    /// </summary>
     public class MainMenuManager : MonoBehaviour
     {
         /// <summary>

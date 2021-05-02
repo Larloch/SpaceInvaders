@@ -8,6 +8,11 @@ using UnityEngine.Assertions;
 
 namespace SpaceInvaders.Scripts.Scores
 {
+    /// <summary>
+    ///     Class used to handle the serialization and deserialization of the leaderboards.
+    ///     It saves a binary file in the playerprefs with current better players and top scores.
+    ///     A player can appear in the list multiple times with different scores.
+    /// </summary>
     public class LeaderboardsSaver
     {
         /// <summary>
@@ -29,6 +34,9 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         private SortedList<(string, int), int> leaderboardList;
 
+        /// <summary>
+        ///     Constructor that initialize the sortedlist used to keep in memory the current leaderboard.
+        /// </summary>
         public LeaderboardsSaver()
         {
             leaderboardList = new SortedList<(string, int), int>(MAX_SIZE + 1, new Item2Comparer());
@@ -46,6 +54,11 @@ namespace SpaceInvaders.Scripts.Scores
             }
         }
 
+        /// <summary>
+        ///     Get the best player in the leaderboard.
+        ///     If the list is empty, the string of the playerName returned will be null.
+        /// </summary>
+        /// <returns>A tuple with (playerName, score) of the best player.</returns>
         public (string, int) GetHighScore()
         {
             Assert.IsNotNull(leaderboardList, "The leaderboards should have already been loaded.");
@@ -56,12 +69,22 @@ namespace SpaceInvaders.Scripts.Scores
             return leaderboardList.Keys[0];
         }
 
+        /// <summary>
+        ///     Get all the leaderboard as a List of (playerName, int) tuples.
+        /// </summary>
+        /// <returns>List of (playerName, int) tuples.</returns>
         public List<(string, int)> GetCompleteLeaderboards()
         {
             Assert.IsNotNull(leaderboardList, "The leaderboards should have already been loaded.");
             return leaderboardList.Keys.ToList();
         }
 
+        /// <summary>
+        ///     Save the new score in the leaderboard (if it good enough to be in it).
+        ///     If the tuple (owner, score) is already il the leaderboard, the score will be discarded.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="score"></param>
         public void SaveScore(string owner, int score)
         {
             Assert.IsNotNull(leaderboardList, "The leaderboards should have already been loaded.");
@@ -83,6 +106,10 @@ namespace SpaceInvaders.Scripts.Scores
             leeaderboardsFile.Close();
         }
 
+        /// <summary>
+        ///     Class that implement the IComparer used to sort the leaderboard list.
+        ///     Handle the cases when two different player has the same score.
+        /// </summary>
         public class Item2Comparer : IComparer<(string, int)>
         {
             int IComparer<(string, int)>.Compare((string, int) a, (string, int) b)
@@ -96,11 +123,20 @@ namespace SpaceInvaders.Scripts.Scores
             }
         }
 
+        /// <summary>
+        ///     Serialization class used to save into binary format the leaderboard.
+        /// </summary>
         [Serializable]
         public class LeaderboardsStructure
         {
+            /// <summary>
+            ///     Ordered list with the playerNames (ordered according to the scores).
+            /// </summary>
             public List<string> ScoreOwners;
 
+            /// <summary>
+            ///     Ordered list of scores (from the highest to the lowest).
+            /// </summary>
             public List<int> Scores;
         }
     }

@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 namespace SpaceInvaders.Scripts.Scores
 {
+    /// <summary>
+    ///     Class used in the Leaderboards scene to manage
+    ///     the visualization of the leaderboard and the MainMenu button.
+    /// </summary>
     public class LeaderboardsManager : MonoBehaviour
     {
         /// <summary>
@@ -25,6 +29,9 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         [SerializeField] private List<TMP_Text> Scores;
 
+        /// <summary>
+        ///     Request to the ScoreManager the best players and add them to the leaderboard.
+        /// </summary>
         void Start()
         {
             List<(string, int)> topPlayers = ScoreManager.Instance.GetLeaderboardTop(LEADERBOARD_SIZE);
@@ -35,6 +42,9 @@ namespace SpaceInvaders.Scripts.Scores
             }
         }
 
+        /// <summary>
+        ///     Return to main menu.
+        /// </summary>
         public void OnMainMenuButtonClick()
         {
             SceneManager.LoadScene("MainMenu");

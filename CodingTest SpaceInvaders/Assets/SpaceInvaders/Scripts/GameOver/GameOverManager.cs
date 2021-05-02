@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 namespace SpaceInvaders.Scripts.GameOver
 {
+    /// <summary>
+    ///     Class used in the GameOver scene to manage
+    ///     the button clicks and to display the score in the last game.
+    /// </summary>
     public class GameOverManager : MonoBehaviour
     {
         /// <summary>
@@ -19,6 +23,11 @@ namespace SpaceInvaders.Scripts.GameOver
         /// </summary>
         [SerializeField] private TMP_Text currentScore;
 
+        /// <summary>
+        ///     Display the score of the player in the last game.
+        ///     Request also to save it in the leaderbord 
+        ///     (if the score is too low it will not be saved).
+        /// </summary>
         void Start()
         {
             playerName.text = ScoreManager.Instance.PlayerName;
