@@ -233,6 +233,41 @@ namespace SpaceInvaders.Scripts.Invasion
         }
 
         /// <summary>
+        ///     Handle the keys to move from a game state to another
+        ///     (to start, pause or resume the game).
+        /// </summary>
+        void Update()
+        {
+            if (Input.GetButtonUp("Fire"))
+            {
+                switch (CurrentPhase)
+                {
+                    case GameStates.Start:
+                        StartGame();
+                        break;
+                    case GameStates.Pause:
+                        ResumeGame();
+                        break;
+                }
+            }
+            else if (Input.GetButtonUp("Quit"))
+            {
+                switch (CurrentPhase)
+                {
+                    case GameStates.Start:
+                        StartGame();
+                        break;
+                    case GameStates.Play:
+                        PauseGame();
+                        break;
+                    case GameStates.Pause:
+                        GameOver();
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
         ///     Open the GameOver panel.
         /// </summary>
         public void GameOver()
@@ -254,7 +289,8 @@ namespace SpaceInvaders.Scripts.Invasion
         }
 
         /// <summary>
-        ///     Open the GameOver panel.
+        ///     Increase the level counter in the ScoreManager and
+        ///     reload the scene.
         /// </summary>
         private void LevelWon()
         {
@@ -315,39 +351,6 @@ namespace SpaceInvaders.Scripts.Invasion
                         LowerBorderPosition + BLOCKS_HEIGHT,
                         0f),
                     Quaternion.identity);
-            }
-        }
-
-        /// <summary>
-        ///     Handle the keys to move from a game state to another:
-        ///     to start, pause or resume the game.
-        /// </summary>
-        private void Update()
-        {
-            switch (CurrentPhase)
-            {
-                case GameStates.Start:
-                    if (Input.GetButtonUp("Fire") || Input.GetButtonUp("Quit"))
-                    {
-                        StartGame();
-                    }
-                    break;
-                case GameStates.Play:
-                    if (Input.GetButtonUp("Quit"))
-                    {
-                        PauseGame();
-                    }
-                    break;
-                case GameStates.Pause:
-                    if (Input.GetButtonUp("Fire"))
-                    {
-                        ResumeGame();
-                    }
-                    if (Input.GetButtonUp("Quit"))
-                    {
-                        GameOver();
-                    }
-                    break;
             }
         }
 

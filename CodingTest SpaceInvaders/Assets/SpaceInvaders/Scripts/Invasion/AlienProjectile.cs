@@ -50,7 +50,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             if (col.gameObject.CompareTag("Block"))
             {
-                col.GetComponent<Block>().OnHit();
+                col.GetComponent<Block>().OnAlienHit();
                 Destroy(gameObject);
                 return;
             }

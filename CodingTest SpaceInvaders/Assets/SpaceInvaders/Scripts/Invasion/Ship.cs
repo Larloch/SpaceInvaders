@@ -26,7 +26,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     This value is used to calculate the intervall between a shot and 
         ///     the following one (in seconds).
         /// </summary>
-        public const float RECHARGE_DURATION = 0.4f;
+        public const float RELOAD_DURATION = 0.4f;
 
         /// <summary>
         ///     Flag enabled when the next shot is available.
@@ -36,7 +36,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Countdown to the next projectile recharge.
         /// </summary>
-        private float rechargingTime = RECHARGE_DURATION;
+        private float reloadingTime = RELOAD_DURATION;
 
         /// <summary>
         ///     Handle the player movement inputs.
@@ -68,17 +68,18 @@ namespace SpaceInvaders.Scripts.Invasion
 
         /// <summary>
         ///     Handle the shooting input.
+        ///     This can stay in the regular Update because the shots have a reload time.
         /// </summary>
-        private void Update()
+        void Update()
         {
             if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
             {
                 if (!shotAvailable)
                 {
-                    rechargingTime -= Time.deltaTime;
-                    if (rechargingTime <= 0f)
+                    reloadingTime -= Time.deltaTime;
+                    if (reloadingTime <= 0f)
                     {
-                        rechargingTime = RECHARGE_DURATION;
+                        reloadingTime = RELOAD_DURATION;
                         shotAvailable = true;
                     }
                 }

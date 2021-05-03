@@ -120,7 +120,7 @@ namespace SpaceInvaders.Scripts.Invasion
                             transform.position.x,
                             transform.position.y - space,
                             0f);
-            if (transform.position.y <= -Camera.main.orthographicSize + InvasionManager.BLOCKS_HEIGHT)
+            if (HealthPoints > 0 && transform.position.y <= -Camera.main.orthographicSize + InvasionManager.BLOCKS_HEIGHT)
             {
                 InvasionManager.Instance.GameOver();
             }
@@ -129,7 +129,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Called when a player projectile hit this alien.
         /// </summary>
-        public void OnHit()
+        public void OnProjectileHit()
         {
             HealthPoints -= 100;
             if (HealthPoints <= 0)
@@ -162,7 +162,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             if (col.gameObject.CompareTag("Block"))
             {
-                col.GetComponent<Block>().AlienCollision();
+                col.GetComponent<Block>().OnAlienCrash();
                 HealthPoints = 0;
                 Die();
                 return;

@@ -30,7 +30,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     When an alien projectile hit this block.
         /// </summary>
-        public void OnHit()
+        public void OnAlienHit()
         {
             resistance--;
             if (resistance > 0)
@@ -52,7 +52,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     When an alien crash on this block.
         /// </summary>
-        public void AlienCollision()
+        public void OnAlienCrash()
         {
             Destroy(gameObject);
         }
