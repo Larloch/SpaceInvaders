@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
-  <Summary numSequencePoints="546" visitedSequencePoints="37" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="6.78" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="18" visitedMethods="9" numMethods="90" />
+  <Summary numSequencePoints="542" visitedSequencePoints="53" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="9.78" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="18" visitedMethods="13" numMethods="90" />
   <Modules>
     <Module>
-      <Summary numSequencePoints="546" visitedSequencePoints="37" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="6.78" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="18" visitedMethods="9" numMethods="90" />
+      <Summary numSequencePoints="542" visitedSequencePoints="53" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="9.78" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="4" numClasses="18" visitedMethods="13" numMethods="90" />
       <ModuleTime>0001-01-01T00:00:00</ModuleTime>
       <ModuleName>SpaceInvaders</ModuleName>
       <Files>
@@ -24,7 +24,7 @@
       </Files>
       <Classes>
         <Class>
-          <Summary numSequencePoints="21" visitedSequencePoints="13" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="61.90" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="3" numMethods="4" />
+          <Summary numSequencePoints="21" visitedSequencePoints="18" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="85.71" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="4" />
           <FullName>SpaceInvaders.Scripts.ServiceLocator</FullName>
           <Methods>
             <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
@@ -33,11 +33,11 @@
               <Name>static T SpaceInvaders.Scripts.ServiceLocator::Get[T]()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="12" uspid="1" ordinal="0" offset="0" sl="24" sc="0" el="24" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="12" uspid="2" ordinal="0" offset="1" sl="25" sc="0" el="25" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="12" uspid="3" ordinal="0" offset="17" sl="26" sc="0" el="26" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="12" uspid="4" ordinal="0" offset="45" sl="28" sc="0" el="28" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="12" uspid="5" ordinal="0" offset="64" sl="29" sc="0" el="29" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="18" uspid="1" ordinal="0" offset="0" sl="24" sc="0" el="24" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="18" uspid="2" ordinal="0" offset="1" sl="25" sc="0" el="25" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="18" uspid="3" ordinal="0" offset="17" sl="26" sc="0" el="26" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="18" uspid="4" ordinal="0" offset="45" sl="28" sc="0" el="28" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="18" uspid="5" ordinal="0" offset="64" sl="29" sc="0" el="29" ec="0" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -47,30 +47,30 @@
               <Name>static System.Void SpaceInvaders.Scripts.ServiceLocator::Register[T](T)</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="6" ordinal="0" offset="0" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="7" ordinal="0" offset="1" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="8" ordinal="0" offset="17" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="9" ordinal="0" offset="35" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="10" ordinal="0" offset="36" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="11" ordinal="0" offset="54" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="6" ordinal="0" offset="0" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="7" ordinal="0" offset="1" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="8" ordinal="0" offset="17" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="9" ordinal="0" offset="35" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="10" ordinal="0" offset="36" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="11" ordinal="0" offset="54" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="1" />
                 <SequencePoint vc="0" uspid="12" ordinal="0" offset="57" sl="45" sc="0" el="45" ec="0" bec="0" bev="0" fileid="1" />
                 <SequencePoint vc="0" uspid="13" ordinal="0" offset="58" sl="46" sc="0" el="46" ec="0" bec="0" bev="0" fileid="1" />
                 <SequencePoint vc="0" uspid="14" ordinal="0" offset="76" sl="47" sc="0" el="47" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="1" uspid="15" ordinal="0" offset="77" sl="48" sc="0" el="48" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="15" ordinal="0" offset="77" sl="48" sc="0" el="48" ec="0" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
             </Method>
-            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="5" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663299</MetadataToken>
               <Name>static System.Void SpaceInvaders.Scripts.ServiceLocator::Unregister[T]()</Name>
               <FileRef uid="1" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="16" ordinal="0" offset="0" sl="55" sc="0" el="55" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="17" ordinal="0" offset="1" sl="56" sc="0" el="56" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="18" ordinal="0" offset="17" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="19" ordinal="0" offset="50" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="1" />
-                <SequencePoint vc="0" uspid="20" ordinal="0" offset="62" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="16" ordinal="0" offset="0" sl="55" sc="0" el="55" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="17" ordinal="0" offset="1" sl="56" sc="0" el="56" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="18" ordinal="0" offset="17" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="19" ordinal="0" offset="50" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="20" ordinal="0" offset="62" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="1" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -420,7 +420,7 @@
           </Methods>
         </Class>
         <Class>
-          <Summary numSequencePoints="65" visitedSequencePoints="18" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="27.69" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="4" numMethods="13" />
+          <Summary numSequencePoints="61" visitedSequencePoints="29" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="47.54" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="7" numMethods="13" />
           <FullName>SpaceInvaders.Scripts.Invasion.Alien</FullName>
           <Methods>
             <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
@@ -429,7 +429,7 @@
               <Name>System.Int32 SpaceInvaders.Scripts.Invasion.Alien::get_HealthPoints()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="124" ordinal="0" offset="0" sl="31" sc="35" el="31" ec="35" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="3" uspid="124" ordinal="0" offset="0" sl="31" sc="35" el="31" ec="35" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -439,17 +439,17 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::set_HealthPoints(System.Int32)</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="125" ordinal="0" offset="0" sl="31" sc="40" el="31" ec="40" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="2" uspid="125" ordinal="0" offset="0" sl="31" sc="40" el="31" ec="40" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
-            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
-              <Summary numSequencePoints="1" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <Summary numSequencePoints="1" visitedSequencePoints="1" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663330</MetadataToken>
               <Name>SpaceInvaders.Scripts.Invasion.Alien SpaceInvaders.Scripts.Invasion.Alien::get_UpperAlien()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="126" ordinal="0" offset="0" sl="37" sc="0" el="37" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="126" ordinal="0" offset="0" sl="37" sc="35" el="37" ec="35" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -496,29 +496,25 @@
               </SequencePoints>
               <BranchPoints />
             </Method>
-            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="70.59" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="17" visitedSequencePoints="12" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="70.59" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="69.23" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="13" visitedSequencePoints="9" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="69.23" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663335</MetadataToken>
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::Update()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="4" uspid="134" ordinal="0" offset="0" sl="60" sc="9" el="60" ec="9" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="4" uspid="135" ordinal="0" offset="1" sl="61" sc="13" el="61" ec="13" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="136" ordinal="0" offset="18" sl="62" sc="13" el="62" ec="13" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="137" ordinal="0" offset="19" sl="63" sc="17" el="63" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="138" ordinal="0" offset="46" sl="64" sc="17" el="64" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="139" ordinal="0" offset="67" sl="65" sc="17" el="65" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="140" ordinal="0" offset="102" sl="66" sc="17" el="66" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="141" ordinal="0" offset="103" sl="67" sc="21" el="67" ec="21" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="142" ordinal="0" offset="114" sl="68" sc="21" el="68" ec="21" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="143" ordinal="0" offset="126" sl="69" sc="17" el="69" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="144" ordinal="0" offset="129" sl="70" sc="22" el="70" ec="22" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="145" ordinal="0" offset="164" sl="71" sc="17" el="71" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="146" ordinal="0" offset="165" sl="72" sc="21" el="72" ec="21" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="147" ordinal="0" offset="176" sl="73" sc="21" el="73" ec="21" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="148" ordinal="0" offset="188" sl="74" sc="17" el="74" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="2" uspid="149" ordinal="0" offset="189" sl="75" sc="13" el="75" ec="13" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="4" uspid="150" ordinal="0" offset="190" sl="76" sc="9" el="76" ec="9" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="6" uspid="134" ordinal="0" offset="0" sl="60" sc="9" el="60" ec="9" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="6" uspid="135" ordinal="0" offset="1" sl="61" sc="13" el="61" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="4" uspid="136" ordinal="0" offset="15" sl="62" sc="13" el="62" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="4" uspid="137" ordinal="0" offset="16" sl="63" sc="17" el="63" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="4" uspid="138" ordinal="0" offset="51" sl="64" sc="17" el="64" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="4" uspid="139" ordinal="0" offset="52" sl="65" sc="21" el="65" ec="21" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="4" uspid="140" ordinal="0" offset="64" sl="66" sc="17" el="66" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="141" ordinal="0" offset="67" sl="67" sc="22" el="67" ec="22" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="142" ordinal="0" offset="102" sl="68" sc="17" el="68" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="143" ordinal="0" offset="103" sl="69" sc="21" el="69" ec="21" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="144" ordinal="0" offset="115" sl="70" sc="17" el="70" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="4" uspid="145" ordinal="0" offset="116" sl="71" sc="13" el="71" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="6" uspid="146" ordinal="0" offset="117" sl="72" sc="9" el="72" ec="9" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -528,9 +524,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::MoveHorizontally(System.Single)</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="151" ordinal="0" offset="0" sl="102" sc="0" el="102" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="152" ordinal="0" offset="1" sl="103" sc="0" el="103" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="153" ordinal="0" offset="57" sl="107" sc="0" el="107" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="147" ordinal="0" offset="0" sl="98" sc="0" el="98" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="148" ordinal="0" offset="1" sl="99" sc="0" el="99" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="149" ordinal="0" offset="57" sl="103" sc="0" el="103" ec="0" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -540,47 +536,47 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::MoveVertically(System.Single)</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="154" ordinal="0" offset="0" sl="116" sc="0" el="116" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="155" ordinal="0" offset="1" sl="117" sc="0" el="117" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="156" ordinal="0" offset="57" sl="121" sc="0" el="121" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="157" ordinal="0" offset="111" sl="122" sc="0" el="122" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="158" ordinal="0" offset="112" sl="123" sc="0" el="123" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="159" ordinal="0" offset="123" sl="124" sc="0" el="124" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="160" ordinal="0" offset="124" sl="125" sc="0" el="125" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="150" ordinal="0" offset="0" sl="112" sc="0" el="112" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="151" ordinal="0" offset="1" sl="113" sc="0" el="113" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="152" ordinal="0" offset="57" sl="117" sc="0" el="117" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="153" ordinal="0" offset="111" sl="118" sc="0" el="118" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="154" ordinal="0" offset="112" sl="119" sc="0" el="119" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="155" ordinal="0" offset="123" sl="120" sc="0" el="120" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="156" ordinal="0" offset="124" sl="121" sc="0" el="121" ec="0" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
-            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663339</MetadataToken>
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::OnProjectileHit()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="161" ordinal="0" offset="0" sl="131" sc="0" el="131" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="162" ordinal="0" offset="1" sl="132" sc="0" el="132" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="163" ordinal="0" offset="17" sl="133" sc="0" el="133" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="164" ordinal="0" offset="33" sl="134" sc="0" el="134" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="165" ordinal="0" offset="34" sl="135" sc="0" el="135" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="166" ordinal="0" offset="41" sl="136" sc="0" el="136" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="167" ordinal="0" offset="42" sl="137" sc="0" el="137" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="157" ordinal="0" offset="0" sl="127" sc="9" el="127" ec="9" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="158" ordinal="0" offset="1" sl="128" sc="13" el="128" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="159" ordinal="0" offset="17" sl="129" sc="13" el="129" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="160" ordinal="0" offset="33" sl="130" sc="13" el="130" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="161" ordinal="0" offset="34" sl="131" sc="17" el="131" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="162" ordinal="0" offset="41" sl="132" sc="13" el="132" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="163" ordinal="0" offset="42" sl="133" sc="9" el="133" ec="9" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
-            <Method visited="false" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="0.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
-              <Summary numSequencePoints="9" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="1" />
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="66.67" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="9" visitedSequencePoints="6" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="66.67" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
               <MetadataToken>100663340</MetadataToken>
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::Die()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="168" ordinal="0" offset="0" sl="143" sc="0" el="143" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="169" ordinal="0" offset="1" sl="144" sc="0" el="144" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="170" ordinal="0" offset="17" sl="145" sc="0" el="145" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="171" ordinal="0" offset="18" sl="146" sc="0" el="146" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="172" ordinal="0" offset="36" sl="147" sc="0" el="147" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="173" ordinal="0" offset="37" sl="148" sc="0" el="148" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="174" ordinal="0" offset="48" sl="149" sc="0" el="149" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="175" ordinal="0" offset="61" sl="150" sc="0" el="150" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="176" ordinal="0" offset="74" sl="151" sc="0" el="151" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="164" ordinal="0" offset="0" sl="139" sc="9" el="139" ec="9" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="165" ordinal="0" offset="1" sl="140" sc="13" el="140" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="166" ordinal="0" offset="17" sl="141" sc="13" el="141" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="167" ordinal="0" offset="18" sl="142" sc="17" el="142" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="168" ordinal="0" offset="36" sl="143" sc="13" el="143" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="169" ordinal="0" offset="37" sl="144" sc="13" el="144" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="170" ordinal="0" offset="48" sl="145" sc="13" el="145" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="171" ordinal="0" offset="61" sl="146" sc="13" el="146" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="172" ordinal="0" offset="74" sl="147" sc="9" el="147" ec="9" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -590,18 +586,18 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Alien::OnTriggerEnter2D(UnityEngine.Collider2D)</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="177" ordinal="0" offset="0" sl="160" sc="0" el="160" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="178" ordinal="0" offset="1" sl="161" sc="0" el="161" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="179" ordinal="0" offset="21" sl="162" sc="0" el="162" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="180" ordinal="0" offset="22" sl="163" sc="0" el="163" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="181" ordinal="0" offset="34" sl="164" sc="0" el="164" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="182" ordinal="0" offset="42" sl="165" sc="0" el="165" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="183" ordinal="0" offset="49" sl="166" sc="0" el="166" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="184" ordinal="0" offset="51" sl="169" sc="0" el="169" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="185" ordinal="0" offset="71" sl="170" sc="0" el="170" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="186" ordinal="0" offset="72" sl="171" sc="0" el="171" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="187" ordinal="0" offset="83" sl="172" sc="0" el="172" ec="0" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="188" ordinal="0" offset="84" sl="173" sc="0" el="173" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="173" ordinal="0" offset="0" sl="156" sc="0" el="156" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="174" ordinal="0" offset="1" sl="157" sc="0" el="157" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="175" ordinal="0" offset="21" sl="158" sc="0" el="158" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="176" ordinal="0" offset="22" sl="159" sc="0" el="159" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="177" ordinal="0" offset="34" sl="160" sc="0" el="160" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="178" ordinal="0" offset="42" sl="161" sc="0" el="161" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="179" ordinal="0" offset="49" sl="162" sc="0" el="162" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="180" ordinal="0" offset="51" sl="165" sc="0" el="165" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="181" ordinal="0" offset="71" sl="166" sc="0" el="166" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="182" ordinal="0" offset="72" sl="167" sc="0" el="167" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="183" ordinal="0" offset="83" sl="168" sc="0" el="168" ec="0" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="184" ordinal="0" offset="84" sl="169" sc="0" el="169" ec="0" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -617,9 +613,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.AlienProjectile::Start()</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="189" ordinal="0" offset="0" sl="24" sc="0" el="24" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="190" ordinal="0" offset="1" sl="25" sc="0" el="25" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="191" ordinal="0" offset="13" sl="26" sc="0" el="26" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="185" ordinal="0" offset="0" sl="24" sc="0" el="24" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="186" ordinal="0" offset="1" sl="25" sc="0" el="25" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="187" ordinal="0" offset="13" sl="26" sc="0" el="26" ec="0" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -629,16 +625,16 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.AlienProjectile::FixedUpdate()</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="192" ordinal="0" offset="0" sl="32" sc="0" el="32" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="193" ordinal="0" offset="1" sl="33" sc="0" el="33" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="194" ordinal="0" offset="15" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="195" ordinal="0" offset="16" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="196" ordinal="0" offset="82" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="197" ordinal="0" offset="114" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="198" ordinal="0" offset="115" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="199" ordinal="0" offset="127" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="200" ordinal="0" offset="128" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="201" ordinal="0" offset="129" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="188" ordinal="0" offset="0" sl="32" sc="0" el="32" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="189" ordinal="0" offset="1" sl="33" sc="0" el="33" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="190" ordinal="0" offset="15" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="191" ordinal="0" offset="16" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="192" ordinal="0" offset="82" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="193" ordinal="0" offset="114" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="194" ordinal="0" offset="115" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="195" ordinal="0" offset="127" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="196" ordinal="0" offset="128" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="197" ordinal="0" offset="129" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -648,23 +644,23 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.AlienProjectile::OnTriggerEnter2D(UnityEngine.Collider2D)</Name>
               <FileRef uid="7" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="202" ordinal="0" offset="0" sl="50" sc="0" el="50" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="203" ordinal="0" offset="1" sl="51" sc="0" el="51" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="204" ordinal="0" offset="21" sl="52" sc="0" el="52" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="205" ordinal="0" offset="22" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="206" ordinal="0" offset="34" sl="54" sc="0" el="54" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="207" ordinal="0" offset="46" sl="55" sc="0" el="55" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="208" ordinal="0" offset="48" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="209" ordinal="0" offset="68" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="210" ordinal="0" offset="69" sl="60" sc="0" el="60" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="211" ordinal="0" offset="81" sl="61" sc="0" el="61" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="212" ordinal="0" offset="93" sl="62" sc="0" el="62" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="213" ordinal="0" offset="94" sl="64" sc="0" el="64" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="214" ordinal="0" offset="114" sl="65" sc="0" el="65" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="215" ordinal="0" offset="115" sl="66" sc="0" el="66" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="216" ordinal="0" offset="126" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="217" ordinal="0" offset="138" sl="68" sc="0" el="68" ec="0" bec="0" bev="0" fileid="7" />
-                <SequencePoint vc="0" uspid="218" ordinal="0" offset="139" sl="69" sc="0" el="69" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="198" ordinal="0" offset="0" sl="50" sc="0" el="50" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="199" ordinal="0" offset="1" sl="51" sc="0" el="51" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="200" ordinal="0" offset="21" sl="52" sc="0" el="52" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="201" ordinal="0" offset="22" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="202" ordinal="0" offset="34" sl="54" sc="0" el="54" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="203" ordinal="0" offset="46" sl="55" sc="0" el="55" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="204" ordinal="0" offset="48" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="205" ordinal="0" offset="68" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="206" ordinal="0" offset="69" sl="60" sc="0" el="60" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="207" ordinal="0" offset="81" sl="61" sc="0" el="61" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="208" ordinal="0" offset="93" sl="62" sc="0" el="62" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="209" ordinal="0" offset="94" sl="64" sc="0" el="64" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="210" ordinal="0" offset="114" sl="65" sc="0" el="65" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="211" ordinal="0" offset="115" sl="66" sc="0" el="66" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="212" ordinal="0" offset="126" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="213" ordinal="0" offset="138" sl="68" sc="0" el="68" ec="0" bec="0" bev="0" fileid="7" />
+                <SequencePoint vc="0" uspid="214" ordinal="0" offset="139" sl="69" sc="0" el="69" ec="0" bec="0" bev="0" fileid="7" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -680,15 +676,15 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Block::OnAlienHit()</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="219" ordinal="0" offset="0" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="220" ordinal="0" offset="1" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="221" ordinal="0" offset="15" sl="36" sc="0" el="36" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="222" ordinal="0" offset="28" sl="37" sc="0" el="37" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="223" ordinal="0" offset="29" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="224" ordinal="0" offset="89" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="225" ordinal="0" offset="149" sl="46" sc="0" el="46" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="226" ordinal="0" offset="151" sl="48" sc="0" el="48" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="227" ordinal="0" offset="163" sl="49" sc="0" el="49" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="215" ordinal="0" offset="0" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="216" ordinal="0" offset="1" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="217" ordinal="0" offset="15" sl="36" sc="0" el="36" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="218" ordinal="0" offset="28" sl="37" sc="0" el="37" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="219" ordinal="0" offset="29" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="220" ordinal="0" offset="89" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="221" ordinal="0" offset="149" sl="46" sc="0" el="46" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="222" ordinal="0" offset="151" sl="48" sc="0" el="48" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="223" ordinal="0" offset="163" sl="49" sc="0" el="49" ec="0" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -698,9 +694,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Block::OnAlienCrash()</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="228" ordinal="0" offset="0" sl="56" sc="0" el="56" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="229" ordinal="0" offset="1" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="8" />
-                <SequencePoint vc="0" uspid="230" ordinal="0" offset="13" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="224" ordinal="0" offset="0" sl="56" sc="0" el="56" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="225" ordinal="0" offset="1" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="226" ordinal="0" offset="13" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -710,7 +706,7 @@
               <Name>SpaceInvaders.Scripts.Invasion.Block::Block()</Name>
               <FileRef uid="8" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="231" ordinal="0" offset="0" sl="28" sc="0" el="28" ec="0" bec="0" bev="0" fileid="8" />
+                <SequencePoint vc="0" uspid="227" ordinal="0" offset="0" sl="28" sc="0" el="28" ec="0" bec="0" bev="0" fileid="8" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -726,13 +722,13 @@
               <Name>System.Single SpaceInvaders.Scripts.Invasion.InvasionManager::get_LeftBorderPosition()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="232" ordinal="0" offset="0" sl="121" sc="0" el="121" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="233" ordinal="0" offset="1" sl="122" sc="0" el="122" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="234" ordinal="0" offset="18" sl="123" sc="0" el="123" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="235" ordinal="0" offset="19" sl="124" sc="0" el="124" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="236" ordinal="0" offset="77" sl="125" sc="0" el="125" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="237" ordinal="0" offset="78" sl="126" sc="0" el="126" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="238" ordinal="0" offset="87" sl="127" sc="0" el="127" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="228" ordinal="0" offset="0" sl="123" sc="0" el="123" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="229" ordinal="0" offset="1" sl="124" sc="0" el="124" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="230" ordinal="0" offset="18" sl="125" sc="0" el="125" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="231" ordinal="0" offset="19" sl="126" sc="0" el="126" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="232" ordinal="0" offset="77" sl="127" sc="0" el="127" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="233" ordinal="0" offset="78" sl="128" sc="0" el="128" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="234" ordinal="0" offset="87" sl="129" sc="0" el="129" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -742,13 +738,13 @@
               <Name>System.Single SpaceInvaders.Scripts.Invasion.InvasionManager::get_RightBorderPosition()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="239" ordinal="0" offset="0" sl="137" sc="0" el="137" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="240" ordinal="0" offset="1" sl="138" sc="0" el="138" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="241" ordinal="0" offset="18" sl="139" sc="0" el="139" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="242" ordinal="0" offset="19" sl="140" sc="0" el="140" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="243" ordinal="0" offset="76" sl="141" sc="0" el="141" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="244" ordinal="0" offset="77" sl="142" sc="0" el="142" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="245" ordinal="0" offset="86" sl="143" sc="0" el="143" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="235" ordinal="0" offset="0" sl="139" sc="0" el="139" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="236" ordinal="0" offset="1" sl="140" sc="0" el="140" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="237" ordinal="0" offset="18" sl="141" sc="0" el="141" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="238" ordinal="0" offset="19" sl="142" sc="0" el="142" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="239" ordinal="0" offset="76" sl="143" sc="0" el="143" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="240" ordinal="0" offset="77" sl="144" sc="0" el="144" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="241" ordinal="0" offset="86" sl="145" sc="0" el="145" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -758,13 +754,13 @@
               <Name>System.Single SpaceInvaders.Scripts.Invasion.InvasionManager::get_HigherBorderPosition()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="246" ordinal="0" offset="0" sl="153" sc="0" el="153" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="247" ordinal="0" offset="1" sl="154" sc="0" el="154" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="248" ordinal="0" offset="18" sl="155" sc="0" el="155" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="249" ordinal="0" offset="19" sl="156" sc="0" el="156" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="250" ordinal="0" offset="41" sl="157" sc="0" el="157" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="251" ordinal="0" offset="42" sl="158" sc="0" el="158" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="252" ordinal="0" offset="51" sl="159" sc="0" el="159" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="242" ordinal="0" offset="0" sl="155" sc="0" el="155" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="243" ordinal="0" offset="1" sl="156" sc="0" el="156" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="244" ordinal="0" offset="18" sl="157" sc="0" el="157" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="245" ordinal="0" offset="19" sl="158" sc="0" el="158" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="246" ordinal="0" offset="41" sl="159" sc="0" el="159" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="247" ordinal="0" offset="42" sl="160" sc="0" el="160" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="248" ordinal="0" offset="51" sl="161" sc="0" el="161" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -774,13 +770,13 @@
               <Name>System.Single SpaceInvaders.Scripts.Invasion.InvasionManager::get_LowerBorderPosition()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="253" ordinal="0" offset="0" sl="169" sc="0" el="169" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="254" ordinal="0" offset="1" sl="170" sc="0" el="170" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="255" ordinal="0" offset="18" sl="171" sc="0" el="171" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="256" ordinal="0" offset="19" sl="172" sc="0" el="172" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="257" ordinal="0" offset="36" sl="173" sc="0" el="173" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="258" ordinal="0" offset="37" sl="174" sc="0" el="174" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="259" ordinal="0" offset="46" sl="175" sc="0" el="175" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="249" ordinal="0" offset="0" sl="171" sc="0" el="171" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="250" ordinal="0" offset="1" sl="172" sc="0" el="172" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="251" ordinal="0" offset="18" sl="173" sc="0" el="173" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="252" ordinal="0" offset="19" sl="174" sc="0" el="174" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="253" ordinal="0" offset="36" sl="175" sc="0" el="175" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="254" ordinal="0" offset="37" sl="176" sc="0" el="176" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="255" ordinal="0" offset="46" sl="177" sc="0" el="177" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -790,7 +786,7 @@
               <Name>System.Single SpaceInvaders.Scripts.Invasion.InvasionManager::get_AliensSpeed()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="260" ordinal="0" offset="0" sl="181" sc="36" el="181" ec="36" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="1" uspid="256" ordinal="0" offset="0" sl="183" sc="36" el="183" ec="36" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -800,7 +796,7 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::set_AliensSpeed(System.Single)</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="261" ordinal="0" offset="0" sl="181" sc="0" el="181" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="257" ordinal="0" offset="0" sl="183" sc="0" el="183" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -810,7 +806,7 @@
               <Name>System.Int32 SpaceInvaders.Scripts.Invasion.InvasionManager::get_AliensShootingRange()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="262" ordinal="0" offset="0" sl="187" sc="0" el="187" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="258" ordinal="0" offset="0" sl="189" sc="0" el="189" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -820,7 +816,7 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::set_AliensShootingRange(System.Int32)</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="263" ordinal="0" offset="0" sl="187" sc="0" el="187" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="259" ordinal="0" offset="0" sl="189" sc="0" el="189" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -830,7 +826,7 @@
               <Name>SpaceInvaders.Scripts.Invasion.InvasionManager/Direction SpaceInvaders.Scripts.Invasion.InvasionManager::get_AliensDirection()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="264" ordinal="0" offset="0" sl="192" sc="0" el="192" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="260" ordinal="0" offset="0" sl="194" sc="0" el="194" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -840,7 +836,7 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::set_AliensDirection(SpaceInvaders.Scripts.Invasion.InvasionManager/Direction)</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="265" ordinal="0" offset="0" sl="192" sc="0" el="192" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="261" ordinal="0" offset="0" sl="194" sc="0" el="194" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -850,14 +846,14 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::Awake()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="266" ordinal="0" offset="0" sl="220" sc="0" el="220" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="267" ordinal="0" offset="1" sl="221" sc="0" el="221" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="268" ordinal="0" offset="8" sl="222" sc="0" el="222" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="269" ordinal="0" offset="16" sl="223" sc="0" el="223" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="270" ordinal="0" offset="23" sl="224" sc="0" el="224" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="271" ordinal="0" offset="31" sl="225" sc="0" el="225" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="272" ordinal="0" offset="38" sl="226" sc="0" el="226" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="273" ordinal="0" offset="45" sl="227" sc="0" el="227" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="262" ordinal="0" offset="0" sl="222" sc="0" el="222" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="263" ordinal="0" offset="1" sl="223" sc="0" el="223" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="264" ordinal="0" offset="8" sl="224" sc="0" el="224" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="265" ordinal="0" offset="16" sl="225" sc="0" el="225" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="266" ordinal="0" offset="23" sl="226" sc="0" el="226" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="267" ordinal="0" offset="31" sl="227" sc="0" el="227" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="268" ordinal="0" offset="38" sl="228" sc="0" el="228" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="269" ordinal="0" offset="45" sl="229" sc="0" el="229" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -867,26 +863,26 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::Update()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="274" ordinal="0" offset="0" sl="234" sc="0" el="234" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="275" ordinal="0" offset="1" sl="235" sc="0" el="235" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="276" ordinal="0" offset="15" sl="236" sc="0" el="236" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="277" ordinal="0" offset="16" sl="237" sc="0" el="237" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="278" ordinal="0" offset="36" sl="240" sc="0" el="240" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="279" ordinal="0" offset="43" sl="241" sc="0" el="241" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="280" ordinal="0" offset="45" sl="243" sc="0" el="243" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="281" ordinal="0" offset="52" sl="244" sc="0" el="244" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="282" ordinal="0" offset="54" sl="246" sc="0" el="246" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="283" ordinal="0" offset="57" sl="247" sc="0" el="247" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="284" ordinal="0" offset="71" sl="248" sc="0" el="248" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="285" ordinal="0" offset="72" sl="249" sc="0" el="249" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="286" ordinal="0" offset="105" sl="252" sc="0" el="252" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="287" ordinal="0" offset="112" sl="253" sc="0" el="253" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="288" ordinal="0" offset="114" sl="255" sc="0" el="255" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="289" ordinal="0" offset="121" sl="256" sc="0" el="256" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="290" ordinal="0" offset="123" sl="258" sc="0" el="258" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="291" ordinal="0" offset="130" sl="259" sc="0" el="259" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="292" ordinal="0" offset="132" sl="261" sc="0" el="261" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="293" ordinal="0" offset="133" sl="262" sc="0" el="262" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="270" ordinal="0" offset="0" sl="236" sc="0" el="236" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="271" ordinal="0" offset="1" sl="237" sc="0" el="237" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="272" ordinal="0" offset="15" sl="238" sc="0" el="238" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="273" ordinal="0" offset="16" sl="239" sc="0" el="239" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="274" ordinal="0" offset="36" sl="242" sc="0" el="242" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="275" ordinal="0" offset="43" sl="243" sc="0" el="243" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="276" ordinal="0" offset="45" sl="245" sc="0" el="245" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="277" ordinal="0" offset="52" sl="246" sc="0" el="246" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="278" ordinal="0" offset="54" sl="248" sc="0" el="248" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="279" ordinal="0" offset="57" sl="249" sc="0" el="249" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="280" ordinal="0" offset="71" sl="250" sc="0" el="250" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="281" ordinal="0" offset="72" sl="251" sc="0" el="251" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="282" ordinal="0" offset="105" sl="254" sc="0" el="254" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="283" ordinal="0" offset="112" sl="255" sc="0" el="255" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="284" ordinal="0" offset="114" sl="257" sc="0" el="257" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="285" ordinal="0" offset="121" sl="258" sc="0" el="258" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="286" ordinal="0" offset="123" sl="260" sc="0" el="260" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="287" ordinal="0" offset="130" sl="261" sc="0" el="261" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="288" ordinal="0" offset="132" sl="263" sc="0" el="263" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="289" ordinal="0" offset="133" sl="264" sc="0" el="264" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -896,9 +892,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::GameOver()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="294" ordinal="0" offset="0" sl="268" sc="0" el="268" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="295" ordinal="0" offset="1" sl="269" sc="0" el="269" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="296" ordinal="0" offset="12" sl="270" sc="0" el="270" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="290" ordinal="0" offset="0" sl="270" sc="0" el="270" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="291" ordinal="0" offset="1" sl="271" sc="0" el="271" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="292" ordinal="0" offset="12" sl="272" sc="0" el="272" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -908,13 +904,13 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::RemoveOneAlien()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="297" ordinal="0" offset="0" sl="277" sc="0" el="277" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="298" ordinal="0" offset="1" sl="278" sc="0" el="278" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="299" ordinal="0" offset="15" sl="279" sc="0" el="279" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="300" ordinal="0" offset="28" sl="280" sc="0" el="280" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="301" ordinal="0" offset="29" sl="281" sc="0" el="281" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="302" ordinal="0" offset="36" sl="282" sc="0" el="282" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="303" ordinal="0" offset="37" sl="283" sc="0" el="283" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="293" ordinal="0" offset="0" sl="279" sc="0" el="279" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="294" ordinal="0" offset="1" sl="280" sc="0" el="280" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="295" ordinal="0" offset="15" sl="281" sc="0" el="281" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="296" ordinal="0" offset="28" sl="282" sc="0" el="282" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="297" ordinal="0" offset="29" sl="283" sc="0" el="283" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="298" ordinal="0" offset="36" sl="284" sc="0" el="284" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="299" ordinal="0" offset="37" sl="285" sc="0" el="285" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -924,9 +920,9 @@
               <Name>System.Boolean SpaceInvaders.Scripts.Invasion.InvasionManager::IsInPlayState()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="304" ordinal="0" offset="0" sl="292" sc="0" el="292" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="305" ordinal="0" offset="1" sl="293" sc="0" el="293" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="306" ordinal="0" offset="13" sl="294" sc="0" el="294" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="300" ordinal="0" offset="0" sl="292" sc="0" el="292" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="301" ordinal="0" offset="1" sl="293" sc="0" el="293" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="302" ordinal="0" offset="13" sl="294" sc="0" el="294" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -936,10 +932,10 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::LevelWon()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="307" ordinal="0" offset="0" sl="301" sc="0" el="301" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="308" ordinal="0" offset="1" sl="302" sc="0" el="302" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="309" ordinal="0" offset="22" sl="303" sc="0" el="303" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="310" ordinal="0" offset="33" sl="304" sc="0" el="304" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="303" ordinal="0" offset="0" sl="301" sc="0" el="301" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="304" ordinal="0" offset="1" sl="302" sc="0" el="302" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="305" ordinal="0" offset="22" sl="303" sc="0" el="303" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="306" ordinal="0" offset="33" sl="304" sc="0" el="304" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -949,36 +945,36 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::SpawnAliens()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="311" ordinal="0" offset="0" sl="311" sc="0" el="311" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="312" ordinal="0" offset="1" sl="312" sc="0" el="312" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="313" ordinal="0" offset="12" sl="313" sc="0" el="313" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="314" ordinal="0" offset="28" sl="314" sc="0" el="314" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="315" ordinal="0" offset="45" sl="315" sc="0" el="315" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="316" ordinal="0" offset="65" sl="316" sc="0" el="316" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="317" ordinal="0" offset="96" sl="317" sc="0" el="317" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="318" ordinal="0" offset="104" sl="318" sc="0" el="318" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="319" ordinal="0" offset="124" sl="319" sc="0" el="319" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="320" ordinal="0" offset="132" sl="320" sc="0" el="320" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="321" ordinal="0" offset="142" sl="321" sc="0" el="321" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="322" ordinal="0" offset="149" sl="322" sc="0" el="322" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="323" ordinal="0" offset="157" sl="323" sc="0" el="323" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="324" ordinal="0" offset="158" sl="324" sc="0" el="324" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="325" ordinal="0" offset="175" sl="325" sc="0" el="325" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="326" ordinal="0" offset="183" sl="326" sc="0" el="326" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="327" ordinal="0" offset="184" sl="327" sc="0" el="327" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="328" ordinal="0" offset="261" sl="333" sc="0" el="333" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="329" ordinal="0" offset="272" sl="334" sc="0" el="334" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="330" ordinal="0" offset="273" sl="335" sc="0" el="335" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="331" ordinal="0" offset="321" sl="336" sc="0" el="336" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="332" ordinal="0" offset="369" sl="337" sc="0" el="337" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="333" ordinal="0" offset="370" sl="338" sc="0" el="338" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="334" ordinal="0" offset="371" sl="325" sc="0" el="325" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="335" ordinal="0" offset="377" sl="325" sc="0" el="325" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="336" ordinal="0" offset="392" sl="339" sc="0" el="339" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="337" ordinal="0" offset="393" sl="322" sc="0" el="322" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="338" ordinal="0" offset="399" sl="322" sc="0" el="322" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="339" ordinal="0" offset="413" sl="340" sc="0" el="340" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="340" ordinal="0" offset="426" sl="341" sc="0" el="341" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="307" ordinal="0" offset="0" sl="311" sc="0" el="311" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="308" ordinal="0" offset="1" sl="312" sc="0" el="312" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="309" ordinal="0" offset="12" sl="313" sc="0" el="313" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="310" ordinal="0" offset="28" sl="314" sc="0" el="314" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="311" ordinal="0" offset="45" sl="315" sc="0" el="315" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="312" ordinal="0" offset="65" sl="316" sc="0" el="316" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="313" ordinal="0" offset="96" sl="317" sc="0" el="317" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="314" ordinal="0" offset="104" sl="318" sc="0" el="318" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="315" ordinal="0" offset="124" sl="319" sc="0" el="319" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="316" ordinal="0" offset="132" sl="320" sc="0" el="320" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="317" ordinal="0" offset="142" sl="321" sc="0" el="321" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="318" ordinal="0" offset="149" sl="322" sc="0" el="322" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="319" ordinal="0" offset="157" sl="323" sc="0" el="323" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="320" ordinal="0" offset="158" sl="324" sc="0" el="324" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="321" ordinal="0" offset="175" sl="325" sc="0" el="325" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="322" ordinal="0" offset="183" sl="326" sc="0" el="326" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="323" ordinal="0" offset="184" sl="327" sc="0" el="327" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="324" ordinal="0" offset="261" sl="333" sc="0" el="333" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="325" ordinal="0" offset="272" sl="334" sc="0" el="334" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="326" ordinal="0" offset="273" sl="335" sc="0" el="335" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="327" ordinal="0" offset="321" sl="336" sc="0" el="336" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="328" ordinal="0" offset="369" sl="337" sc="0" el="337" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="329" ordinal="0" offset="370" sl="338" sc="0" el="338" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="330" ordinal="0" offset="371" sl="325" sc="0" el="325" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="331" ordinal="0" offset="377" sl="325" sc="0" el="325" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="332" ordinal="0" offset="392" sl="339" sc="0" el="339" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="333" ordinal="0" offset="393" sl="322" sc="0" el="322" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="334" ordinal="0" offset="399" sl="322" sc="0" el="322" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="335" ordinal="0" offset="413" sl="340" sc="0" el="340" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="336" ordinal="0" offset="426" sl="341" sc="0" el="341" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -988,17 +984,17 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::SpawnBlocks()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="341" ordinal="0" offset="0" sl="347" sc="0" el="347" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="342" ordinal="0" offset="1" sl="348" sc="0" el="348" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="343" ordinal="0" offset="23" sl="349" sc="0" el="349" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="344" ordinal="0" offset="31" sl="350" sc="0" el="350" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="345" ordinal="0" offset="40" sl="351" sc="0" el="351" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="346" ordinal="0" offset="44" sl="352" sc="0" el="352" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="347" ordinal="0" offset="45" sl="353" sc="0" el="353" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="348" ordinal="0" offset="90" sl="359" sc="0" el="359" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="349" ordinal="0" offset="91" sl="351" sc="0" el="351" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="350" ordinal="0" offset="95" sl="351" sc="0" el="351" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="351" ordinal="0" offset="105" sl="360" sc="0" el="360" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="337" ordinal="0" offset="0" sl="347" sc="0" el="347" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="338" ordinal="0" offset="1" sl="348" sc="0" el="348" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="339" ordinal="0" offset="23" sl="349" sc="0" el="349" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="340" ordinal="0" offset="31" sl="350" sc="0" el="350" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="341" ordinal="0" offset="40" sl="351" sc="0" el="351" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="342" ordinal="0" offset="44" sl="352" sc="0" el="352" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="343" ordinal="0" offset="45" sl="353" sc="0" el="353" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="344" ordinal="0" offset="90" sl="359" sc="0" el="359" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="345" ordinal="0" offset="91" sl="351" sc="0" el="351" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="346" ordinal="0" offset="95" sl="351" sc="0" el="351" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="347" ordinal="0" offset="105" sl="360" sc="0" el="360" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1008,11 +1004,11 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::PauseGame()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="352" ordinal="0" offset="0" sl="366" sc="0" el="366" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="353" ordinal="0" offset="1" sl="367" sc="0" el="367" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="354" ordinal="0" offset="8" sl="368" sc="0" el="368" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="355" ordinal="0" offset="21" sl="369" sc="0" el="369" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="356" ordinal="0" offset="32" sl="370" sc="0" el="370" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="348" ordinal="0" offset="0" sl="366" sc="0" el="366" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="349" ordinal="0" offset="1" sl="367" sc="0" el="367" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="350" ordinal="0" offset="8" sl="368" sc="0" el="368" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="351" ordinal="0" offset="21" sl="369" sc="0" el="369" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="352" ordinal="0" offset="32" sl="370" sc="0" el="370" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1022,11 +1018,11 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::ResumeGame()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="357" ordinal="0" offset="0" sl="376" sc="0" el="376" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="358" ordinal="0" offset="1" sl="377" sc="0" el="377" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="359" ordinal="0" offset="12" sl="378" sc="0" el="378" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="360" ordinal="0" offset="25" sl="379" sc="0" el="379" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="361" ordinal="0" offset="32" sl="380" sc="0" el="380" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="353" ordinal="0" offset="0" sl="376" sc="0" el="376" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="354" ordinal="0" offset="1" sl="377" sc="0" el="377" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="355" ordinal="0" offset="12" sl="378" sc="0" el="378" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="356" ordinal="0" offset="25" sl="379" sc="0" el="379" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="357" ordinal="0" offset="32" sl="380" sc="0" el="380" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1036,12 +1032,12 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.InvasionManager::StartGame()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="362" ordinal="0" offset="0" sl="386" sc="0" el="386" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="363" ordinal="0" offset="1" sl="387" sc="0" el="387" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="364" ordinal="0" offset="8" sl="388" sc="0" el="388" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="365" ordinal="0" offset="35" sl="389" sc="0" el="389" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="366" ordinal="0" offset="62" sl="390" sc="0" el="390" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="367" ordinal="0" offset="75" sl="391" sc="0" el="391" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="358" ordinal="0" offset="0" sl="386" sc="0" el="386" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="359" ordinal="0" offset="1" sl="387" sc="0" el="387" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="360" ordinal="0" offset="8" sl="388" sc="0" el="388" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="361" ordinal="0" offset="35" sl="389" sc="0" el="389" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="362" ordinal="0" offset="62" sl="390" sc="0" el="390" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="363" ordinal="0" offset="75" sl="391" sc="0" el="391" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1057,19 +1053,19 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Ship::FixedUpdate()</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="368" ordinal="0" offset="0" sl="45" sc="0" el="45" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="369" ordinal="0" offset="1" sl="46" sc="0" el="46" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="370" ordinal="0" offset="18" sl="47" sc="0" el="47" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="371" ordinal="0" offset="19" sl="48" sc="0" el="48" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="372" ordinal="0" offset="40" sl="49" sc="0" el="49" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="373" ordinal="0" offset="41" sl="50" sc="0" el="50" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="374" ordinal="0" offset="138" sl="56" sc="0" el="56" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="375" ordinal="0" offset="141" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="376" ordinal="0" offset="162" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="377" ordinal="0" offset="163" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="378" ordinal="0" offset="260" sl="65" sc="0" el="65" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="379" ordinal="0" offset="261" sl="66" sc="0" el="66" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="380" ordinal="0" offset="262" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="364" ordinal="0" offset="0" sl="45" sc="0" el="45" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="365" ordinal="0" offset="1" sl="46" sc="0" el="46" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="366" ordinal="0" offset="18" sl="47" sc="0" el="47" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="367" ordinal="0" offset="19" sl="48" sc="0" el="48" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="368" ordinal="0" offset="40" sl="49" sc="0" el="49" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="369" ordinal="0" offset="41" sl="50" sc="0" el="50" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="370" ordinal="0" offset="138" sl="56" sc="0" el="56" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="371" ordinal="0" offset="141" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="372" ordinal="0" offset="162" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="373" ordinal="0" offset="163" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="374" ordinal="0" offset="260" sl="65" sc="0" el="65" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="375" ordinal="0" offset="261" sl="66" sc="0" el="66" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="376" ordinal="0" offset="262" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1079,25 +1075,25 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.Ship::Update()</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="381" ordinal="0" offset="0" sl="74" sc="0" el="74" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="382" ordinal="0" offset="1" sl="75" sc="0" el="75" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="383" ordinal="0" offset="18" sl="76" sc="0" el="76" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="384" ordinal="0" offset="19" sl="77" sc="0" el="77" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="385" ordinal="0" offset="32" sl="78" sc="0" el="78" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="386" ordinal="0" offset="33" sl="79" sc="0" el="79" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="387" ordinal="0" offset="51" sl="80" sc="0" el="80" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="388" ordinal="0" offset="71" sl="81" sc="0" el="81" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="389" ordinal="0" offset="72" sl="82" sc="0" el="82" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="390" ordinal="0" offset="83" sl="83" sc="0" el="83" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="391" ordinal="0" offset="90" sl="84" sc="0" el="84" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="392" ordinal="0" offset="91" sl="85" sc="0" el="85" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="393" ordinal="0" offset="92" sl="86" sc="0" el="86" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="394" ordinal="0" offset="117" sl="87" sc="0" el="87" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="395" ordinal="0" offset="118" sl="88" sc="0" el="88" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="396" ordinal="0" offset="146" sl="89" sc="0" el="89" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="397" ordinal="0" offset="153" sl="90" sc="0" el="90" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="398" ordinal="0" offset="154" sl="91" sc="0" el="91" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="399" ordinal="0" offset="155" sl="92" sc="0" el="92" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="377" ordinal="0" offset="0" sl="74" sc="0" el="74" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="378" ordinal="0" offset="1" sl="75" sc="0" el="75" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="379" ordinal="0" offset="18" sl="76" sc="0" el="76" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="380" ordinal="0" offset="19" sl="77" sc="0" el="77" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="381" ordinal="0" offset="32" sl="78" sc="0" el="78" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="382" ordinal="0" offset="33" sl="79" sc="0" el="79" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="383" ordinal="0" offset="51" sl="80" sc="0" el="80" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="384" ordinal="0" offset="71" sl="81" sc="0" el="81" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="385" ordinal="0" offset="72" sl="82" sc="0" el="82" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="386" ordinal="0" offset="83" sl="83" sc="0" el="83" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="387" ordinal="0" offset="90" sl="84" sc="0" el="84" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="388" ordinal="0" offset="91" sl="85" sc="0" el="85" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="389" ordinal="0" offset="92" sl="86" sc="0" el="86" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="390" ordinal="0" offset="117" sl="87" sc="0" el="87" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="391" ordinal="0" offset="118" sl="88" sc="0" el="88" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="392" ordinal="0" offset="146" sl="89" sc="0" el="89" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="393" ordinal="0" offset="153" sl="90" sc="0" el="90" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="394" ordinal="0" offset="154" sl="91" sc="0" el="91" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="395" ordinal="0" offset="155" sl="92" sc="0" el="92" ec="0" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1107,8 +1103,8 @@
               <Name>SpaceInvaders.Scripts.Invasion.Ship::Ship()</Name>
               <FileRef uid="10" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="400" ordinal="0" offset="0" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="10" />
-                <SequencePoint vc="0" uspid="401" ordinal="0" offset="7" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="396" ordinal="0" offset="0" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="10" />
+                <SequencePoint vc="0" uspid="397" ordinal="0" offset="7" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="10" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1124,9 +1120,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.ShipProjectile::Start()</Name>
               <FileRef uid="11" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="402" ordinal="0" offset="0" sl="24" sc="0" el="24" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="403" ordinal="0" offset="1" sl="25" sc="0" el="25" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="404" ordinal="0" offset="13" sl="26" sc="0" el="26" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="398" ordinal="0" offset="0" sl="24" sc="0" el="24" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="399" ordinal="0" offset="1" sl="25" sc="0" el="25" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="400" ordinal="0" offset="13" sl="26" sc="0" el="26" ec="0" bec="0" bev="0" fileid="11" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1136,16 +1132,16 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.ShipProjectile::FixedUpdate()</Name>
               <FileRef uid="11" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="405" ordinal="0" offset="0" sl="32" sc="0" el="32" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="406" ordinal="0" offset="1" sl="33" sc="0" el="33" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="407" ordinal="0" offset="15" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="408" ordinal="0" offset="16" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="409" ordinal="0" offset="82" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="410" ordinal="0" offset="114" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="411" ordinal="0" offset="115" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="412" ordinal="0" offset="127" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="413" ordinal="0" offset="128" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="414" ordinal="0" offset="129" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="401" ordinal="0" offset="0" sl="32" sc="0" el="32" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="402" ordinal="0" offset="1" sl="33" sc="0" el="33" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="403" ordinal="0" offset="15" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="404" ordinal="0" offset="16" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="405" ordinal="0" offset="82" sl="38" sc="0" el="38" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="406" ordinal="0" offset="114" sl="39" sc="0" el="39" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="407" ordinal="0" offset="115" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="408" ordinal="0" offset="127" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="409" ordinal="0" offset="128" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="410" ordinal="0" offset="129" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="11" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1155,17 +1151,17 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.ShipProjectile::OnTriggerEnter2D(UnityEngine.Collider2D)</Name>
               <FileRef uid="11" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="415" ordinal="0" offset="0" sl="50" sc="0" el="50" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="416" ordinal="0" offset="1" sl="51" sc="0" el="51" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="417" ordinal="0" offset="21" sl="52" sc="0" el="52" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="418" ordinal="0" offset="22" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="419" ordinal="0" offset="34" sl="54" sc="0" el="54" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="420" ordinal="0" offset="36" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="421" ordinal="0" offset="56" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="422" ordinal="0" offset="57" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="423" ordinal="0" offset="69" sl="60" sc="0" el="60" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="424" ordinal="0" offset="81" sl="61" sc="0" el="61" ec="0" bec="0" bev="0" fileid="11" />
-                <SequencePoint vc="0" uspid="425" ordinal="0" offset="82" sl="62" sc="0" el="62" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="411" ordinal="0" offset="0" sl="50" sc="0" el="50" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="412" ordinal="0" offset="1" sl="51" sc="0" el="51" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="413" ordinal="0" offset="21" sl="52" sc="0" el="52" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="414" ordinal="0" offset="22" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="415" ordinal="0" offset="34" sl="54" sc="0" el="54" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="416" ordinal="0" offset="36" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="417" ordinal="0" offset="56" sl="58" sc="0" el="58" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="418" ordinal="0" offset="57" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="419" ordinal="0" offset="69" sl="60" sc="0" el="60" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="420" ordinal="0" offset="81" sl="61" sc="0" el="61" ec="0" bec="0" bev="0" fileid="11" />
+                <SequencePoint vc="0" uspid="421" ordinal="0" offset="82" sl="62" sc="0" el="62" ec="0" bec="0" bev="0" fileid="11" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1181,9 +1177,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.UserInterfaceManager::Awake()</Name>
               <FileRef uid="12" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="426" ordinal="0" offset="0" sl="66" sc="0" el="66" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="427" ordinal="0" offset="1" sl="67" sc="0" el="67" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="428" ordinal="0" offset="8" sl="68" sc="0" el="68" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="422" ordinal="0" offset="0" sl="68" sc="0" el="68" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="423" ordinal="0" offset="1" sl="69" sc="0" el="69" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="424" ordinal="0" offset="8" sl="70" sc="0" el="70" ec="0" bec="0" bev="0" fileid="12" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1193,17 +1189,17 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.UserInterfaceManager::Start()</Name>
               <FileRef uid="12" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="429" ordinal="0" offset="0" sl="76" sc="0" el="76" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="430" ordinal="0" offset="1" sl="77" sc="0" el="77" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="431" ordinal="0" offset="23" sl="78" sc="0" el="78" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="432" ordinal="0" offset="40" sl="79" sc="0" el="79" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="433" ordinal="0" offset="41" sl="80" sc="0" el="80" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="434" ordinal="0" offset="63" sl="81" sc="0" el="81" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="435" ordinal="0" offset="64" sl="82" sc="0" el="82" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="436" ordinal="0" offset="94" sl="83" sc="0" el="83" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="437" ordinal="0" offset="124" sl="84" sc="0" el="84" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="438" ordinal="0" offset="141" sl="85" sc="0" el="85" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="439" ordinal="0" offset="148" sl="86" sc="0" el="86" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="425" ordinal="0" offset="0" sl="78" sc="0" el="78" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="426" ordinal="0" offset="1" sl="79" sc="0" el="79" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="427" ordinal="0" offset="23" sl="80" sc="0" el="80" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="428" ordinal="0" offset="40" sl="81" sc="0" el="81" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="429" ordinal="0" offset="41" sl="82" sc="0" el="82" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="430" ordinal="0" offset="63" sl="83" sc="0" el="83" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="431" ordinal="0" offset="64" sl="84" sc="0" el="84" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="432" ordinal="0" offset="94" sl="85" sc="0" el="85" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="433" ordinal="0" offset="124" sl="86" sc="0" el="86" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="434" ordinal="0" offset="141" sl="87" sc="0" el="87" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="435" ordinal="0" offset="148" sl="88" sc="0" el="88" ec="0" bec="0" bev="0" fileid="12" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1213,17 +1209,17 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.UserInterfaceManager::AddPoints(System.Int32)</Name>
               <FileRef uid="12" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="440" ordinal="0" offset="0" sl="95" sc="0" el="95" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="441" ordinal="0" offset="1" sl="96" sc="0" el="96" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="442" ordinal="0" offset="24" sl="97" sc="0" el="97" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="443" ordinal="0" offset="54" sl="98" sc="0" el="98" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="444" ordinal="0" offset="80" sl="99" sc="0" el="99" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="445" ordinal="0" offset="81" sl="100" sc="0" el="100" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="446" ordinal="0" offset="102" sl="101" sc="0" el="101" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="447" ordinal="0" offset="132" sl="102" sc="0" el="102" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="448" ordinal="0" offset="154" sl="103" sc="0" el="103" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="449" ordinal="0" offset="175" sl="104" sc="0" el="104" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="450" ordinal="0" offset="176" sl="105" sc="0" el="105" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="436" ordinal="0" offset="0" sl="97" sc="0" el="97" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="437" ordinal="0" offset="1" sl="98" sc="0" el="98" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="438" ordinal="0" offset="24" sl="99" sc="0" el="99" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="439" ordinal="0" offset="54" sl="100" sc="0" el="100" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="440" ordinal="0" offset="80" sl="101" sc="0" el="101" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="441" ordinal="0" offset="81" sl="102" sc="0" el="102" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="442" ordinal="0" offset="102" sl="103" sc="0" el="103" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="443" ordinal="0" offset="132" sl="104" sc="0" el="104" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="444" ordinal="0" offset="154" sl="105" sc="0" el="105" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="445" ordinal="0" offset="175" sl="106" sc="0" el="106" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="446" ordinal="0" offset="176" sl="107" sc="0" el="107" ec="0" bec="0" bev="0" fileid="12" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1233,9 +1229,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.UserInterfaceManager::SetLevel(System.Int32)</Name>
               <FileRef uid="12" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="451" ordinal="0" offset="0" sl="112" sc="0" el="112" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="452" ordinal="0" offset="1" sl="113" sc="0" el="113" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="453" ordinal="0" offset="30" sl="114" sc="0" el="114" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="447" ordinal="0" offset="0" sl="114" sc="0" el="114" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="448" ordinal="0" offset="1" sl="115" sc="0" el="115" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="449" ordinal="0" offset="30" sl="116" sc="0" el="116" ec="0" bec="0" bev="0" fileid="12" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1245,9 +1241,9 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.UserInterfaceManager::CloseCentral()</Name>
               <FileRef uid="12" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="454" ordinal="0" offset="0" sl="120" sc="0" el="120" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="455" ordinal="0" offset="1" sl="121" sc="0" el="121" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="456" ordinal="0" offset="14" sl="122" sc="0" el="122" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="450" ordinal="0" offset="0" sl="122" sc="0" el="122" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="451" ordinal="0" offset="1" sl="123" sc="0" el="123" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="452" ordinal="0" offset="14" sl="124" sc="0" el="124" ec="0" bec="0" bev="0" fileid="12" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1257,11 +1253,11 @@
               <Name>System.Void SpaceInvaders.Scripts.Invasion.UserInterfaceManager::OpenPause()</Name>
               <FileRef uid="12" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="457" ordinal="0" offset="0" sl="128" sc="0" el="128" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="458" ordinal="0" offset="1" sl="129" sc="0" el="129" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="459" ordinal="0" offset="18" sl="130" sc="0" el="130" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="460" ordinal="0" offset="35" sl="131" sc="0" el="131" ec="0" bec="0" bev="0" fileid="12" />
-                <SequencePoint vc="0" uspid="461" ordinal="0" offset="48" sl="132" sc="0" el="132" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="453" ordinal="0" offset="0" sl="130" sc="0" el="130" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="454" ordinal="0" offset="1" sl="131" sc="0" el="131" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="455" ordinal="0" offset="18" sl="132" sc="0" el="132" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="456" ordinal="0" offset="35" sl="133" sc="0" el="133" ec="0" bec="0" bev="0" fileid="12" />
+                <SequencePoint vc="0" uspid="457" ordinal="0" offset="48" sl="134" sc="0" el="134" ec="0" bec="0" bev="0" fileid="12" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1277,12 +1273,12 @@
               <Name>System.Void SpaceInvaders.Scripts.GameOver.GameOverManager::Start()</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="462" ordinal="0" offset="0" sl="30" sc="0" el="30" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="463" ordinal="0" offset="1" sl="31" sc="0" el="31" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="464" ordinal="0" offset="23" sl="32" sc="0" el="32" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="465" ordinal="0" offset="53" sl="33" sc="0" el="33" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="466" ordinal="0" offset="64" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="467" ordinal="0" offset="71" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="458" ordinal="0" offset="0" sl="30" sc="0" el="30" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="459" ordinal="0" offset="1" sl="31" sc="0" el="31" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="460" ordinal="0" offset="23" sl="32" sc="0" el="32" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="461" ordinal="0" offset="53" sl="33" sc="0" el="33" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="462" ordinal="0" offset="64" sl="34" sc="0" el="34" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="463" ordinal="0" offset="71" sl="35" sc="0" el="35" ec="0" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1292,11 +1288,11 @@
               <Name>System.Void SpaceInvaders.Scripts.GameOver.GameOverManager::OnRestartButtonClick()</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="468" ordinal="0" offset="0" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="469" ordinal="0" offset="1" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="470" ordinal="0" offset="13" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="471" ordinal="0" offset="25" sl="44" sc="0" el="44" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="472" ordinal="0" offset="36" sl="45" sc="0" el="45" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="464" ordinal="0" offset="0" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="465" ordinal="0" offset="1" sl="42" sc="0" el="42" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="466" ordinal="0" offset="13" sl="43" sc="0" el="43" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="467" ordinal="0" offset="25" sl="44" sc="0" el="44" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="468" ordinal="0" offset="36" sl="45" sc="0" el="45" ec="0" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1306,9 +1302,9 @@
               <Name>System.Void SpaceInvaders.Scripts.GameOver.GameOverManager::OnMainMenuButtonClick()</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="473" ordinal="0" offset="0" sl="51" sc="0" el="51" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="474" ordinal="0" offset="1" sl="52" sc="0" el="52" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="475" ordinal="0" offset="12" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="469" ordinal="0" offset="0" sl="51" sc="0" el="51" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="470" ordinal="0" offset="1" sl="52" sc="0" el="52" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="471" ordinal="0" offset="12" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1318,9 +1314,9 @@
               <Name>System.Void SpaceInvaders.Scripts.GameOver.GameOverManager::OnQuitButtonClick()</Name>
               <FileRef uid="13" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="476" ordinal="0" offset="0" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="477" ordinal="0" offset="1" sl="60" sc="0" el="60" ec="0" bec="0" bev="0" fileid="13" />
-                <SequencePoint vc="0" uspid="478" ordinal="0" offset="7" sl="61" sc="0" el="61" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="472" ordinal="0" offset="0" sl="59" sc="0" el="59" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="473" ordinal="0" offset="1" sl="60" sc="0" el="60" ec="0" bec="0" bev="0" fileid="13" />
+                <SequencePoint vc="0" uspid="474" ordinal="0" offset="7" sl="61" sc="0" el="61" ec="0" bec="0" bev="0" fileid="13" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1336,11 +1332,11 @@
               <Name>System.Void SpaceInvaders.Scripts.Configuration.ConfigurationManager::Awake()</Name>
               <FileRef uid="14" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="479" ordinal="0" offset="0" sl="27" sc="0" el="27" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="480" ordinal="0" offset="1" sl="28" sc="0" el="28" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="481" ordinal="0" offset="8" sl="29" sc="0" el="29" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="482" ordinal="0" offset="20" sl="30" sc="0" el="30" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="483" ordinal="0" offset="46" sl="31" sc="0" el="31" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="475" ordinal="0" offset="0" sl="27" sc="0" el="27" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="476" ordinal="0" offset="1" sl="28" sc="0" el="28" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="477" ordinal="0" offset="8" sl="29" sc="0" el="29" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="478" ordinal="0" offset="20" sl="30" sc="0" el="30" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="479" ordinal="0" offset="46" sl="31" sc="0" el="31" ec="0" bec="0" bev="0" fileid="14" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1350,9 +1346,9 @@
               <Name>System.Single SpaceInvaders.Scripts.Configuration.ConfigurationManager::GetCurrentSpeed(System.Int32)</Name>
               <FileRef uid="14" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="484" ordinal="0" offset="0" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="485" ordinal="0" offset="1" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="486" ordinal="0" offset="48" sl="44" sc="0" el="44" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="480" ordinal="0" offset="0" sl="40" sc="0" el="40" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="481" ordinal="0" offset="1" sl="41" sc="0" el="41" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="482" ordinal="0" offset="48" sl="44" sc="0" el="44" ec="0" bec="0" bev="0" fileid="14" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1362,9 +1358,9 @@
               <Name>System.Int32 SpaceInvaders.Scripts.Configuration.ConfigurationManager::GetCurrentShootingRange(System.Int32)</Name>
               <FileRef uid="14" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="487" ordinal="0" offset="0" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="488" ordinal="0" offset="1" sl="54" sc="0" el="54" ec="0" bec="0" bev="0" fileid="14" />
-                <SequencePoint vc="0" uspid="489" ordinal="0" offset="47" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="483" ordinal="0" offset="0" sl="53" sc="0" el="53" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="484" ordinal="0" offset="1" sl="54" sc="0" el="54" ec="0" bec="0" bev="0" fileid="14" />
+                <SequencePoint vc="0" uspid="485" ordinal="0" offset="47" sl="57" sc="0" el="57" ec="0" bec="0" bev="0" fileid="14" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1380,14 +1376,14 @@
               <Name>System.Int32 SpaceInvaders.Scripts.Scores.LeaderboardsSaver/Item2Comparer::System.Collections.Generic.IComparer&lt;(System.String,System.Int32)&gt;.Compare(System.ValueTuple[String,Int32], System.ValueTuple[String,Int32])</Name>
               <FileRef uid="3" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="490" ordinal="0" offset="0" sl="116" sc="0" el="116" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="491" ordinal="0" offset="1" sl="117" sc="0" el="117" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="492" ordinal="0" offset="23" sl="118" sc="0" el="118" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="493" ordinal="0" offset="53" sl="119" sc="0" el="119" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="494" ordinal="0" offset="54" sl="120" sc="0" el="120" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="495" ordinal="0" offset="56" sl="121" sc="0" el="121" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="496" ordinal="0" offset="57" sl="122" sc="0" el="122" ec="0" bec="0" bev="0" fileid="3" />
-                <SequencePoint vc="0" uspid="497" ordinal="0" offset="61" sl="123" sc="0" el="123" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="486" ordinal="0" offset="0" sl="116" sc="0" el="116" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="487" ordinal="0" offset="1" sl="117" sc="0" el="117" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="488" ordinal="0" offset="23" sl="118" sc="0" el="118" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="489" ordinal="0" offset="53" sl="119" sc="0" el="119" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="490" ordinal="0" offset="54" sl="120" sc="0" el="120" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="491" ordinal="0" offset="56" sl="121" sc="0" el="121" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="492" ordinal="0" offset="57" sl="122" sc="0" el="122" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="493" ordinal="0" offset="61" sl="123" sc="0" el="123" ec="0" bec="0" bev="0" fileid="3" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1403,7 +1399,7 @@
               <Name>System.String SpaceInvaders.Scripts.Scores.LeaderboardsSaver/&lt;&gt;c::&lt;SaveScore&gt;b__6_0(System.Collections.Generic.KeyValuePair[ValueTuple`2,Int32])</Name>
               <FileRef uid="3" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="498" ordinal="0" offset="0" sl="101" sc="0" el="101" ec="0" bec="0" bev="0" fileid="3" />
+                <SequencePoint vc="0" uspid="494" ordinal="0" offset="0" sl="101" sc="0" el="101" ec="0" bec="0" bev="0" fileid="3" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1419,16 +1415,16 @@
               <Name>System.Boolean SpaceInvaders.Scripts.Invasion.Alien/&lt;Shoot&gt;d__17::MoveNext()</Name>
               <FileRef uid="6" />
               <SequencePoints>
-                <SequencePoint vc="1" uspid="499" ordinal="0" offset="34" sl="84" sc="9" el="84" ec="9" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="1" uspid="500" ordinal="0" offset="40" sl="86" sc="13" el="86" ec="13" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="1" uspid="501" ordinal="0" offset="41" sl="87" sc="17" el="87" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="502" ordinal="0" offset="98" sl="89" sc="17" el="89" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="503" ordinal="0" offset="99" sl="90" sc="21" el="90" ec="21" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="504" ordinal="0" offset="137" sl="91" sc="17" el="91" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="1" uspid="505" ordinal="0" offset="138" sl="92" sc="17" el="92" ec="17" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="506" ordinal="0" offset="181" sl="93" sc="13" el="93" ec="13" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="1" uspid="507" ordinal="0" offset="182" sl="85" sc="13" el="85" ec="13" bec="0" bev="0" fileid="6" />
-                <SequencePoint vc="0" uspid="508" ordinal="0" offset="203" sl="94" sc="9" el="94" ec="9" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="495" ordinal="0" offset="34" sl="80" sc="9" el="80" ec="9" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="496" ordinal="0" offset="40" sl="82" sc="13" el="82" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="497" ordinal="0" offset="41" sl="83" sc="17" el="83" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="498" ordinal="0" offset="98" sl="85" sc="17" el="85" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="499" ordinal="0" offset="99" sl="86" sc="21" el="86" ec="21" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="500" ordinal="0" offset="137" sl="87" sc="17" el="87" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="501" ordinal="0" offset="138" sl="88" sc="17" el="88" ec="17" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="502" ordinal="0" offset="181" sl="89" sc="13" el="89" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="1" uspid="503" ordinal="0" offset="182" sl="81" sc="13" el="81" ec="13" bec="0" bev="0" fileid="6" />
+                <SequencePoint vc="0" uspid="504" ordinal="0" offset="203" sl="90" sc="9" el="90" ec="9" bec="0" bev="0" fileid="6" />
               </SequencePoints>
               <BranchPoints />
             </Method>
@@ -1444,44 +1440,44 @@
               <Name>System.Boolean SpaceInvaders.Scripts.Invasion.InvasionManager/&lt;MoveAliens&gt;d__55::MoveNext()</Name>
               <FileRef uid="9" />
               <SequencePoints>
-                <SequencePoint vc="0" uspid="509" ordinal="0" offset="34" sl="398" sc="0" el="398" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="510" ordinal="0" offset="35" sl="399" sc="0" el="399" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="511" ordinal="0" offset="42" sl="400" sc="0" el="400" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="512" ordinal="0" offset="49" sl="401" sc="0" el="401" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="513" ordinal="0" offset="84" sl="402" sc="0" el="402" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="514" ordinal="0" offset="102" sl="403" sc="0" el="403" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="515" ordinal="0" offset="114" sl="405" sc="0" el="405" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="516" ordinal="0" offset="115" sl="406" sc="0" el="406" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="517" ordinal="0" offset="136" sl="407" sc="0" el="407" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="518" ordinal="0" offset="137" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="519" ordinal="0" offset="138" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="520" ordinal="0" offset="173" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="521" ordinal="0" offset="190" sl="409" sc="0" el="409" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="522" ordinal="0" offset="191" sl="410" sc="0" el="410" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="523" ordinal="0" offset="222" sl="411" sc="0" el="411" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="524" ordinal="0" offset="232" sl="412" sc="0" el="412" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="525" ordinal="0" offset="233" sl="413" sc="0" el="413" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="526" ordinal="0" offset="251" sl="414" sc="0" el="414" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="527" ordinal="0" offset="252" sl="415" sc="0" el="415" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="528" ordinal="0" offset="260" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="529" ordinal="0" offset="306" sl="416" sc="0" el="416" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="530" ordinal="0" offset="333" sl="417" sc="0" el="417" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="531" ordinal="0" offset="334" sl="418" sc="0" el="418" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="532" ordinal="0" offset="341" sl="419" sc="0" el="419" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="533" ordinal="0" offset="365" sl="420" sc="0" el="420" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="534" ordinal="0" offset="388" sl="421" sc="0" el="421" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="535" ordinal="0" offset="389" sl="422" sc="0" el="422" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="536" ordinal="0" offset="401" sl="423" sc="0" el="423" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="537" ordinal="0" offset="408" sl="424" sc="0" el="424" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="538" ordinal="0" offset="411" sl="426" sc="0" el="426" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="539" ordinal="0" offset="412" sl="427" sc="0" el="427" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="540" ordinal="0" offset="419" sl="428" sc="0" el="428" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="541" ordinal="0" offset="420" sl="429" sc="0" el="429" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="542" ordinal="0" offset="421" sl="430" sc="0" el="430" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="543" ordinal="0" offset="422" sl="431" sc="0" el="431" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="544" ordinal="0" offset="466" sl="432" sc="0" el="432" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="545" ordinal="0" offset="467" sl="404" sc="0" el="404" ec="0" bec="0" bev="0" fileid="9" />
-                <SequencePoint vc="0" uspid="546" ordinal="0" offset="490" sl="433" sc="0" el="433" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="505" ordinal="0" offset="34" sl="398" sc="0" el="398" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="506" ordinal="0" offset="35" sl="399" sc="0" el="399" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="507" ordinal="0" offset="42" sl="400" sc="0" el="400" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="508" ordinal="0" offset="49" sl="401" sc="0" el="401" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="509" ordinal="0" offset="84" sl="402" sc="0" el="402" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="510" ordinal="0" offset="102" sl="403" sc="0" el="403" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="511" ordinal="0" offset="114" sl="405" sc="0" el="405" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="512" ordinal="0" offset="115" sl="406" sc="0" el="406" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="513" ordinal="0" offset="136" sl="407" sc="0" el="407" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="514" ordinal="0" offset="137" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="515" ordinal="0" offset="138" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="516" ordinal="0" offset="173" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="517" ordinal="0" offset="190" sl="409" sc="0" el="409" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="518" ordinal="0" offset="191" sl="410" sc="0" el="410" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="519" ordinal="0" offset="222" sl="411" sc="0" el="411" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="520" ordinal="0" offset="232" sl="412" sc="0" el="412" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="521" ordinal="0" offset="233" sl="413" sc="0" el="413" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="522" ordinal="0" offset="251" sl="414" sc="0" el="414" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="523" ordinal="0" offset="252" sl="415" sc="0" el="415" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="524" ordinal="0" offset="260" sl="408" sc="0" el="408" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="525" ordinal="0" offset="306" sl="416" sc="0" el="416" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="526" ordinal="0" offset="333" sl="417" sc="0" el="417" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="527" ordinal="0" offset="334" sl="418" sc="0" el="418" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="528" ordinal="0" offset="341" sl="419" sc="0" el="419" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="529" ordinal="0" offset="365" sl="420" sc="0" el="420" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="530" ordinal="0" offset="388" sl="421" sc="0" el="421" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="531" ordinal="0" offset="389" sl="422" sc="0" el="422" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="532" ordinal="0" offset="401" sl="423" sc="0" el="423" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="533" ordinal="0" offset="408" sl="424" sc="0" el="424" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="534" ordinal="0" offset="411" sl="426" sc="0" el="426" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="535" ordinal="0" offset="412" sl="427" sc="0" el="427" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="536" ordinal="0" offset="419" sl="428" sc="0" el="428" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="537" ordinal="0" offset="420" sl="429" sc="0" el="429" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="538" ordinal="0" offset="421" sl="430" sc="0" el="430" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="539" ordinal="0" offset="422" sl="431" sc="0" el="431" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="540" ordinal="0" offset="466" sl="432" sc="0" el="432" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="541" ordinal="0" offset="467" sl="404" sc="0" el="404" ec="0" bec="0" bev="0" fileid="9" />
+                <SequencePoint vc="0" uspid="542" ordinal="0" offset="490" sl="433" sc="0" el="433" ec="0" bec="0" bev="0" fileid="9" />
               </SequencePoints>
               <BranchPoints />
             </Method>

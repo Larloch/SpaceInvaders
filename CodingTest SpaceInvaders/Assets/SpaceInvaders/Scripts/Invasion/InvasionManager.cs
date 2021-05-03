@@ -10,7 +10,7 @@ namespace SpaceInvaders.Scripts.Invasion
 {
     /// <summary>
     ///     Singleton class that manage the game progression.
-    ///     Note: Added some Virtual to allow mocking for unit testing,
+    ///     Note: Added some Virtual modifier to allow mocking for unit testing,
     ///     they should be removed with a proper Interface implementation.
     /// </summary>
     public class InvasionManager : MonoBehaviour, IGameService
@@ -275,7 +275,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     When an alien die decrease the counter to
         ///     determine when the level is won.
         /// </summary>
-        public void RemoveOneAlien()
+        public virtual void RemoveOneAlien()
         {
             aliensLeft--;
             if (aliensLeft == 0)

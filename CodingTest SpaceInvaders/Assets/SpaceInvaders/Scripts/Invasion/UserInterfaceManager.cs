@@ -7,6 +7,8 @@ namespace SpaceInvaders.Scripts.Invasion
 {
     /// <summary>
     ///     Singleton class that manage the UI of the Invasion scene.
+    ///     Note: Added some Virtual modifier to allow mocking for unit testing,
+    ///     they should be removed with a proper Interface implementation.
     /// </summary>
     public class UserInterfaceManager : MonoBehaviour, IGameService
     {
@@ -91,7 +93,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     in the ScoreManager).
         /// </summary>
         /// <param name="points">The quantity of points to add.</param>
-        public void AddPoints(int points)
+        public virtual void AddPoints(int points)
         {
             ServiceLocator.Get<ScoreManager>().CurrentScore = ServiceLocator.Get<ScoreManager>().CurrentScore + points;
             currentScore.text = ServiceLocator.Get<ScoreManager>().CurrentScore.ToString();
