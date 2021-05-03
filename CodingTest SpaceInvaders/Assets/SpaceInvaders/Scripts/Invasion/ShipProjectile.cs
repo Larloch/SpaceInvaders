@@ -30,12 +30,12 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void FixedUpdate()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play)
             {
                 projectileRigidbody.MovePosition(new Vector2(
                     projectileRigidbody.position.x,
-                    projectileRigidbody.position.y + (InvasionManager.Instance.AliensSpeed / PROJECTILE_SPEED_REDUCTOR)));
-                if (transform.position.y > InvasionManager.Instance.HigherBorderPosition)
+                    projectileRigidbody.position.y + (ServiceLocator.Get<InvasionManager>().AliensSpeed / PROJECTILE_SPEED_REDUCTOR)));
+                if (transform.position.y > ServiceLocator.Get<InvasionManager>().HigherBorderPosition)
                 {
                     Destroy(gameObject);
                 }

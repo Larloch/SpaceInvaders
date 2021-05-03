@@ -28,7 +28,7 @@ namespace SpaceInvaders.Scripts.MainMenu
         /// </summary>
         void Start()
         {
-            playerName.text = ScoreManager.Instance.PlayerName;
+            playerName.text = ServiceLocator.Get<ScoreManager>().PlayerName;
             Cursor.visible = true;
         }
 
@@ -42,9 +42,9 @@ namespace SpaceInvaders.Scripts.MainMenu
                 missingName.gameObject.SetActive(true);
                 return;
             }
-            ScoreManager.Instance.PlayerName = playerName.text.Trim();
-            ScoreManager.Instance.CurrentScore = 0;
-            ScoreManager.Instance.CurrentLevel = 1;
+            ServiceLocator.Get<ScoreManager>().PlayerName = playerName.text.Trim();
+            ServiceLocator.Get<ScoreManager>().CurrentScore = 0;
+            ServiceLocator.Get<ScoreManager>().CurrentLevel = 1;
             SceneManager.LoadScene("Invasion");
         }
 

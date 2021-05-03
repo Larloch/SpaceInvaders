@@ -64,15 +64,15 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Update()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play)
             {
-                if (transform.position.x <= InvasionManager.Instance.LeftBorderPosition)
+                if (transform.position.x <= ServiceLocator.Get<InvasionManager>().LeftBorderPosition)
                 {
-                    InvasionManager.Instance.AliensDirection = InvasionManager.Direction.Right;
+                    ServiceLocator.Get<InvasionManager>().AliensDirection = InvasionManager.Direction.Right;
                 }
-                else if (transform.position.x >= InvasionManager.Instance.RightBorderPosition)
+                else if (transform.position.x >= ServiceLocator.Get<InvasionManager>().RightBorderPosition)
                 {
-                    InvasionManager.Instance.AliensDirection = InvasionManager.Direction.Left;
+                    ServiceLocator.Get<InvasionManager>().AliensDirection = InvasionManager.Direction.Left;
                 }
             }
         }
@@ -86,12 +86,12 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             while (HealthPoints > 0)
             {
-                if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play && 
-                    LowerAlien == null && Random.Range(0, InvasionManager.Instance.AliensShootingRange) == 0)
+                if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play && 
+                    LowerAlien == null && Random.Range(0, ServiceLocator.Get<InvasionManager>().AliensShootingRange) == 0)
                 {
                     Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);                    
                 }
-                yield return new WaitForSeconds(1 / InvasionManager.Instance.AliensSpeed);
+                yield return new WaitForSeconds(1 / ServiceLocator.Get<InvasionManager>().AliensSpeed);
             }
         }
 
@@ -122,7 +122,7 @@ namespace SpaceInvaders.Scripts.Invasion
                             0f);
             if (HealthPoints > 0 && transform.position.y <= -Camera.main.orthographicSize + InvasionManager.BLOCKS_HEIGHT)
             {
-                InvasionManager.Instance.GameOver();
+                ServiceLocator.Get<InvasionManager>().GameOver();
             }
         }
 
@@ -147,8 +147,8 @@ namespace SpaceInvaders.Scripts.Invasion
             {
                 UpperAlien.LowerAlien = LowerAlien;
             }
-            InvasionManager.Instance.RemoveOneAlien();
-            UserInterfaceManager.Instance.AddPoints(ALIEN_POINTS);
+            ServiceLocator.Get<InvasionManager>().RemoveOneAlien();
+            ServiceLocator.Get<UserInterfaceManager>().AddPoints(ALIEN_POINTS);
             gameObject.SetActive(false);
         }
 
@@ -170,7 +170,7 @@ namespace SpaceInvaders.Scripts.Invasion
 
             if (col.gameObject.CompareTag("Player"))
             {
-                InvasionManager.Instance.GameOver();
+                ServiceLocator.Get<InvasionManager>().GameOver();
             }
         }
     }

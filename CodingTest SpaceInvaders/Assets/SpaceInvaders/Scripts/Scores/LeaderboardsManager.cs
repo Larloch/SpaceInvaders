@@ -33,7 +33,7 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         void Start()
         {
-            List<(string, int)> topPlayers = ScoreManager.Instance.GetLeaderboardTop(LEADERBOARD_SIZE);
+            List<(string, int)> topPlayers = ServiceLocator.Get<ScoreManager>().GetLeaderboardTop(LEADERBOARD_SIZE);
             for (int position = 0; position < topPlayers.Count; ++position)
             {
                 ScoreOwners[position].text = topPlayers[position].Item1;

@@ -8,13 +8,8 @@ namespace SpaceInvaders.Scripts.Invasion
     /// <summary>
     ///     Singleton class that manage the UI of the Invasion scene.
     /// </summary>
-    public class UserInterfaceManager : MonoBehaviour
+    public class UserInterfaceManager : MonoBehaviour, IGameService
     {
-        /// <summary>
-        ///     ScoreManager is a singleton.
-        /// </summary>
-        public static UserInterfaceManager Instance { get; private set; }
-
         #region SerializedFields
 
         /// <summary>
@@ -69,8 +64,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Awake()
         {
-            Assert.IsNull(Instance, "Only one instance of UserInterfaceManager is allowed");
-            Instance = this;
+            ServiceLocator.Register(this);
         }
 
         /// <summary>
@@ -80,14 +74,14 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Start()
         {
-            playerName.text = ScoreManager.Instance.PlayerName;
-            if (ScoreManager.Instance.HighScoreOwner != null)
+            playerName.text = ServiceLocator.Get<ScoreManager>().PlayerName;
+            if (ServiceLocator.Get<ScoreManager>().HighScoreOwner != null)
             {
-                highScoreOwner.text = ScoreManager.Instance.HighScoreOwner;
+                highScoreOwner.text = ServiceLocator.Get<ScoreManager>().HighScoreOwner;
             }
-            currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
-            highScore.text = ScoreManager.Instance.HighScore.ToString();
-            SetLevel(ScoreManager.Instance.CurrentLevel);
+            currentScore.text = ServiceLocator.Get<ScoreManager>().CurrentScore.ToString();
+            highScore.text = ServiceLocator.Get<ScoreManager>().HighScore.ToString();
+            SetLevel(ServiceLocator.Get<ScoreManager>().CurrentLevel);
             Cursor.visible = false;
         }
 
@@ -99,14 +93,14 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <param name="points">The quantity of points to add.</param>
         public void AddPoints(int points)
         {
-            ScoreManager.Instance.CurrentScore = ScoreManager.Instance.CurrentScore + points;
-            currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
-            if (ScoreManager.Instance.CurrentScore > ScoreManager.Instance.HighScore)
+            ServiceLocator.Get<ScoreManager>().CurrentScore = ServiceLocator.Get<ScoreManager>().CurrentScore + points;
+            currentScore.text = ServiceLocator.Get<ScoreManager>().CurrentScore.ToString();
+            if (ServiceLocator.Get<ScoreManager>().CurrentScore > ServiceLocator.Get<ScoreManager>().HighScore)
             {
-                ScoreManager.Instance.HighScore = ScoreManager.Instance.CurrentScore;
-                highScore.text = ScoreManager.Instance.HighScore.ToString();
-                highScoreOwner.text = ScoreManager.Instance.PlayerName;
-                ScoreManager.Instance.HighScoreOwner = ScoreManager.Instance.PlayerName;
+                ServiceLocator.Get<ScoreManager>().HighScore = ServiceLocator.Get<ScoreManager>().CurrentScore;
+                highScore.text = ServiceLocator.Get<ScoreManager>().HighScore.ToString();
+                highScoreOwner.text = ServiceLocator.Get<ScoreManager>().PlayerName;
+                ServiceLocator.Get<ScoreManager>().HighScoreOwner = ServiceLocator.Get<ScoreManager>().PlayerName;
             }
         }
 

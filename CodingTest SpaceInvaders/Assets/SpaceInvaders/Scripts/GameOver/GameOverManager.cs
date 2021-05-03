@@ -28,9 +28,9 @@ namespace SpaceInvaders.Scripts.GameOver
         /// </summary>
         void Start()
         {
-            playerName.text = ScoreManager.Instance.PlayerName;
-            currentScore.text = ScoreManager.Instance.CurrentScore.ToString();
-            ScoreManager.Instance.SaveFinalScore();
+            playerName.text = ServiceLocator.Get<ScoreManager>().PlayerName;
+            currentScore.text = ServiceLocator.Get<ScoreManager>().CurrentScore.ToString();
+            ServiceLocator.Get<ScoreManager>().SaveFinalScore();
             Cursor.visible = true;
         }
 
@@ -39,8 +39,8 @@ namespace SpaceInvaders.Scripts.GameOver
         /// </summary>
         public void OnRestartButtonClick()
         {
-            ScoreManager.Instance.CurrentScore = 0;
-            ScoreManager.Instance.CurrentLevel = 1;
+            ServiceLocator.Get<ScoreManager>().CurrentScore = 0;
+            ServiceLocator.Get<ScoreManager>().CurrentLevel = 1;
             SceneManager.LoadScene("Invasion");
         }
 

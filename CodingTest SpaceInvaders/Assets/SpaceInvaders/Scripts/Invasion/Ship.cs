@@ -43,13 +43,13 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void FixedUpdate()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play)
             {
                 if (Input.GetAxis("Horizontal") > 0.01f)
                 {
                     transform.position = new Vector3(
                         Mathf.Min(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), 
-                            InvasionManager.Instance.RightBorderPosition),
+                            ServiceLocator.Get<InvasionManager>().RightBorderPosition),
                         transform.position.y,
                         transform.position.z
                     );
@@ -58,7 +58,7 @@ namespace SpaceInvaders.Scripts.Invasion
                 {
                     transform.position = new Vector3(
                         Mathf.Max(transform.position.x + (Input.GetAxis("Horizontal") / SPEED_REDUCER), 
-                            InvasionManager.Instance.LeftBorderPosition),
+                            ServiceLocator.Get<InvasionManager>().LeftBorderPosition),
                         transform.position.y,
                         transform.position.z
                     );
@@ -72,7 +72,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Update()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play)
             {
                 if (!shotAvailable)
                 {

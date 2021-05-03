@@ -8,13 +8,8 @@ namespace SpaceInvaders.Scripts.Scores
     ///     Singleton class that keeps in memory the player score and the high score (with the relative names).
     ///     This is attached to its gameobject in the MainMenu scene, but it will be not destroyed on load.
     /// </summary>
-    public class ScoreManager : MonoBehaviour
+    public class ScoreManager : MonoBehaviour, IGameService
     {
-        /// <summary>
-        ///     ScoreManager is a singleton.
-        /// </summary>
-        public static ScoreManager Instance { get; private set; }
-
         /// <summary>
         ///     Current player.
         /// </summary>
@@ -52,12 +47,7 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         void Awake()
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
+            ServiceLocator.Register(this);
             leaderboards = new LeaderboardsSaver();
             (HighScoreOwner, HighScore) = leaderboards.GetHighScore();
             DontDestroyOnLoad(gameObject);

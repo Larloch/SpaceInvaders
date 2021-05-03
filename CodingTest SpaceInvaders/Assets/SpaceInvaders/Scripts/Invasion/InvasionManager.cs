@@ -11,13 +11,8 @@ namespace SpaceInvaders.Scripts.Invasion
     /// <summary>
     ///     Singleton class that manage the game progression.
     /// </summary>
-    public class InvasionManager : MonoBehaviour
+    public class InvasionManager : MonoBehaviour, IGameService
     {
-        /// <summary>
-        ///     InvasionManager is a singleton.
-        /// </summary>
-        public static InvasionManager Instance { get; private set; }
-
         #region SerializedFields
 
         /// <summary>
@@ -223,8 +218,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Awake()
         {
-            Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
-            Instance = this;
+            ServiceLocator.Register(this);
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
             CurrentPhase = GameStates.Start;
             AliensDirection = Direction.Right;
@@ -294,7 +288,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private void LevelWon()
         {
-            ScoreManager.Instance.CurrentLevel++;
+            ServiceLocator.Get<ScoreManager>().CurrentLevel++;
             SceneManager.LoadScene("Invasion");
         }
 
@@ -361,7 +355,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             CurrentPhase = GameStates.Pause;
             aliensContainer.SetActive(false);
-            UserInterfaceManager.Instance.OpenPause();
+            ServiceLocator.Get<UserInterfaceManager>().OpenPause();
         }
 
         /// <summary>
@@ -369,7 +363,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private void ResumeGame()
         {
-            UserInterfaceManager.Instance.CloseCentral();
+            ServiceLocator.Get<UserInterfaceManager>().CloseCentral();
             aliensContainer.SetActive(true);
             CurrentPhase = GameStates.Play;
         }
@@ -380,8 +374,8 @@ namespace SpaceInvaders.Scripts.Invasion
         private void StartGame()
         {
             ResumeGame();
-            AliensSpeed = ConfigurationManager.Instance.GetCurrentSpeed(ScoreManager.Instance.CurrentLevel);
-            AliensShootingRange = ConfigurationManager.Instance.GetCurrentShootingRange(ScoreManager.Instance.CurrentLevel);
+            AliensSpeed = ServiceLocator.Get<ConfigurationManager>().GetCurrentSpeed(ServiceLocator.Get<ScoreManager>().CurrentLevel);
+            AliensShootingRange = ServiceLocator.Get<ConfigurationManager>().GetCurrentShootingRange(ServiceLocator.Get<ScoreManager>().CurrentLevel);
             StartCoroutine(MoveAliens());
         }
 

@@ -7,13 +7,8 @@ namespace SpaceInvaders.Scripts.Configuration
     ///     Singleton class that is used to load the configuration from the json file (saved in the resources folder).
     ///     This is attached to its gameobject in the MainMenu scene, but it will be not destroyed on load.
     /// </summary>
-    public class ConfigurationManager : MonoBehaviour
+    public class ConfigurationManager : MonoBehaviour, IGameService
     {
-        /// <summary>
-        ///     ConfigurationManager is a singleton.
-        /// </summary>
-        public static ConfigurationManager Instance { get; private set; }
-
         /// <summary>
         ///     Filename (without extension) of the json configuration file.
         /// </summary>
@@ -30,13 +25,7 @@ namespace SpaceInvaders.Scripts.Configuration
         /// </summary>
         void Awake()
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            Instance = this;
+            ServiceLocator.Register(this);
             DontDestroyOnLoad(gameObject);
             invasionConfig = JsonUtility.FromJson<InvasionConfiguration>(Resources.Load<TextAsset>(CONFIGURATION_FILE_NAME).ToString());
         }
