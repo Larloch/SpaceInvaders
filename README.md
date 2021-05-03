@@ -11,4 +11,4 @@ Since these changes required some refactoring, I left a branch called `FedericoS
 
 
 I want to conclude with a heartfelt thank you for allowing me to take on this challenge, this was the first time I have tackled 2D game development, but aside from some minor initial doubts, I really enjoyed the experience! \
-Federico Spinardi
+**Federico Spinardi**
