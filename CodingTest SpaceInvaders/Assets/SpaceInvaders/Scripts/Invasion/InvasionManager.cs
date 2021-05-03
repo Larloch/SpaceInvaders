@@ -114,7 +114,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Current Game Phase
         /// </summary>
-        public GameStates CurrentPhase { get; private set; }
+        public GameStates CurrentState { get; private set; }
 
         private float _leftBorderPosition;
         /// <summary>
@@ -226,7 +226,7 @@ namespace SpaceInvaders.Scripts.Invasion
             Assert.IsNull(Instance, "Only one instance of InvasionManager is allowed");
             Instance = this;
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
-            CurrentPhase = GameStates.Start;
+            CurrentState = GameStates.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
@@ -240,7 +240,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             if (Input.GetButtonUp("Fire"))
             {
-                switch (CurrentPhase)
+                switch (CurrentState)
                 {
                     case GameStates.Start:
                         StartGame();
@@ -252,7 +252,7 @@ namespace SpaceInvaders.Scripts.Invasion
             }
             else if (Input.GetButtonUp("Quit"))
             {
-                switch (CurrentPhase)
+                switch (CurrentState)
                 {
                     case GameStates.Start:
                         StartGame();
@@ -359,7 +359,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private void PauseGame()
         {
-            CurrentPhase = GameStates.Pause;
+            CurrentState = GameStates.Pause;
             aliensContainer.SetActive(false);
             UserInterfaceManager.Instance.OpenPause();
         }
@@ -371,7 +371,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             UserInterfaceManager.Instance.CloseCentral();
             aliensContainer.SetActive(true);
-            CurrentPhase = GameStates.Play;
+            CurrentState = GameStates.Play;
         }
 
         /// <summary>
@@ -396,9 +396,9 @@ namespace SpaceInvaders.Scripts.Invasion
             float verticalSpaceLeft = (HigherBorderPosition - LowerBorderPosition) * (1f - ALIENS_VERTICAL_OCCUPATION);
             float alienVerticalMovement = verticalSpaceLeft / ALIENS_VERTICAL_MOVEMENTS;
             bool moveVertical = false;
-            while (CurrentPhase != GameStates.Start)
+            while (CurrentState != GameStates.Start)
             {
-                if (CurrentPhase == GameStates.Play)
+                if (CurrentState == GameStates.Play)
                 {
                     foreach (Alien alien in aliensGroup[currentRow])
                     {

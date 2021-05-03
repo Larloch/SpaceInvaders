@@ -43,7 +43,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void FixedUpdate()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            if (InvasionManager.Instance.CurrentState == InvasionManager.GameStates.Play)
             {
                 if (Input.GetAxis("Horizontal") > 0.01f)
                 {
@@ -72,7 +72,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Update()
         {
-            if (InvasionManager.Instance.CurrentPhase == InvasionManager.GameStates.Play)
+            if (InvasionManager.Instance.CurrentState == InvasionManager.GameStates.Play)
             {
                 if (!shotAvailable)
                 {
