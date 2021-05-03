@@ -10,6 +10,8 @@ namespace SpaceInvaders.Scripts.Invasion
 {
     /// <summary>
     ///     Singleton class that manage the game progression.
+    ///     Note: Added some Virtual to allow mocking for unit testing,
+    ///     they should be removed with a proper Interface implementation.
     /// </summary>
     public class InvasionManager : MonoBehaviour, IGameService
     {
@@ -109,13 +111,13 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Current Game Phase
         /// </summary>
-        public GameStates CurrentPhase { get; private set; }
+        private GameStates CurrentState;
 
         private float _leftBorderPosition;
         /// <summary>
         ///     Left border position according to the current resolution.
         /// </summary>
-        public float LeftBorderPosition
+        public virtual float LeftBorderPosition
         {
             get
             {
@@ -131,7 +133,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Right border position according to the current resolution.
         /// </summary>
-        public float RightBorderPosition
+        public virtual float RightBorderPosition
         {
             get
             {
@@ -189,7 +191,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     The aliens movement direction.
         /// </summary>
-        public Direction AliensDirection { get; set; }
+        public virtual Direction AliensDirection { get; set; }
 
         /// <summary>
         ///     All the spawned aliens [row][column].
@@ -220,7 +222,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             ServiceLocator.Register(this);
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
-            CurrentPhase = GameStates.Start;
+            CurrentState = GameStates.Start;
             AliensDirection = Direction.Right;
             SpawnAliens();
             SpawnBlocks();
@@ -234,7 +236,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             if (Input.GetButtonUp("Fire"))
             {
-                switch (CurrentPhase)
+                switch (CurrentState)
                 {
                     case GameStates.Start:
                         StartGame();
@@ -246,7 +248,7 @@ namespace SpaceInvaders.Scripts.Invasion
             }
             else if (Input.GetButtonUp("Quit"))
             {
-                switch (CurrentPhase)
+                switch (CurrentState)
                 {
                     case GameStates.Start:
                         StartGame();
@@ -280,6 +282,15 @@ namespace SpaceInvaders.Scripts.Invasion
             {
                 LevelWon();
             }
+        }
+
+        /// <summary>
+        ///     Check if the game is in Play state.
+        /// </summary>
+        /// <returns>True if is Play state.</returns>
+        public virtual bool IsInPlayState()
+        {
+            return CurrentState == GameStates.Play;
         }
 
         /// <summary>
@@ -353,7 +364,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         private void PauseGame()
         {
-            CurrentPhase = GameStates.Pause;
+            CurrentState = GameStates.Pause;
             aliensContainer.SetActive(false);
             ServiceLocator.Get<UserInterfaceManager>().OpenPause();
         }
@@ -365,7 +376,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             ServiceLocator.Get<UserInterfaceManager>().CloseCentral();
             aliensContainer.SetActive(true);
-            CurrentPhase = GameStates.Play;
+            CurrentState = GameStates.Play;
         }
 
         /// <summary>
@@ -390,9 +401,9 @@ namespace SpaceInvaders.Scripts.Invasion
             float verticalSpaceLeft = (HigherBorderPosition - LowerBorderPosition) * (1f - ALIENS_VERTICAL_OCCUPATION);
             float alienVerticalMovement = verticalSpaceLeft / ALIENS_VERTICAL_MOVEMENTS;
             bool moveVertical = false;
-            while (CurrentPhase != GameStates.Start)
+            while (CurrentState != GameStates.Start)
             {
-                if (CurrentPhase == GameStates.Play)
+                if (CurrentState == GameStates.Play)
                 {
                     foreach (Alien alien in aliensGroup[currentRow])
                     {

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>5/3/2021 - 12:06:01 PM</Generatedon>
+    <Parser>OpenCoverParser</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>14</Classes>
+    <Files>14</Files>
+    <Coveredlines>36</Coveredlines>
+    <Uncoveredlines>485</Uncoveredlines>
+    <Coverablelines>521</Coverablelines>
+    <Totallines>1598</Totallines>
+    <Linecoverage>6.9</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+  </Summary>
+  <Coverage>
+    <Assembly name="SpaceInvaders" classes="14" coverage="6.9" coveredlines="36" coverablelines="521" totallines="1598" branchcoverage="" coveredbranches="0" totalbranches="0">
+      <Class name="SpaceInvaders.Scripts.Configuration.ConfigurationManager" coverage="0" coveredlines="0" coverablelines="11" totallines="103" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.GameOver.GameOverManager" coverage="0" coveredlines="0" coverablelines="17" totallines="63" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.Alien" coverage="30.5" coveredlines="22" coverablelines="72" totallines="175" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.AlienProjectile" coverage="0" coveredlines="0" coverablelines="30" totallines="71" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.Block" coverage="0" coveredlines="0" coverablelines="13" totallines="60" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.InvasionManager" coverage="0.6" coveredlines="1" coverablelines="162" totallines="435" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.Ship" coverage="0" coveredlines="0" coverablelines="34" totallines="94" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.ShipProjectile" coverage="0" coveredlines="0" coverablelines="24" totallines="64" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Invasion.UserInterfaceManager" coverage="0" coveredlines="0" coverablelines="36" totallines="134" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.MainMenu.MainMenuManager" coverage="0" coveredlines="0" coverablelines="20" totallines="67" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Scores.LeaderboardsManager" coverage="0" coveredlines="0" coverablelines="11" totallines="52" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Scores.LeaderboardsSaver" coverage="0" coveredlines="0" coverablelines="53" totallines="143" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.Scores.ScoreManager" coverage="0" coveredlines="0" coverablelines="17" totallines="76" branchcoverage="" coveredbranches="0" totalbranches="0" />
+      <Class name="SpaceInvaders.Scripts.ServiceLocator" coverage="61.9" coveredlines="13" coverablelines="21" totallines="61" branchcoverage="" coveredbranches="0" totalbranches="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

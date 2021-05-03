@@ -26,11 +26,6 @@ namespace SpaceInvaders.Scripts.Invasion
         private const int ALIEN_HEALTH_POINTS = 100;
 
         /// <summary>
-        ///     The sprite renderer of the Alien.
-        /// </summary>
-        public SpriteRenderer AlienSpriteRenderer { get; private set; }
-
-        /// <summary>
         ///     Health of this alien (0 or less and it is dead).
         /// </summary>
         public int HealthPoints { get; private set; }
@@ -53,7 +48,6 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Start()
         {
-            AlienSpriteRenderer = GetComponent<SpriteRenderer>();
             HealthPoints = ALIEN_HEALTH_POINTS;
             StartCoroutine(Shoot());
         }
@@ -64,7 +58,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Update()
         {
-            if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play)
+            if (ServiceLocator.Get<InvasionManager>().IsInPlayState())
             {
                 if (transform.position.x <= ServiceLocator.Get<InvasionManager>().LeftBorderPosition)
                 {
@@ -86,7 +80,7 @@ namespace SpaceInvaders.Scripts.Invasion
         {
             while (HealthPoints > 0)
             {
-                if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play && 
+                if (ServiceLocator.Get<InvasionManager>().IsInPlayState() && 
                     LowerAlien == null && Random.Range(0, ServiceLocator.Get<InvasionManager>().AliensShootingRange) == 0)
                 {
                     Instantiate(alienProjectilePrefab, transform.position, Quaternion.identity);                    

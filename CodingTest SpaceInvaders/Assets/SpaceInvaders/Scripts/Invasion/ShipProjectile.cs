@@ -30,7 +30,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void FixedUpdate()
         {
-            if (ServiceLocator.Get<InvasionManager>().CurrentPhase == InvasionManager.GameStates.Play)
+            if (ServiceLocator.Get<InvasionManager>().IsInPlayState())
             {
                 projectileRigidbody.MovePosition(new Vector2(
                     projectileRigidbody.position.x,

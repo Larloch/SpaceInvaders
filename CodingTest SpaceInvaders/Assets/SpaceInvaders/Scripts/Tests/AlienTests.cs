@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NSubstitute;
 using NUnit.Framework;
 using SpaceInvaders.Scripts.Invasion;
 using UnityEngine;
@@ -11,27 +12,33 @@ namespace SpaceInvaders.Scripts.Tests
     {
         private Alien alien;
 
+        private InvasionManager invasionManagerMock;
+
         [OneTimeSetUp]
         public void Setup()
         {
+            new GameObject().AddComponent<ServiceLocator>();
             alien = new GameObject().AddComponent<Alien>();
+            invasionManagerMock = Substitute.For<InvasionManager>();
+            ServiceLocator.Register(invasionManagerMock);
         }
 
-        // A Test behaves as an ordinary method
-        [Test]
-        public void AlienTestsSimplePasses()
-        {
-            // Use the Assert class to test conditions
-        }
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
         [UnityTest]
-        public IEnumerator AlienTestsWithEnumeratorPasses()
+        public IEnumerator Should_ChangeDirection_IfOnTheBorder()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            // Arrange
+            invasionManagerMock.AliensDirection.Returns(InvasionManager.Direction.Left);
+            invasionManagerMock.IsInPlayState().Returns(true);
+            float borderPosition = -10f;
+            invasionManagerMock.LeftBorderPosition.Returns(borderPosition);
+
+            // Act
+            yield return new WaitForEndOfFrame();
+            alien.transform.position = new Vector3(borderPosition, 0f, 0f);
+            yield return new WaitForEndOfFrame();
+            
+            // Assert
+            Assert.IsTrue(invasionManagerMock.AliensDirection == InvasionManager.Direction.Right);
         }
     }
 }
