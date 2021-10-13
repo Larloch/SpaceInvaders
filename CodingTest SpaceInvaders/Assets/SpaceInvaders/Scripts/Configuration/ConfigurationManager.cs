@@ -25,6 +25,11 @@ namespace SpaceInvaders.Scripts.Configuration
         /// </summary>
         void Awake()
         {
+            if (ServiceLocator.IsRegistered<ConfigurationManager>())
+            {
+                Destroy(this.gameObject);
+                return;
+            }
             ServiceLocator.Register(this);
             DontDestroyOnLoad(gameObject);
             invasionConfig = JsonUtility.FromJson<InvasionConfiguration>(Resources.Load<TextAsset>(CONFIGURATION_FILE_NAME).ToString());

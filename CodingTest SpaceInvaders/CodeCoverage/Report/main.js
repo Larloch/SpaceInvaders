@@ -224,20 +224,21 @@ var assemblies = [
   {
     "name": "SpaceInvaders",
     "classes": [
-      { "name": "SpaceInvaders.Scripts.Configuration.ConfigurationManager", "rp": "SpaceInvaders_ConfigurationManager.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 103, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "SpaceInvaders.Scripts.Configuration.ConfigurationManager", "rp": "SpaceInvaders_ConfigurationManager.html", "cl": 0, "ucl": 15, "cal": 15, "tl": 108, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.GameOver.GameOverManager", "rp": "SpaceInvaders_GameOverManager.html", "cl": 0, "ucl": 17, "cal": 17, "tl": 63, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "SpaceInvaders.Scripts.Invasion.AbstractInvasion", "rp": "SpaceInvaders_AbstractInvasion.html", "cl": 2, "ucl": 1, "cal": 3, "tl": 69, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Invasion.Alien", "rp": "SpaceInvaders_Alien.html", "cl": 33, "ucl": 35, "cal": 68, "tl": 171, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Invasion.AlienProjectile", "rp": "SpaceInvaders_AlienProjectile.html", "cl": 0, "ucl": 30, "cal": 30, "tl": 71, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Invasion.Block", "rp": "SpaceInvaders_Block.html", "cl": 0, "ucl": 13, "cal": 13, "tl": 60, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "SpaceInvaders.Scripts.Invasion.InvasionManager", "rp": "SpaceInvaders_InvasionManager.html", "cl": 1, "ucl": 161, "cal": 162, "tl": 435, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "SpaceInvaders.Scripts.Invasion.InvasionManager", "rp": "SpaceInvaders_InvasionManager.html", "cl": 0, "ucl": 159, "cal": 159, "tl": 390, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Invasion.Ship", "rp": "SpaceInvaders_Ship.html", "cl": 0, "ucl": 34, "cal": 34, "tl": 94, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Invasion.ShipProjectile", "rp": "SpaceInvaders_ShipProjectile.html", "cl": 0, "ucl": 24, "cal": 24, "tl": 64, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "SpaceInvaders.Scripts.Invasion.UserInterfaceManager", "rp": "SpaceInvaders_UserInterfaceManager.html", "cl": 0, "ucl": 36, "cal": 36, "tl": 136, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "SpaceInvaders.Scripts.Invasion.UserInterfaceManager", "rp": "SpaceInvaders_UserInterfaceManager.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 140, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.MainMenu.MainMenuManager", "rp": "SpaceInvaders_MainMenuManager.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 67, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Scores.LeaderboardsManager", "rp": "SpaceInvaders_LeaderboardsManager.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 52, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
       { "name": "SpaceInvaders.Scripts.Scores.LeaderboardsSaver", "rp": "SpaceInvaders_LeaderboardsSaver.html", "cl": 0, "ucl": 53, "cal": 53, "tl": 143, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "SpaceInvaders.Scripts.Scores.ScoreManager", "rp": "SpaceInvaders_ScoreManager.html", "cl": 0, "ucl": 17, "cal": 17, "tl": 76, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
-      { "name": "SpaceInvaders.Scripts.ServiceLocator", "rp": "SpaceInvaders_ServiceLocator.html", "cl": 18, "ucl": 3, "cal": 21, "tl": 61, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "SpaceInvaders.Scripts.Scores.ScoreManager", "rp": "SpaceInvaders_ScoreManager.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 81, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
+      { "name": "SpaceInvaders.Scripts.ServiceLocator", "rp": "SpaceInvaders_ServiceLocator.html", "cl": 18, "ucl": 3, "cal": 21, "tl": 60, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
 ];
 

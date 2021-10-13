@@ -66,6 +66,10 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Awake()
         {
+            if (ServiceLocator.IsRegistered<UserInterfaceManager>())
+            {
+                ServiceLocator.Unregister<UserInterfaceManager>();
+            }
             ServiceLocator.Register(this);
         }
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
 using SpaceInvaders.Scripts.Invasion;
@@ -21,14 +20,13 @@ namespace SpaceInvaders.Scripts.Tests
         /// <summary>
         ///     Mock (substitution) of the InvasionManager.
         /// </summary>
-        private InvasionManager invasionManagerMock;
+        private AbstractInvasion invasionManagerMock;
 
         [OneTimeSetUp]
         public void Setup()
         {
-            new GameObject().AddComponent<ServiceLocator>();
             alien = new GameObject().AddComponent<Alien>();
-            invasionManagerMock = Substitute.For<InvasionManager>();
+            invasionManagerMock = Substitute.For<AbstractInvasion>();
             ServiceLocator.Register(invasionManagerMock);
         }
 
@@ -36,8 +34,8 @@ namespace SpaceInvaders.Scripts.Tests
         public IEnumerator Should_ChangeDirection_When_OnTheBorder()
         {
             // Arrange
-            invasionManagerMock.AliensDirection.Returns(InvasionManager.Direction.Left);
             invasionManagerMock.IsInPlayState().Returns(true);
+            invasionManagerMock.AliensDirection = AbstractInvasion.Direction.Left;
             float borderPosition = -10f;
             invasionManagerMock.LeftBorderPosition.Returns(borderPosition);
             yield return new WaitForEndOfFrame();
@@ -47,7 +45,7 @@ namespace SpaceInvaders.Scripts.Tests
             yield return new WaitForEndOfFrame();
             
             // Assert
-            Assert.IsTrue(invasionManagerMock.AliensDirection == InvasionManager.Direction.Right);
+            Assert.IsTrue(invasionManagerMock.AliensDirection == AbstractInvasion.Direction.Right);
         }
 
         [UnityTest]
@@ -70,7 +68,7 @@ namespace SpaceInvaders.Scripts.Tests
         [OneTimeTearDown]
         public void TearDown()
         {
-            ServiceLocator.Unregister<InvasionManager>();
+            ServiceLocator.Unregister<AbstractInvasion>();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SpaceInvaders.Scripts.Invasion
     ///     Note: Added some Virtual modifier to allow mocking for unit testing,
     ///     they should be removed with a proper Interface implementation.
     /// </summary>
-    public class InvasionManager : MonoBehaviour, IGameService
+    public class InvasionManager : AbstractInvasion
     {
         #region SerializedFields
 
@@ -34,36 +34,7 @@ namespace SpaceInvaders.Scripts.Invasion
 
         #endregion
 
-        #region Const and Enums
-
-        /// <summary>
-        ///     Enumerator to describe the states of the game.
-        /// </summary>
-        public enum GameStates
-        {
-            Start,
-            Play,
-            Pause
-        }
-
-        /// <summary>
-        ///     Enumerator for the aliens movement directions.
-        /// </summary>
-        public enum Direction
-        {
-            Left,
-            Right
-        }
-
-        /// <summary>
-        ///     Height of the top header (it will contains the highscores).
-        /// </summary>
-        public const float HEADER_HEIGHT = 1.4f;
-
-        /// <summary>
-        ///     Vertical distance from the bottom of the Blocks.
-        /// </summary>
-        public const float BLOCKS_HEIGHT = 1.8f;
+        #region Const
 
         /// <summary>
         ///     The number of columns of the invasion.
@@ -117,7 +88,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Left border position according to the current resolution.
         /// </summary>
-        public virtual float LeftBorderPosition
+        public override float LeftBorderPosition
         {
             get
             {
@@ -133,7 +104,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Right border position according to the current resolution.
         /// </summary>
-        public virtual float RightBorderPosition
+        public override float RightBorderPosition
         {
             get
             {
@@ -149,7 +120,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Higher border position of the gameplay area, according to the current resolution.
         /// </summary>
-        public float HigherBorderPosition
+        public override float HigherBorderPosition
         {
             get
             {
@@ -165,7 +136,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Lower border position of the gameplay area, according to the current resolution.
         /// </summary>
-        public float LowerBorderPosition
+        public override float LowerBorderPosition
         {
             get
             {
@@ -176,22 +147,6 @@ namespace SpaceInvaders.Scripts.Invasion
                 return _lowerBorderPosition;
             }
         }
-
-        /// <summary>
-        ///     Current speed of the aliens.
-        /// </summary>
-        public float AliensSpeed { get; private set; }
-
-        /// <summary>
-        ///     The upper bound of the random range used to decide if
-        ///     an alien will shoot or not.
-        /// </summary>
-        public int AliensShootingRange { get; private set; }
-
-        /// <summary>
-        ///     The aliens movement direction.
-        /// </summary>
-        public virtual Direction AliensDirection { get; set; }
 
         /// <summary>
         ///     All the spawned aliens [row][column].
@@ -220,7 +175,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// </summary>
         void Awake()
         {
-            ServiceLocator.Register(this);
+            ServiceLocator.Register<AbstractInvasion>(this);
             aliensLeft = ALIENS_COLUMNS * ALIENS_ROWS;
             CurrentState = GameStates.Start;
             AliensDirection = Direction.Right;
@@ -266,7 +221,7 @@ namespace SpaceInvaders.Scripts.Invasion
         /// <summary>
         ///     Open the GameOver panel.
         /// </summary>
-        public void GameOver()
+        public override void GameOver()
         {
             SceneManager.LoadScene("GameOver");
         }
@@ -275,7 +230,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     When an alien die decrease the counter to
         ///     determine when the level is won.
         /// </summary>
-        public virtual void RemoveOneAlien()
+        public override void RemoveOneAlien()
         {
             aliensLeft--;
             if (aliensLeft == 0)
@@ -288,7 +243,7 @@ namespace SpaceInvaders.Scripts.Invasion
         ///     Check if the game is in Play state.
         /// </summary>
         /// <returns>True if is Play state.</returns>
-        public virtual bool IsInPlayState()
+        public override bool IsInPlayState()
         {
             return CurrentState == GameStates.Play;
         }

@@ -47,6 +47,11 @@ namespace SpaceInvaders.Scripts.Scores
         /// </summary>
         void Awake()
         {
+            if (ServiceLocator.IsRegistered<ScoreManager>())
+            {
+                Destroy(this.gameObject);
+                return;
+            }
             ServiceLocator.Register(this);
             leaderboards = new LeaderboardsSaver();
             (HighScoreOwner, HighScore) = leaderboards.GetHighScore();
